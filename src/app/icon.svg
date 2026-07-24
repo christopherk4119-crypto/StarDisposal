@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect x="0" y="0" width="200" height="200" rx="24" fill="#FFD700" />
+  <polygon points="100,8 121.16,70.88 187.5,71.57 134.24,111.12 154.08,174.43 100,136 45.92,174.43 65.76,111.12 12.5,71.57 78.84,70.88" fill="#1E2A5E" stroke="#1E2A5E" stroke-width="2" stroke-linejoin="round" />
+  <text x="100" y="103" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="34" fill="#D32F2F" stroke="#FFFFFF" stroke-width="3" paint-order="stroke" letter-spacing="2">STAR</text>
+  <rect x="24" y="150" width="152" height="24" rx="4" fill="#FFD700" />
+  <text x="100" y="167" text-anchor="middle" font-family="Arial, sans-serif" font-weight="800" font-size="13" fill="#1E2A5E" letter-spacing="0.5">DISPOSAL SERVICES</text>
+</svg>
