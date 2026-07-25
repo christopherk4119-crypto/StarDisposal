@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Logo from "./Logo";
 import { business } from "@/lib/business";
 
 export default function Hero() {
@@ -7,16 +8,11 @@ export default function Hero() {
       id="home"
       className="relative overflow-hidden bg-brand-navy text-white"
     >
-      {/* diagonal caution-stripe accent */}
-      <div
-        className="pointer-events-none absolute inset-0 opacity-[0.07]"
-        style={{
-          backgroundImage:
-            "repeating-linear-gradient(45deg, #FFD700 0, #FFD700 40px, transparent 40px, transparent 80px)",
-        }}
+      {/* faint watermark logo */}
+      <Logo
+        background={false}
+        className="pointer-events-none absolute left-1/2 top-1/2 h-[140%] w-[140%] max-w-none -translate-x-1/2 -translate-y-1/2 opacity-[0.07] sm:h-[110%] sm:w-[110%]"
       />
-      <div className="pointer-events-none absolute -right-24 -top-24 h-96 w-96 rounded-full bg-brand-red/20 blur-3xl" />
-      <div className="pointer-events-none absolute -bottom-32 -left-24 h-96 w-96 rounded-full bg-brand-yellow/10 blur-3xl" />
 
       <div className="relative mx-auto flex max-w-7xl flex-col items-center px-4 py-20 text-center lg:px-8 lg:py-28">
         <span className="mb-4 inline-block rounded-full bg-brand-yellow px-4 py-1 font-display text-xs tracking-wide text-brand-red">

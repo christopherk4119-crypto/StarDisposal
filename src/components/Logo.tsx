@@ -1,7 +1,16 @@
 const STAR_POINTS =
   "100,8 121.16,70.88 187.5,71.57 134.24,111.12 154.08,174.43 100,136 45.92,174.43 65.76,111.12 12.5,71.57 78.84,70.88";
 
-export default function Logo({ className = "" }: { className?: string }) {
+export default function Logo({
+  className = "",
+  background = true,
+}: {
+  className?: string;
+  background?: boolean;
+}) {
+  const starFill = background ? "#1E2A5E" : "#FFFFFF";
+  const disposalFill = background ? "#1E2A5E" : "#FFFFFF";
+
   return (
     <svg
       viewBox="0 0 200 200"
@@ -9,11 +18,11 @@ export default function Logo({ className = "" }: { className?: string }) {
       role="img"
       aria-label="Star Disposal Services logo"
     >
-      <rect x="0" y="0" width="200" height="200" rx="18" fill="#FFD700" />
+      {background && <rect x="0" y="0" width="200" height="200" rx="18" fill="#FFD700" />}
       <polygon
         points={STAR_POINTS}
-        fill="#1E2A5E"
-        stroke="#1E2A5E"
+        fill={starFill}
+        stroke={starFill}
         strokeWidth="2"
         strokeLinejoin="round"
       />
@@ -32,7 +41,7 @@ export default function Logo({ className = "" }: { className?: string }) {
       >
         STAR
       </text>
-      <rect x="24" y="150" width="152" height="24" rx="4" fill="#FFD700" />
+      {background && <rect x="24" y="150" width="152" height="24" rx="4" fill="#FFD700" />}
       <text
         x="100"
         y="167"
@@ -40,7 +49,7 @@ export default function Logo({ className = "" }: { className?: string }) {
         fontFamily="Arial, sans-serif"
         fontWeight="800"
         fontSize="13"
-        fill="#1E2A5E"
+        fill={disposalFill}
         letterSpacing="0.5"
       >
         DISPOSAL SERVICES
