@@ -25,10 +25,10 @@ const points = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="bg-brand-navy py-20">
+    <section id="why-choose-star" className="bg-brand-navy py-20">
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
         <h2 className="text-center font-display text-3xl text-white sm:text-4xl">
-          Why Calgary Trusts Star Disposal Services
+          Why Choose Star Disposal Services
         </h2>
         <div className="mx-auto mt-2 h-1.5 w-20 bg-brand-yellow" />
 
