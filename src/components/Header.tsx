@@ -1,6 +1,3 @@
-"use client";
-
-import { useState } from "react";
 import Link from "next/link";
 import Logo from "./Logo";
 import PhoneBadge from "./PhoneBadge";
@@ -8,33 +5,25 @@ import { business } from "@/lib/business";
 
 const navLinks = [
   { href: "#home", label: "HOME" },
-  { href: "#about", label: "ABOUT" },
   { href: "#services", label: "SERVICES" },
-  { href: "#bins", label: "BIN RENTALS" },
   { href: "#gallery", label: "GALLERY" },
   { href: "#contact", label: "CONTACT" },
 ];
 
 export default function Header() {
-  const [menuOpen, setMenuOpen] = useState(false);
-
   return (
     <header className="sticky top-0 z-50 bg-brand-navy shadow-lg">
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-2 lg:px-8">
-        <Link
-          href="#home"
-          className="flex shrink-0 items-center gap-3"
-          onClick={() => setMenuOpen(false)}
-        >
-          <Logo className="h-14 w-14 lg:h-16 lg:w-16" />
-          <span className="hidden font-display text-lg leading-tight text-white sm:block lg:text-xl">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-1 px-2 py-2 md:gap-3 md:px-4 lg:gap-4 lg:px-8">
+        <Link href="#home" className="flex shrink-0 items-center gap-1.5 md:gap-2 lg:gap-3">
+          <Logo className="h-9 w-9 md:h-11 md:w-11 lg:h-16 lg:w-16" />
+          <span className="hidden font-display text-lg leading-tight text-white lg:block">
             STAR DISPOSAL
             <br />
             SERVICES
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-4 font-display text-xs tracking-wide text-white lg:gap-5 lg:text-sm xl:flex">
+        <nav className="flex items-center gap-1.5 font-display text-[10px] text-white md:gap-3 md:text-xs lg:gap-6 lg:text-sm lg:tracking-wide">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -46,61 +35,24 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="hidden flex-col items-end gap-1 leading-tight lg:flex">
-          <PhoneBadge className="text-lg" />
-          <a
-            href={`tel:${business.phoneTedTel}`}
-            className="text-xs font-semibold text-white/90 hover:text-brand-yellow"
-          >
-            Ted&apos;s Cell: {business.phoneTedDisplay}
-          </a>
-        </div>
-
-        <div className="flex shrink-0 items-center gap-2">
-          <Link
-            href="#contact"
-            className="glow-yellow rounded-md bg-brand-yellow px-4 py-2 text-center font-display text-xs text-brand-red shadow-md ring-2 ring-brand-red/20 transition hover:brightness-105 sm:text-sm"
-          >
-            GET A FREE QUOTE
-          </Link>
-          <button
-            type="button"
-            aria-label="Toggle menu"
-            aria-expanded={menuOpen}
-            onClick={() => setMenuOpen((v) => !v)}
-            className="flex h-9 w-9 flex-col items-center justify-center gap-1.5 rounded-md ring-1 ring-white/30 xl:hidden"
-          >
-            <span className="h-0.5 w-5 bg-white" />
-            <span className="h-0.5 w-5 bg-white" />
-            <span className="h-0.5 w-5 bg-white" />
-          </button>
-        </div>
+        <Link
+          href="#contact"
+          className="glow-yellow shrink-0 rounded-md bg-brand-yellow px-2 py-1.5 text-center font-display text-[10px] text-brand-red shadow-md ring-2 ring-brand-red/20 transition hover:brightness-105 md:px-3 md:py-2 md:text-xs lg:px-4 lg:text-sm"
+        >
+          <span className="lg:hidden">QUOTE</span>
+          <span className="hidden lg:inline">GET A FREE QUOTE</span>
+        </Link>
       </div>
 
-      <div className="flex items-center justify-center gap-4 bg-brand-yellow px-4 py-2 lg:hidden">
+      <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 bg-brand-yellow px-3 py-2 md:gap-x-4">
         <PhoneBadge className="px-3 py-1 text-sm" />
         <a
           href={`tel:${business.phoneTedTel}`}
-          className="text-xs font-bold text-brand-navy"
+          className="text-xs font-bold text-brand-navy md:text-sm"
         >
           Ted&apos;s Cell: {business.phoneTedDisplay}
         </a>
       </div>
-
-      {menuOpen && (
-        <nav className="flex flex-col gap-1 bg-brand-navy px-4 pb-4 font-display text-sm tracking-wide text-white xl:hidden">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              onClick={() => setMenuOpen(false)}
-              className="rounded-md px-2 py-2 hover:bg-white/10 hover:text-brand-yellow"
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
-      )}
     </header>
   );
 }

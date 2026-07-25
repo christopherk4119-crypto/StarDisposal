@@ -21,14 +21,8 @@ export default function Footer() {
           <Link href="#home" className="hover:text-brand-red">
             HOME
           </Link>
-          <Link href="#about" className="hover:text-brand-red">
-            ABOUT
-          </Link>
           <Link href="#services" className="hover:text-brand-red">
             SERVICES
-          </Link>
-          <Link href="#bins" className="hover:text-brand-red">
-            BIN RENTALS
           </Link>
           <Link href="#gallery" className="hover:text-brand-red">
             GALLERY
