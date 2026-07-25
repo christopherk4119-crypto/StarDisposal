@@ -4,10 +4,12 @@ import PhoneBadge from "./PhoneBadge";
 import { business } from "@/lib/business";
 
 const navLinks = [
-  { href: "#home", label: "HOME" },
-  { href: "#services", label: "SERVICES" },
-  { href: "#gallery", label: "GALLERY" },
-  { href: "#contact", label: "CONTACT" },
+  { href: "#home", label: "HOME", core: true },
+  { href: "#about", label: "ABOUT", core: false },
+  { href: "#services", label: "SERVICES", core: true },
+  { href: "#why-choose-star", label: "WHY CHOOSE STAR", core: false },
+  { href: "#gallery", label: "GALLERY", core: true },
+  { href: "#contact", label: "CONTACT", core: true },
 ];
 
 export default function Header() {
@@ -23,12 +25,14 @@ export default function Header() {
           </span>
         </Link>
 
-        <nav className="flex items-center gap-1.5 font-display text-[10px] text-white md:gap-3 md:text-xs lg:gap-6 lg:text-sm lg:tracking-wide">
+        <nav className="flex items-center gap-1.5 font-display text-[10px] text-white md:gap-3 md:text-xs lg:gap-2.5 lg:text-[11px] xl:gap-6 xl:text-sm xl:tracking-wide">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="whitespace-nowrap hover:text-brand-yellow"
+              className={`whitespace-nowrap hover:text-brand-yellow ${
+                link.core ? "" : "hidden lg:inline-block"
+              }`}
             >
               {link.label}
             </Link>
@@ -37,10 +41,10 @@ export default function Header() {
 
         <Link
           href="#contact"
-          className="glow-yellow shrink-0 rounded-md bg-brand-yellow px-2 py-1.5 text-center font-display text-[10px] text-brand-red shadow-md ring-2 ring-brand-red/20 transition hover:brightness-105 md:px-3 md:py-2 md:text-xs lg:px-4 lg:text-sm"
+          className="glow-yellow shrink-0 rounded-md bg-brand-yellow px-2 py-1.5 text-center font-display text-[10px] text-brand-red shadow-md ring-2 ring-brand-red/20 transition hover:brightness-105 md:px-3 md:py-2 md:text-xs xl:px-4 xl:text-sm"
         >
-          <span className="lg:hidden">QUOTE</span>
-          <span className="hidden lg:inline">GET A FREE QUOTE</span>
+          <span className="xl:hidden">QUOTE</span>
+          <span className="hidden xl:inline">GET A FREE QUOTE</span>
         </Link>
       </div>
 
