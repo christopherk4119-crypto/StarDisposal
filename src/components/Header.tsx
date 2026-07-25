@@ -4,55 +4,52 @@ import PhoneBadge from "./PhoneBadge";
 import { business } from "@/lib/business";
 
 const navLinks = [
-  { href: "#home", label: "HOME", core: true },
-  { href: "#about", label: "ABOUT", core: false },
-  { href: "#services", label: "SERVICES", core: true },
-  { href: "#why-choose-star", label: "WHY CHOOSE STAR", core: false },
-  { href: "#gallery", label: "GALLERY", core: true },
-  { href: "#contact", label: "CONTACT", core: true },
+  { href: "#home", label: "HOME" },
+  { href: "#about", label: "ABOUT" },
+  { href: "#services", label: "SERVICES" },
+  { href: "#why-choose-star", label: "WHY CHOOSE STAR" },
+  { href: "#gallery", label: "GALLERY" },
+  { href: "#contact", label: "CONTACT" },
 ];
 
 export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-brand-navy shadow-lg">
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-1 px-2 py-2 md:gap-3 md:px-4 lg:gap-4 lg:px-8">
-        <Link href="#home" className="flex shrink-0 items-center gap-1.5 md:gap-2 lg:gap-3">
-          <Logo className="h-9 w-9 md:h-11 md:w-11 lg:h-16 lg:w-16" />
-          <span className="hidden font-display text-lg leading-tight text-white lg:block">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-2 px-3 py-2 sm:px-4 lg:px-8">
+        <Link href="#home" className="flex shrink-0 items-center gap-2 sm:gap-3">
+          <Logo className="h-10 w-10 sm:h-12 sm:w-12 lg:h-16 lg:w-16" />
+          <span className="hidden font-display text-base leading-tight text-white sm:block lg:text-xl">
             STAR DISPOSAL
             <br />
             SERVICES
           </span>
         </Link>
 
-        <nav className="flex items-center gap-1.5 font-display text-[10px] text-white md:gap-3 md:text-xs lg:gap-2.5 lg:text-[11px] xl:gap-6 xl:text-sm xl:tracking-wide">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={`whitespace-nowrap hover:text-brand-yellow ${
-                link.core ? "" : "hidden lg:inline-block"
-              }`}
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
-
         <Link
           href="#contact"
-          className="glow-yellow shrink-0 rounded-md bg-brand-yellow px-2 py-1.5 text-center font-display text-[10px] text-brand-red shadow-md ring-2 ring-brand-red/20 transition hover:brightness-105 md:px-3 md:py-2 md:text-xs xl:px-4 xl:text-sm"
+          className="glow-yellow shrink-0 rounded-md bg-brand-yellow px-3 py-2 text-center font-display text-xs text-brand-red shadow-md ring-2 ring-brand-red/20 transition hover:brightness-105 sm:px-4 sm:text-sm"
         >
-          <span className="xl:hidden">QUOTE</span>
-          <span className="hidden xl:inline">GET A FREE QUOTE</span>
+          GET A FREE QUOTE
         </Link>
       </div>
 
-      <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 bg-brand-yellow px-3 py-2 md:gap-x-4">
+      <nav className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 border-t border-white/10 px-3 py-2.5 font-display text-sm tracking-wide text-white sm:gap-x-6 sm:text-base">
+        {navLinks.map((link) => (
+          <Link
+            key={link.href}
+            href={link.href}
+            className="whitespace-nowrap hover:text-brand-yellow"
+          >
+            {link.label}
+          </Link>
+        ))}
+      </nav>
+
+      <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 bg-brand-yellow px-3 py-2 sm:gap-x-4">
         <PhoneBadge className="px-3 py-1 text-sm" />
         <a
           href={`tel:${business.phoneTedTel}`}
-          className="text-xs font-bold text-brand-navy md:text-sm"
+          className="text-xs font-bold text-brand-navy sm:text-sm"
         >
           Ted&apos;s Cell: {business.phoneTedDisplay}
         </a>
