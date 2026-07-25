@@ -6,6 +6,7 @@
   --brand-yellow: #ffd700;
   --brand-red: #d32f2f;
   --brand-navy: #1e2a5e;
+  --brand-orange: #ff7a00;
 }
 
 @theme inline {
@@ -14,6 +15,7 @@
   --color-brand-yellow: var(--brand-yellow);
   --color-brand-red: var(--brand-red);
   --color-brand-navy: var(--brand-navy);
+  --color-brand-orange: var(--brand-orange);
   --font-sans: var(--font-inter);
   --font-display: var(--font-archivo-black);
 }
@@ -31,4 +33,48 @@ body {
 
 html {
   scroll-behavior: smooth;
+}
+
+@keyframes glow-pulse-yellow {
+  0%,
+  100% {
+    box-shadow:
+      0 0 10px 2px rgba(255, 215, 0, 0.55),
+      0 0 22px 6px rgba(255, 215, 0, 0.3);
+  }
+  50% {
+    box-shadow:
+      0 0 18px 6px rgba(255, 215, 0, 0.9),
+      0 0 36px 14px rgba(255, 215, 0, 0.5);
+  }
+}
+
+@keyframes glow-pulse-orange {
+  0%,
+  100% {
+    box-shadow:
+      0 0 10px 2px rgba(255, 122, 0, 0.7),
+      0 0 22px 8px rgba(255, 122, 0, 0.35);
+  }
+  50% {
+    box-shadow:
+      0 0 20px 8px rgba(255, 122, 0, 1),
+      0 0 38px 16px rgba(255, 122, 0, 0.6);
+  }
+}
+
+.glow-yellow {
+  animation: glow-pulse-yellow 2s ease-in-out infinite;
+}
+
+.glow-orange {
+  animation: glow-pulse-orange 2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glow-yellow,
+  .glow-orange {
+    animation: none;
+    box-shadow: 0 0 16px 4px rgba(255, 122, 0, 0.6);
+  }
 }

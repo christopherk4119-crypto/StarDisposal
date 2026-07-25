@@ -35,13 +35,13 @@ export default function Hero() {
         <div className="mt-8 flex flex-col gap-4 sm:flex-row">
           <Link
             href="#contact"
-            className="rounded-md bg-brand-yellow px-8 py-4 font-display text-base text-brand-red shadow-lg transition hover:brightness-105"
+            className="glow-yellow rounded-md bg-brand-yellow px-8 py-4 font-display text-base text-brand-red shadow-lg transition hover:brightness-105"
           >
             GET A FREE QUOTE
           </Link>
           <a
             href={`tel:${business.phoneMainTel}`}
-            className="rounded-md border-2 border-brand-red bg-transparent px-8 py-4 font-display text-base text-white transition hover:bg-brand-red"
+            className="glow-orange rounded-md bg-brand-orange px-8 py-4 font-display text-base text-white transition hover:brightness-110"
           >
             CALL {business.phoneMainDisplay}
           </a>

@@ -123,7 +123,7 @@ export default function ContactForm() {
 
       <button
         type="submit"
-        className="w-full rounded-md bg-brand-yellow px-6 py-4 font-display text-base text-brand-red shadow-md transition hover:brightness-105"
+        className="glow-yellow w-full rounded-md bg-brand-yellow px-6 py-4 font-display text-base text-brand-red shadow-md transition hover:brightness-105"
       >
         REQUEST MY FREE QUOTE
       </button>

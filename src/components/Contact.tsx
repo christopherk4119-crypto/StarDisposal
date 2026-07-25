@@ -1,4 +1,5 @@
 import ContactForm from "./ContactForm";
+import PhoneBadge from "./PhoneBadge";
 import { business } from "@/lib/business";
 
 export default function Contact() {
@@ -21,13 +22,8 @@ export default function Contact() {
                 <p className="font-display text-xs tracking-wide text-brand-yellow">
                   MAIN LINE
                 </p>
-                <a
-                  href={`tel:${business.phoneMainTel}`}
-                  className="font-display text-2xl"
-                >
-                  {business.phoneMainDisplay}
-                </a>
-                <p className="text-sm text-white/70">{business.phoneMainSub}</p>
+                <PhoneBadge className="mt-1 text-xl" />
+                <p className="mt-1 text-sm text-white/70">{business.phoneMainSub}</p>
               </div>
 
               <div>

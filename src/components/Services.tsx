@@ -60,7 +60,7 @@ export default function Services() {
               </p>
               <Link
                 href="#contact"
-                className="mt-5 inline-block rounded-md bg-brand-yellow px-4 py-2 text-center font-display text-xs text-brand-red transition hover:brightness-105"
+                className="glow-yellow mt-5 inline-block rounded-md bg-brand-yellow px-4 py-2 text-center font-display text-xs text-brand-red transition hover:brightness-105"
               >
                 GET QUOTE
               </Link>

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Logo from "./Logo";
+import PhoneBadge from "./PhoneBadge";
 import { business } from "@/lib/business";
 
 const navLinks = [
@@ -39,13 +40,8 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="hidden flex-col items-end leading-tight lg:flex">
-          <a
-            href={`tel:${business.phoneMainTel}`}
-            className="font-display text-xl text-brand-yellow"
-          >
-            {business.phoneMainDisplay}
-          </a>
+        <div className="hidden flex-col items-end gap-1 leading-tight lg:flex">
+          <PhoneBadge className="text-lg" />
           <a
             href={`tel:${business.phoneTedTel}`}
             className="text-xs font-semibold text-white/90 hover:text-brand-yellow"
@@ -57,7 +53,7 @@ export default function Header() {
         <div className="flex shrink-0 items-center gap-2">
           <Link
             href="#contact"
-            className="rounded-md bg-brand-yellow px-4 py-2 text-center font-display text-xs text-brand-red shadow-md ring-2 ring-brand-red/20 transition hover:brightness-105 sm:text-sm"
+            className="glow-yellow rounded-md bg-brand-yellow px-4 py-2 text-center font-display text-xs text-brand-red shadow-md ring-2 ring-brand-red/20 transition hover:brightness-105 sm:text-sm"
           >
             GET A FREE QUOTE
           </Link>
@@ -75,14 +71,8 @@ export default function Header() {
         </div>
       </div>
 
-      <div className="flex items-center justify-center gap-4 bg-brand-yellow px-4 py-1.5 md:hidden">
-        <a
-          href={`tel:${business.phoneMainTel}`}
-          className="font-display text-sm text-brand-red"
-        >
-          {business.phoneMainDisplay}
-        </a>
-        <span className="text-brand-navy/40">|</span>
+      <div className="flex items-center justify-center gap-4 bg-brand-yellow px-4 py-2 md:hidden">
+        <PhoneBadge className="px-3 py-1 text-sm" />
         <a
           href={`tel:${business.phoneTedTel}`}
           className="text-xs font-bold text-brand-navy"
