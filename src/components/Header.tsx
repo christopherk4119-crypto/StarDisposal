@@ -8,8 +8,10 @@ import { business } from "@/lib/business";
 
 const navLinks = [
   { href: "#home", label: "HOME" },
+  { href: "#about", label: "ABOUT" },
   { href: "#services", label: "SERVICES" },
   { href: "#bins", label: "BIN RENTALS" },
+  { href: "#gallery", label: "GALLERY" },
   { href: "#contact", label: "CONTACT" },
 ];
 
@@ -32,9 +34,13 @@ export default function Header() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-6 font-display text-sm tracking-wide text-white md:flex">
+        <nav className="hidden items-center gap-4 font-display text-xs tracking-wide text-white lg:gap-5 lg:text-sm xl:flex">
           {navLinks.map((link) => (
-            <Link key={link.href} href={link.href} className="hover:text-brand-yellow">
+            <Link
+              key={link.href}
+              href={link.href}
+              className="whitespace-nowrap hover:text-brand-yellow"
+            >
               {link.label}
             </Link>
           ))}
@@ -62,7 +68,7 @@ export default function Header() {
             aria-label="Toggle menu"
             aria-expanded={menuOpen}
             onClick={() => setMenuOpen((v) => !v)}
-            className="flex h-9 w-9 flex-col items-center justify-center gap-1.5 rounded-md ring-1 ring-white/30 md:hidden"
+            className="flex h-9 w-9 flex-col items-center justify-center gap-1.5 rounded-md ring-1 ring-white/30 xl:hidden"
           >
             <span className="h-0.5 w-5 bg-white" />
             <span className="h-0.5 w-5 bg-white" />
@@ -71,7 +77,7 @@ export default function Header() {
         </div>
       </div>
 
-      <div className="flex items-center justify-center gap-4 bg-brand-yellow px-4 py-2 md:hidden">
+      <div className="flex items-center justify-center gap-4 bg-brand-yellow px-4 py-2 lg:hidden">
         <PhoneBadge className="px-3 py-1 text-sm" />
         <a
           href={`tel:${business.phoneTedTel}`}
@@ -82,7 +88,7 @@ export default function Header() {
       </div>
 
       {menuOpen && (
-        <nav className="flex flex-col gap-1 bg-brand-navy px-4 pb-4 font-display text-sm tracking-wide text-white md:hidden">
+        <nav className="flex flex-col gap-1 bg-brand-navy px-4 pb-4 font-display text-sm tracking-wide text-white xl:hidden">
           {navLinks.map((link) => (
             <Link
               key={link.href}

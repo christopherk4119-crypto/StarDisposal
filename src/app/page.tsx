@@ -1,7 +1,9 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import About from "@/components/About";
 import Services from "@/components/Services";
 import WhyChooseUs from "@/components/WhyChooseUs";
+import Gallery from "@/components/Gallery";
 import Testimonials from "@/components/Testimonials";
 import ServiceArea from "@/components/ServiceArea";
 import Contact from "@/components/Contact";
@@ -39,8 +41,10 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <Hero />
+        <About />
         <Services />
         <WhyChooseUs />
+        <Gallery />
         <Testimonials />
         <ServiceArea />
         <Contact />

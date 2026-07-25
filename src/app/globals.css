@@ -35,46 +35,14 @@ html {
   scroll-behavior: smooth;
 }
 
-@keyframes glow-pulse-yellow {
-  0%,
-  100% {
-    box-shadow:
-      0 0 10px 2px rgba(255, 215, 0, 0.55),
-      0 0 22px 6px rgba(255, 215, 0, 0.3);
-  }
-  50% {
-    box-shadow:
-      0 0 18px 6px rgba(255, 215, 0, 0.9),
-      0 0 36px 14px rgba(255, 215, 0, 0.5);
-  }
-}
-
-@keyframes glow-pulse-orange {
-  0%,
-  100% {
-    box-shadow:
-      0 0 10px 2px rgba(255, 122, 0, 0.7),
-      0 0 22px 8px rgba(255, 122, 0, 0.35);
-  }
-  50% {
-    box-shadow:
-      0 0 20px 8px rgba(255, 122, 0, 1),
-      0 0 38px 16px rgba(255, 122, 0, 0.6);
-  }
-}
-
 .glow-yellow {
-  animation: glow-pulse-yellow 2s ease-in-out infinite;
+  box-shadow:
+    0 0 8px 1px rgba(255, 215, 0, 0.35),
+    0 0 14px 4px rgba(255, 215, 0, 0.2);
 }
 
 .glow-orange {
-  animation: glow-pulse-orange 2s ease-in-out infinite;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .glow-yellow,
-  .glow-orange {
-    animation: none;
-    box-shadow: 0 0 16px 4px rgba(255, 122, 0, 0.6);
-  }
+  box-shadow:
+    0 0 8px 1px rgba(255, 122, 0, 0.45),
+    0 0 14px 4px rgba(255, 122, 0, 0.25);
 }
