@@ -1,4 +1,5 @@
 import Hero from "@/components/Hero";
+import Header from "@/components/Header";
 import About from "@/components/About";
 import Services from "@/components/Services";
 import WhyChooseUs from "@/components/WhyChooseUs";
@@ -39,6 +40,7 @@ export default function Home() {
       />
       <main className="flex-1">
         <Hero />
+        <Header />
         <About />
         <Services />
         <WhyChooseUs />

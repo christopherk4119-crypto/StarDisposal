@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "./Logo";
@@ -15,6 +15,36 @@ const navLinks = [
 
 export default function Hero() {
   const [sheetOpen, setSheetOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const triggerRef = useRef<HTMLElement | null>(null);
+
+  function openSheet(e: React.MouseEvent<HTMLButtonElement>) {
+    triggerRef.current = e.currentTarget;
+    setMenuOpen(false);
+    setSheetOpen(true);
+  }
+
+  function closeSheet() {
+    setSheetOpen(false);
+    triggerRef.current?.focus();
+  }
+
+  useEffect(() => {
+    if (!sheetOpen) return;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    function onKeyDown(e: KeyboardEvent) {
+      if (e.key === "Escape") closeSheet();
+    }
+    document.addEventListener("keydown", onKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener("keydown", onKeyDown);
+    };
+  }, [sheetOpen]);
 
   return (
     <section id="home" className="relative overflow-hidden bg-brand-navy text-white">
@@ -44,7 +74,10 @@ export default function Hero() {
       </div>
 
       {/* header */}
-      <div className="relative z-10 flex items-center justify-between border-b border-white/10 px-5 py-5 lg:px-16">
+      <div
+        className="relative z-10 flex items-center justify-between border-b border-white/10 px-5 pb-5 lg:px-16 lg:pb-5"
+        style={{ paddingTop: "max(1.25rem, env(safe-area-inset-top))" }}
+      >
         <Link href="#home" className="flex items-center gap-2.5 lg:gap-3.5">
           <Logo className="h-10 w-10 lg:h-[52px] lg:w-[52px]" />
           <span className="font-display text-[13px] leading-tight text-white lg:text-[17px]">
@@ -64,7 +97,7 @@ export default function Hero() {
 
         <button
           type="button"
-          onClick={() => setSheetOpen(true)}
+          onClick={openSheet}
           className="hidden items-center gap-2.5 rounded-md bg-brand-yellow px-5 py-3 font-display text-[15px] text-brand-navy transition hover:brightness-105 lg:flex"
         >
           <span className="h-[9px] w-[9px] rounded-full bg-brand-navy" />
@@ -74,6 +107,8 @@ export default function Hero() {
         <button
           type="button"
           aria-label="Menu"
+          aria-expanded={menuOpen}
+          onClick={() => setMenuOpen((v) => !v)}
           className="flex flex-col gap-[5px] p-2.5 lg:hidden"
         >
           <span className="block h-0.5 w-[22px] bg-white" />
@@ -81,6 +116,22 @@ export default function Hero() {
           <span className="block h-0.5 w-[22px] bg-white" />
         </button>
       </div>
+
+      {/* mobile nav dropdown */}
+      {menuOpen && (
+        <nav className="relative z-10 flex flex-col gap-1 border-b border-white/10 bg-brand-navy/95 px-5 py-3 font-display text-sm uppercase tracking-[0.1em] text-white lg:hidden">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              onClick={() => setMenuOpen(false)}
+              className="rounded-md px-2 py-2.5 hover:bg-white/10 hover:text-brand-yellow"
+            >
+              {link.label}
+            </Link>
+          ))}
+        </nav>
+      )}
 
       {/* content */}
       <div className="relative z-10 px-5 pb-40 pt-16 lg:max-w-[900px] lg:px-16 lg:pb-24 lg:pt-24">
@@ -122,7 +173,7 @@ export default function Hero() {
         <div className="mt-10 hidden items-center gap-5 lg:flex">
           <button
             type="button"
-            onClick={() => setSheetOpen(true)}
+            onClick={openSheet}
             className="pulse-ring flex items-center gap-4 rounded-[10px] bg-brand-yellow px-[34px] py-[22px] text-left text-brand-navy transition hover:brightness-105"
           >
             <span className="font-display text-[15px] tracking-wide">CALL NOW</span>
@@ -175,7 +226,7 @@ export default function Hero() {
       >
         <button
           type="button"
-          onClick={() => setSheetOpen(true)}
+          onClick={openSheet}
           className="flex w-full items-center justify-center gap-3 rounded-xl bg-brand-yellow px-5 py-5 text-brand-navy transition hover:brightness-105"
         >
           <span className="font-display text-xl">CALL {business.phoneMainDisplay}</span>
@@ -195,7 +246,7 @@ export default function Hero() {
         >
           <div
             className="absolute inset-0 bg-[rgba(15,23,56,0.72)]"
-            onClick={() => setSheetOpen(false)}
+            onClick={closeSheet}
           />
           <div className="relative w-full rounded-t-[20px] bg-white p-[18px] pb-7 lg:w-[440px] lg:rounded-2xl lg:p-7">
             <div className="mx-auto mb-4 h-1 w-11 rounded-full bg-brand-navy/20 lg:hidden" />
@@ -252,7 +303,7 @@ export default function Hero() {
 
             <button
               type="button"
-              onClick={() => setSheetOpen(false)}
+              onClick={closeSheet}
               className="mt-3.5 w-full text-center text-sm font-semibold text-[#8a8a80]"
             >
               Close
