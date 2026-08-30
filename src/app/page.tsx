@@ -8,89 +8,75 @@ import Testimonials from "@/components/Testimonials";
 import ServiceArea from "@/components/ServiceArea";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import { business } from "@/lib/business";
+import FaqSection from "@/components/FaqSection";
+import JsonLd from "@/components/JsonLd";
+import { siteUrl } from "@/lib/business";
+
+/**
+ * Reviews stay on the homepage only, attached to the LocalBusiness entity
+ * declared in the root layout. No aggregateRating is published — the review
+ * count and average are not verified against a Google Business Profile.
+ */
+const reviewSchema = {
+  "@context": "https://schema.org",
+  "@id": `${siteUrl}/#business`,
+  review: [
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "Ingrid H." },
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      reviewBody:
+        "Ted was prompt, friendly, polite... provided excellent service. I would absolutely recommend Star Disposal Services for any hauling job.",
+    },
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "Candi Miranda" },
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      reviewBody:
+        "Awesome customer service. They sure helped my elderly father and his wife. They went above and beyond in helping them. Thanks",
+    },
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "April G." },
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      reviewBody: "He was polite, helpful, knowledgeable.",
+    },
+  ],
+};
+
+const faqs = [
+  {
+    q: "How much does junk removal cost in Calgary?",
+    a: "Jobs start at $50. Beyond that it is priced by volume and weight — a single item at the curb is at the bottom of the range, a packed garage is a truckload. Call 403-204-7827, describe the material, and you get a price before anything moves.",
+  },
+  {
+    q: "Should I book junk removal or rent a bin?",
+    a: "Junk removal when the stuff already exists and you do not want to touch it. A bin when the work happens over several days and generates debris as you go. If you are unsure, describe the job on the phone — we will tell you honestly which one costs you less.",
+  },
+  {
+    q: "What size bins do you have?",
+    a: "10, 12, 15 and 20 yard bins. The 15 is the most common for renovations and clear-outs; the 10 is the right size for heavy material like concrete and tile, which reaches its weight limit before it fills the space.",
+  },
+  {
+    q: "Can you come the same day?",
+    a: "Often, especially for smaller loads booked in the morning. We answer the phone 8 AM to 8 PM, seven days a week, including weekends.",
+  },
+  {
+    q: "What will you not take?",
+    a: "No hazardous waste — paint, solvents, motor oil, chemicals, propane tanks — and no asbestos-containing material. Household hazardous waste can be dropped free at a City of Calgary landfill site by residents.",
+  },
+  {
+    q: "Do you serve Airdrie?",
+    a: "Yes, and there is no surcharge on a normal-sized load. We also cover Cochrane and Chestermere.",
+  },
+];
 
 export default function Home() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    name: business.name,
-    description:
-      "Calgary junk removal, bin rentals, dump runs, bobcat services, demolition, and site clean-up since 1996. Jobs start at $50.",
-    telephone: business.phoneMainTel,
-    email: business.email,
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "2729 14 Ave SE",
-      addressLocality: "Calgary",
-      addressRegion: "AB",
-      postalCode: "T2A 0J7",
-      addressCountry: "CA",
-    },
-    areaServed: ["Calgary", "Airdrie", "Cochrane", "Chestermere"],
-    priceRange: "$50+",
-    foundingDate: "1996",
-    openingHoursSpecification: {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
-        "Sunday",
-      ],
-      opens: "08:00",
-      closes: "20:00",
-    },
-    hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: "Services",
-      itemListElement: [
-        "Junk Removal",
-        "All Size Bin Rentals",
-        "Bobcat Services",
-        "Dump Runs",
-        "Demolition",
-        "Site Clean-Up",
-      ].map((serviceName) => ({
-        "@type": "Offer",
-        itemOffered: { "@type": "Service", name: serviceName },
-      })),
-    },
-    review: [
-      {
-        "@type": "Review",
-        author: { "@type": "Person", name: "Ingrid H." },
-        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-        reviewBody:
-          "Ted was prompt, friendly, polite... provided excellent service. I would absolutely recommend Star Disposal Services for any hauling job.",
-      },
-      {
-        "@type": "Review",
-        author: { "@type": "Person", name: "Candi Miranda" },
-        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-        reviewBody:
-          "Awesome customer service. They sure helped my elderly father and his wife. They went above and beyond in helping them. Thanks",
-      },
-      {
-        "@type": "Review",
-        author: { "@type": "Person", name: "April G." },
-        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-        reviewBody: "He was polite, helpful, knowledgeable.",
-      },
-    ],
-  };
-
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <JsonLd data={reviewSchema} />
       <Header />
-      <main className="flex-1">
+      <main id="main" className="flex-1">
         <Hero />
         <About />
         <Services />
@@ -98,6 +84,7 @@ export default function Home() {
         <Gallery />
         <Testimonials />
         <ServiceArea />
+        <FaqSection faqs={faqs} heading="Common questions" />
         <Contact />
       </main>
       <Footer />

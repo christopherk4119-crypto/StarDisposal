@@ -1,23 +1,23 @@
 import Link from "next/link";
 import Logo from "./Logo";
 import { business } from "@/lib/business";
+import { allHubs, servicesByHub } from "@/lib/services";
 
-const navLinks = [
-  { href: "#home", label: "HOME" },
-  { href: "#about", label: "ABOUT" },
-  { href: "#services", label: "SERVICES" },
-  { href: "#why-choose-star", label: "WHY CHOOSE STAR" },
-  { href: "#gallery", label: "GALLERY" },
-  { href: "#contact", label: "CONTACT" },
+const companyLinks = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/service-areas", label: "Service Area" },
+  { href: "/#gallery", label: "Gallery" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export default function Footer() {
   return (
     <footer className="bg-brand-yellow px-8 pb-[34px] pt-16 lg:px-14">
       <div className="mx-auto max-w-[1300px]">
-        <div className="grid grid-cols-1 items-start gap-14 lg:grid-cols-[1.2fr_0.7fr_1fr]">
+        <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-[1.1fr_1fr]">
           <div className="min-w-0">
-            <Link href="#home" className="flex items-center gap-3.5">
+            <Link href="/" className="flex items-center gap-3.5">
               <Logo className="h-[54px] w-[54px]" />
               <span className="font-display text-lg leading-[1.1] text-brand-navy">
                 STAR DISPOSAL
@@ -28,44 +28,74 @@ export default function Footer() {
             <p className="mt-[22px] max-w-[380px] text-base font-semibold leading-[1.55] text-brand-navy/80">
               {business.tagline}
             </p>
+
+            <div className="mt-8 flex flex-col gap-3">
+              <a
+                href={`tel:${business.phoneMainTel}`}
+                className="font-display text-[26px] leading-none text-brand-navy hover:text-brand-red"
+              >
+                {business.phoneMainDisplay}
+              </a>
+              <a
+                href={`tel:${business.phoneTedTel}`}
+                className="text-[15px] font-semibold text-brand-navy hover:text-brand-red"
+              >
+                Ted&rsquo;s Cell: {business.phoneTedDisplay}
+              </a>
+              <a
+                href={`mailto:${business.email}`}
+                className="break-words text-[15px] font-semibold text-brand-navy hover:text-brand-red"
+              >
+                {business.email}
+              </a>
+              <span className="text-[15px] font-semibold text-brand-navy/75">
+                Open {business.hours[0].day}, {business.hours[0].time}
+              </span>
+            </div>
           </div>
 
-          <nav className="flex flex-col gap-[11px] font-display text-[13px] tracking-[0.06em]">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-brand-navy hover:text-brand-red"
-              >
-                {link.label}
-              </Link>
+          {/* Full service index — every page reachable from every page. */}
+          <div className="grid grid-cols-2 gap-x-8 gap-y-9 sm:grid-cols-4">
+            {allHubs.map((hub) => (
+              <div key={hub.slug}>
+                <Link
+                  href={`/${hub.slug}`}
+                  className="block border-b border-brand-navy/30 pb-2 font-display text-[12px] tracking-[0.08em] text-brand-navy hover:text-brand-red"
+                >
+                  {hub.navLabel}
+                </Link>
+                <ul className="mt-3 flex flex-col gap-2.5">
+                  {servicesByHub(hub.slug).map((service) => (
+                    <li key={service.slug}>
+                      <Link
+                        href={`/${service.hub}/${service.slug}`}
+                        className="text-[13px] font-medium leading-snug text-brand-navy/75 hover:text-brand-red"
+                      >
+                        {service.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             ))}
-          </nav>
 
-          <div className="flex flex-col gap-3.5">
-            <a
-              href={`tel:${business.phoneMainTel}`}
-              className="font-display text-[26px] leading-none text-brand-navy hover:text-brand-red"
-            >
-              {business.phoneMainDisplay}
-            </a>
-            {business.phoneMainSub && (
-              <span className="text-sm font-semibold text-brand-navy/70">
-                {business.phoneMainSub}
+            <div>
+              <span className="block border-b border-brand-navy/30 pb-2 font-display text-[12px] tracking-[0.08em] text-brand-navy">
+                COMPANY
               </span>
-            )}
-            <a
-              href={`tel:${business.phoneTedTel}`}
-              className="text-[15px] font-semibold text-brand-navy hover:text-brand-red"
-            >
-              Ted&rsquo;s Cell: {business.phoneTedDisplay}
-            </a>
-            <a
-              href={`mailto:${business.email}`}
-              className="break-words text-[15px] font-semibold text-brand-navy hover:text-brand-red"
-            >
-              {business.email}
-            </a>
+              <ul className="mt-3 flex flex-col gap-2.5">
+                {companyLinks.map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="text-[13px] font-medium leading-snug text-brand-navy/75 hover:text-brand-red"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
 
@@ -74,7 +104,8 @@ export default function Footer() {
             {business.address}
           </span>
           <span className="text-[13px] text-brand-navy/65">
-            © 2026 Star Disposal Services — Calgary, AB — Since 1996
+            © {new Date().getFullYear()} {business.name} — Calgary, AB — Since{" "}
+            {business.foundingDate}
           </span>
         </div>
       </div>

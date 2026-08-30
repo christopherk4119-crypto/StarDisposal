@@ -60,7 +60,7 @@ export default function Hero() {
             </span>
           </a>
           <Link
-            href="#contact"
+            href="/contact"
             className="flex items-center gap-[18px] border border-brand-yellow/60 bg-white/[0.06] px-8 py-[22px] text-white transition hover:border-brand-yellow hover:bg-brand-yellow/[0.12]"
           >
             <span className="font-display text-sm tracking-[0.1em] text-brand-yellow">

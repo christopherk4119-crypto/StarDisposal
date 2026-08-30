@@ -1,7 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
+import { allHubs, servicesByHub } from "@/lib/services";
 
+/**
+ * Homepage services grid. Every tile is a real <Link> wrapping the whole
+ * card — the visual card is the click target, not a small text row beside it.
+ */
 export default function Services() {
+  const [junk, bins, site] = allHubs;
+
   return (
     <section
       id="services"
@@ -21,19 +28,29 @@ export default function Services() {
             Services
           </h2>
           <p className="mt-[26px] max-w-[400px] text-[17px] leading-[1.6] text-brand-navy/72">
-            Junk removal, bin rentals, dump runs, bobcat work, demolition
-            and full site clean-outs across Calgary. Ted picks up the
-            phone. Jobs start at $50.
+            Junk removal, bin rentals, dump runs, bobcat work, demolition and
+            full site clean-outs across Calgary. Ted picks up the phone. Jobs
+            start at $50.
           </p>
+          <Link
+            href="/contact"
+            className="mt-8 inline-block self-start bg-brand-yellow px-6 py-4 font-display text-[13px] tracking-[0.12em] text-brand-navy transition hover:brightness-105"
+          >
+            GET A FREE QUOTE
+          </Link>
         </div>
 
-        <div className="relative h-[430px] overflow-hidden bg-brand-navy lg:col-span-7">
+        {/* Junk removal hub */}
+        <Link
+          href={`/${junk.slug}`}
+          className="group relative h-[430px] overflow-hidden bg-brand-navy lg:col-span-7"
+        >
           <Image
             src="/images/gallery/mattress-furniture-bin.webp"
-            alt="Bin loaded with mattress and furniture for junk removal in Calgary"
+            alt="Bin loaded with a mattress and furniture during a Calgary junk removal job"
             fill
             sizes="(min-width: 1024px) 55vw, 90vw"
-            className="object-cover"
+            className="object-cover transition duration-500 group-hover:scale-105"
           />
           <div
             className="absolute inset-0"
@@ -50,30 +67,29 @@ export default function Services() {
               01
             </div>
             <h3 className="font-display text-4xl leading-none text-white">
-              Junk Removal
+              Junk Removal Calgary
             </h3>
-            <p className="mt-3 max-w-[420px] text-[15px] leading-[1.55] text-white/85">
-              Garage, home, and yard junk removal — starting at $50.
+            <p className="mt-3 max-w-[440px] text-[15px] leading-[1.55] text-white/85">
+              {junk.summary}
             </p>
-            <Link
-              href="#contact"
-              className="mt-[18px] inline-block border-b-2 border-brand-yellow/50 font-display text-xs tracking-[0.14em] text-brand-yellow hover:border-brand-yellow"
-            >
-              GET QUOTE →
-            </Link>
+            <span className="mt-[18px] inline-block border-b-2 border-brand-yellow/50 font-display text-xs tracking-[0.14em] text-brand-yellow transition group-hover:border-brand-yellow">
+              VIEW JUNK REMOVAL →
+            </span>
           </div>
-        </div>
+        </Link>
 
-        <div
+        {/* Bin rentals hub */}
+        <Link
+          href={`/${bins.slug}`}
           id="bins"
-          className="relative h-[340px] overflow-hidden bg-brand-navy lg:col-span-8"
+          className="group relative h-[340px] overflow-hidden bg-brand-navy lg:col-span-8"
         >
           <Image
             src="/images/gallery/bin-trailer-apartment.webp"
-            alt="Bin trailer rental service at a Calgary apartment complex"
+            alt="Bin trailer rental delivered to a Calgary apartment complex"
             fill
             sizes="(min-width: 1024px) 62vw, 90vw"
-            className="object-cover object-[60%_50%]"
+            className="object-cover object-[60%_50%] transition duration-500 group-hover:scale-105"
           />
           <div
             className="absolute inset-0"
@@ -88,44 +104,53 @@ export default function Services() {
                 02
               </div>
               <h3 className="font-display text-4xl leading-none text-white">
-                All Size Bins
+                Bin Rental Calgary
               </h3>
               <p className="mt-3 text-[15px] leading-[1.55] text-white/85">
-                10, 12, 15, and 20 yard bins available for any size
-                project.
+                10, 12, 15 and 20 yard bins dropped where you need them.
               </p>
             </div>
             <div className="flex flex-wrap gap-2">
-              <span className="border border-brand-yellow/60 px-3 py-2 font-display text-xs tracking-[0.08em] text-brand-yellow">
-                10 YD
-              </span>
-              <span className="border border-brand-yellow/60 px-3 py-2 font-display text-xs tracking-[0.08em] text-brand-yellow">
-                12 YD
-              </span>
-              <span className="border border-brand-yellow/60 px-3 py-2 font-display text-xs tracking-[0.08em] text-brand-yellow">
-                15 YD
-              </span>
-              <span className="bg-brand-yellow px-3 py-2 font-display text-xs tracking-[0.08em] text-brand-navy">
-                20 YD
-              </span>
+              {["10 YD", "12 YD", "15 YD", "20 YD"].map((size, i) => (
+                <span
+                  key={size}
+                  className={`px-3 py-2 font-display text-xs tracking-[0.08em] ${
+                    i === 3
+                      ? "bg-brand-yellow text-brand-navy"
+                      : "border border-brand-yellow/60 text-brand-yellow"
+                  }`}
+                >
+                  {size}
+                </span>
+              ))}
             </div>
           </div>
-        </div>
+        </Link>
 
+        {/* Two spoke tiles */}
         <div className="flex flex-col bg-brand-navy lg:col-span-4">
-          <div className="flex flex-1 flex-col justify-center px-7 py-[30px]">
+          <Link
+            href="/junk-removal/appliance-removal"
+            className="group flex flex-1 flex-col justify-center px-7 py-[30px] transition hover:bg-white/[0.06]"
+          >
             <div className="mb-2 font-display text-xs tracking-[0.2em] text-brand-yellow">
               03
             </div>
             <h3 className="font-display text-[25px] leading-[1.05] text-white">
-              Bobcat Services
+              Appliance Removal
             </h3>
             <p className="mt-2 text-sm leading-[1.5] text-white/70">
-              Bobcat work for site prep, landscaping, and material moving.
+              Fridges, washers, dryers and stoves carried out — stairs included.
             </p>
-          </div>
+            <span className="mt-3 font-display text-[10px] tracking-[0.14em] text-brand-yellow opacity-0 transition group-hover:opacity-100">
+              VIEW SERVICE →
+            </span>
+          </Link>
           <div className="h-px bg-white/15" />
-          <div className="flex flex-1 flex-col justify-center px-7 py-[30px]">
+          <Link
+            href="/junk-removal/dump-runs"
+            className="group flex flex-1 flex-col justify-center px-7 py-[30px] transition hover:bg-white/[0.06]"
+          >
             <div className="mb-2 font-display text-xs tracking-[0.2em] text-brand-yellow">
               04
             </div>
@@ -133,31 +158,45 @@ export default function Services() {
               Dump Runs
             </h3>
             <p className="mt-2 text-sm leading-[1.5] text-white/70">
-              Fast, reliable dump runs for residential and commercial
-              waste.
+              We load it, haul it, and pay the tipping fee at the scale.
             </p>
-          </div>
+            <span className="mt-3 font-display text-[10px] tracking-[0.14em] text-brand-yellow opacity-0 transition group-hover:opacity-100">
+              VIEW SERVICE →
+            </span>
+          </Link>
         </div>
 
-        <div className="relative flex min-h-[250px] flex-col justify-end overflow-hidden bg-brand-yellow px-[30px] py-[34px] lg:col-span-4">
+        {/* Demolition spoke */}
+        <Link
+          href="/site-services/demolition"
+          className="group relative flex min-h-[250px] flex-col justify-end overflow-hidden bg-brand-yellow px-[30px] py-[34px] lg:col-span-4"
+        >
           <span className="pointer-events-none absolute -top-6 right-1.5 font-display text-[140px] leading-none text-brand-navy/10">
             05
           </span>
           <h3 className="relative font-display text-[34px] leading-none text-brand-navy">
-            Demolition
+            Demolition Calgary
           </h3>
           <p className="relative mt-3 text-[15px] leading-[1.55] text-brand-navy/78">
-            Small demolition jobs handled quickly and safely.
+            Garages, sheds, decks, fences and interior strip-outs — debris
+            hauled in the same job.
           </p>
-        </div>
+          <span className="relative mt-4 font-display text-[11px] tracking-[0.14em] text-brand-navy/70 transition group-hover:text-brand-navy">
+            VIEW DEMOLITION →
+          </span>
+        </Link>
 
-        <div className="relative min-h-[250px] overflow-hidden bg-brand-navy lg:col-span-8">
+        {/* Site services hub */}
+        <Link
+          href={`/${site.slug}`}
+          className="group relative min-h-[250px] overflow-hidden bg-brand-navy lg:col-span-8"
+        >
           <Image
             src="/images/gallery/yard-cleanup-debris.webp"
-            alt="Site clean-up and yard debris removal in Calgary"
+            alt="Site clean-up and yard debris removal on a Calgary property"
             fill
             sizes="(min-width: 1024px) 62vw, 90vw"
-            className="object-cover object-[50%_55%]"
+            className="object-cover object-[50%_55%] transition duration-500 group-hover:scale-105"
           />
           <div
             className="absolute inset-0"
@@ -172,20 +211,47 @@ export default function Services() {
                 06
               </div>
               <h3 className="font-display text-[34px] leading-none text-white">
-                Site Clean-Up
+                Site Clean-Up &amp; Bobcat
               </h3>
-              <p className="mt-[11px] max-w-[420px] text-[15px] leading-[1.55] text-white/85">
-                Complete site clean-up services for construction and
-                renovation projects.
+              <p className="mt-[11px] max-w-[440px] text-[15px] leading-[1.55] text-white/85">
+                {site.summary}
               </p>
             </div>
-            <Link
-              href="#contact"
-              className="shrink-0 bg-brand-yellow px-[18px] py-3.5 font-display text-xs tracking-[0.12em] text-brand-navy transition hover:brightness-105"
-            >
-              GET QUOTE
-            </Link>
+            <span className="shrink-0 bg-brand-yellow px-[18px] py-3.5 font-display text-xs tracking-[0.12em] text-brand-navy transition group-hover:brightness-105">
+              VIEW SITE SERVICES
+            </span>
           </div>
+        </Link>
+      </div>
+
+      {/* Every spoke, linked in plain text — no page is more than one click away */}
+      <div className="mt-16 border-t border-brand-navy/18 pt-10">
+        <h3 className="mb-7 font-display text-[11px] uppercase tracking-[0.18em] text-brand-navy/55">
+          Every service we offer
+        </h3>
+        <div className="grid grid-cols-1 gap-9 sm:grid-cols-3">
+          {allHubs.map((hub) => (
+            <div key={hub.slug}>
+              <Link
+                href={`/${hub.slug}`}
+                className="block border-b-2 border-brand-yellow pb-2 font-display text-[15px] text-brand-navy hover:text-brand-red"
+              >
+                {hub.h1}
+              </Link>
+              <ul className="mt-3.5 flex flex-col gap-2.5">
+                {servicesByHub(hub.slug).map((service) => (
+                  <li key={service.slug}>
+                    <Link
+                      href={`/${service.hub}/${service.slug}`}
+                      className="text-[15px] font-medium text-brand-navy/72 hover:text-brand-red"
+                    >
+                      {service.h1}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </div>
     </section>

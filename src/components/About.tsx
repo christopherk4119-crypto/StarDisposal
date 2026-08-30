@@ -38,12 +38,20 @@ export default function About() {
             We&rsquo;re still local, still family-run, and you can still
             reach Ted directly on his cell. That&rsquo;s not changing.
           </p>
-          <Link
-            href="#contact"
-            className="mt-[34px] inline-block bg-brand-yellow px-6 py-4 font-display text-[13px] tracking-[0.12em] text-brand-navy transition hover:brightness-105"
-          >
-            GET A FREE QUOTE
-          </Link>
+          <div className="mt-[34px] flex flex-wrap items-center gap-4">
+            <Link
+              href="/contact"
+              className="inline-block bg-brand-yellow px-6 py-4 font-display text-[13px] tracking-[0.12em] text-brand-navy transition hover:brightness-105"
+            >
+              GET A FREE QUOTE
+            </Link>
+            <Link
+              href="/about"
+              className="inline-block border-b-2 border-brand-yellow pb-1 font-display text-[13px] tracking-[0.12em] text-brand-navy hover:text-brand-red"
+            >
+              MORE ABOUT US →
+            </Link>
+          </div>
         </div>
 
         <div className="relative pb-[86px]">

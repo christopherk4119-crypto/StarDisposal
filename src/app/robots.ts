@@ -1,11 +1,10 @@
 import type { MetadataRoute } from "next";
+import { siteUrl } from "@/lib/business";
 
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: {
-      userAgent: "*",
-      allow: "/",
-    },
-    sitemap: "https://stardisposalservices.ca/sitemap.xml",
+    rules: { userAgent: "*", allow: "/" },
+    sitemap: `${siteUrl}/sitemap.xml`,
+    host: siteUrl,
   };
 }

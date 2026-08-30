@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { business } from "@/lib/business";
 
 const calgaryAreas = [
@@ -63,6 +64,13 @@ export default function ServiceArea() {
               </div>
             ))}
           </div>
+
+          <Link
+            href="/service-areas"
+            className="mt-9 inline-block bg-brand-yellow px-6 py-4 font-display text-[13px] tracking-[0.12em] text-brand-navy transition hover:brightness-105"
+          >
+            SEE THE FULL SERVICE AREA
+          </Link>
         </div>
 
         <div className="relative min-h-[320px] self-stretch overflow-hidden lg:min-h-[560px]">
@@ -81,9 +89,12 @@ export default function ServiceArea() {
             }}
           />
           <div className="absolute inset-x-6 bottom-[26px]">
-            <div className="font-display text-xl leading-[1.15] text-white">
+            <a
+              href={`tel:${business.phoneMainTel}`}
+              className="block font-display text-xl leading-[1.15] text-white hover:text-brand-yellow"
+            >
               {business.phoneMainDisplay}
-            </div>
+            </a>
             <div className="mt-[7px] text-[13px] font-semibold text-white/75">
               Ted or the yard, 8 AM – 8 PM
             </div>
