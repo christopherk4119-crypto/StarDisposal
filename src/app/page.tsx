@@ -16,7 +16,7 @@ export default function Home() {
     "@type": "LocalBusiness",
     name: business.name,
     description:
-      "Calgary junk removal, hauling, bobcat services, dump runs, site clean-up, demolition, and bin rentals since 1996.",
+      "Calgary junk removal, bin rentals, dump runs, bobcat services, demolition, and site clean-up since 1996. Jobs start at $50 — call 403-50WASTE.",
     telephone: business.phoneMainTel,
     email: business.email,
     address: {
@@ -30,6 +30,35 @@ export default function Home() {
     areaServed: ["Calgary", "Airdrie", "Cochrane", "Chestermere"],
     priceRange: "$50+",
     foundingDate: "1996",
+    openingHoursSpecification: {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday",
+      ],
+      opens: "08:00",
+      closes: "20:00",
+    },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Services",
+      itemListElement: [
+        "Junk Removal",
+        "All Size Bin Rentals",
+        "Bobcat Services",
+        "Dump Runs",
+        "Demolition",
+        "Site Clean-Up",
+      ].map((serviceName) => ({
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: serviceName },
+      })),
+    },
   };
 
   return (
@@ -38,9 +67,9 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <Header />
       <main className="flex-1">
         <Hero />
-        <Header />
         <About />
         <Services />
         <WhyChooseUs />

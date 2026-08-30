@@ -1,78 +1,88 @@
 import ContactForm from "./ContactForm";
-import PhoneBadge from "./PhoneBadge";
 import { business } from "@/lib/business";
 
 export default function Contact() {
   return (
-    <section id="contact" className="bg-brand-navy py-20">
-      <div className="mx-auto max-w-6xl px-4 lg:px-8">
-        <h2 className="text-center font-display text-3xl text-white sm:text-4xl">
-          Get Your Free Quote — Starting at $50
-        </h2>
-        <div className="mx-auto mt-2 h-1.5 w-20 bg-brand-yellow" />
-
-        <div className="mt-12 grid grid-cols-1 gap-10 lg:grid-cols-5">
-          <div className="rounded-lg bg-white p-6 shadow-xl sm:p-8 lg:col-span-3">
-            <ContactForm />
+    <section id="contact" className="bg-[#f5f5f1] px-8 pb-[104px] pt-[100px] lg:px-14">
+      <div className="mx-auto grid max-w-[1300px] grid-cols-1 items-start gap-[72px] lg:grid-cols-[0.85fr_1.15fr]">
+        <div className="min-w-0">
+          <div className="mb-5 flex items-center gap-2.5">
+            <span className="h-2 w-2 bg-brand-yellow" />
+            <span className="font-display text-[11px] uppercase tracking-[0.18em] text-brand-navy/55">
+              Free quote
+            </span>
           </div>
+          <h2 className="font-display text-[36px] leading-[1.02] tracking-[-0.02em] text-brand-navy lg:text-[46px]">
+            Get Your Free Quote
+            <br />— Starting at $50
+          </h2>
 
-          <div className="flex flex-col justify-between rounded-lg bg-white/5 p-6 text-white ring-1 ring-white/10 sm:p-8 lg:col-span-2">
-            <div className="space-y-6">
-              <div>
-                <p className="font-display text-xs tracking-wide text-brand-yellow">
-                  MAIN LINE
-                </p>
-                <PhoneBadge className="mt-1 text-xl" />
-                <p className="mt-1 text-sm text-white/70">{business.phoneMainSub}</p>
-              </div>
-
-              <div>
-                <p className="font-display text-xs tracking-wide text-brand-yellow">
-                  TED&apos;S CELL
-                </p>
-                <a
-                  href={`tel:${business.phoneTedTel}`}
-                  className="font-display text-xl"
-                >
-                  {business.phoneTedDisplay}
-                </a>
-              </div>
-
-              <div>
-                <p className="font-display text-xs tracking-wide text-brand-yellow">
-                  EMAIL
-                </p>
-                <a
-                  href={`mailto:${business.email}`}
-                  className="break-words text-sm font-semibold underline"
-                >
-                  {business.email}
-                </a>
-              </div>
-
-              <div>
-                <p className="font-display text-xs tracking-wide text-brand-yellow">
-                  ADDRESS
-                </p>
-                <p className="text-sm font-semibold">{business.address}</p>
-              </div>
-
-              <div>
-                <p className="font-display text-xs tracking-wide text-brand-yellow">
-                  HOURS
-                </p>
-                <ul className="text-sm font-semibold text-white/90">
-                  {business.hours.map((h) => (
-                    <li key={h.day} className="flex justify-between gap-4">
-                      <span>{h.day}</span>
-                      <span className="text-white/70">{h.time}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+          <div className="mt-10 border-t-2 border-brand-navy pt-[22px]">
+            <div className="font-display text-[11px] tracking-[0.16em] text-brand-navy/55">
+              MAIN LINE
+            </div>
+            <a
+              href={`tel:${business.phoneMainTel}`}
+              className="mt-1.5 block font-display text-4xl leading-none tracking-[-0.01em] text-brand-navy transition hover:text-brand-red lg:text-[42px]"
+            >
+              {business.phoneMainDisplay}
+            </a>
+            <div className="mt-2 text-sm font-semibold text-brand-navy/60">
+              {business.phoneMainSub}
             </div>
           </div>
+
+          <div className="mt-[26px] grid grid-cols-2 gap-[26px]">
+            <div>
+              <div className="font-display text-[11px] tracking-[0.16em] text-brand-navy/55">
+                TED&rsquo;S CELL
+              </div>
+              <a
+                href={`tel:${business.phoneTedTel}`}
+                className="mt-1.5 block font-display text-xl text-brand-navy transition hover:text-brand-red"
+              >
+                {business.phoneTedDisplay}
+              </a>
+            </div>
+            <div>
+              <div className="font-display text-[11px] tracking-[0.16em] text-brand-navy/55">
+                EMAIL
+              </div>
+              <a
+                href={`mailto:${business.email}`}
+                className="mt-2 block break-words text-sm font-semibold text-brand-navy transition hover:text-brand-red"
+              >
+                {business.email}
+              </a>
+            </div>
+          </div>
+
+          <div className="mt-[30px] border-t border-brand-navy/18 pt-5">
+            <div className="font-display text-[11px] tracking-[0.16em] text-brand-navy/55">
+              ADDRESS
+            </div>
+            <p className="mt-[7px] text-[15px] font-semibold text-brand-navy">
+              {business.address}
+            </p>
+          </div>
+
+          <div className="mt-6 border-t border-brand-navy/18 pt-5">
+            <div className="mb-2.5 font-display text-[11px] tracking-[0.16em] text-brand-navy/55">
+              HOURS
+            </div>
+            {business.hours.map((h) => (
+              <div
+                key={h.day}
+                className="flex justify-between gap-4 py-[7px] text-[15px]"
+              >
+                <span className="font-semibold text-brand-navy">{h.day}</span>
+                <span className="text-brand-navy/65">{h.time}</span>
+              </div>
+            ))}
+          </div>
         </div>
+
+        <ContactForm />
       </div>
     </section>
   );

@@ -15,28 +15,47 @@ const archivoBlack = Archivo_Black({
 
 const siteUrl = "https://stardisposalservices.ca";
 
+const title =
+  "Star Disposal Services | Calgary Junk Removal & Bin Rentals Since 1996";
+const description =
+  "Calgary & Airdrie junk removal, appliance pickup, bin rentals (10-20 yd), dump runs, bobcat work, demolition and site clean-up since 1996. Same-day service, jobs start at $50. Call 403-50WASTE.";
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Star Disposal Services | Calgary Junk Removal & Bin Rentals Since 1996",
-  description:
-    "Calgary's trusted junk removal, hauling, and bin rental company since 1996. Bobcat work, dump runs, site clean-up, demolition, junk removal & all size bins. Starting at $50. Call 403-50WASTE.",
+  title,
+  description,
   keywords: [
     "junk removal Calgary",
+    "junk removal Airdrie",
     "bin rental Calgary",
     "dumpster rental Calgary",
+    "appliance removal Calgary",
     "bobcat services Calgary",
     "demolition Calgary",
     "dump runs Calgary",
     "site clean up Calgary",
+    "same day junk removal Calgary",
   ],
+  alternates: {
+    canonical: siteUrl,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
   openGraph: {
-    title: "Star Disposal Services | Calgary Junk Removal & Bin Rentals Since 1996",
+    title,
     description:
-      "Bobcat Work, Dump Runs, Site Clean-Up, Demolition, Junk Removal & All Size Bins — Starting at $50. Serving Calgary since 1996.",
+      "Junk Removal, Bin Rentals, Dump Runs, Bobcat Work, Demolition & Site Clean-Up — Starting at $50. Serving Calgary & Airdrie since 1996.",
     url: siteUrl,
     siteName: "Star Disposal Services",
     locale: "en_CA",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
   },
 };
 

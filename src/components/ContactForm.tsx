@@ -15,6 +15,7 @@ const services = [
 
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [service, setService] = useState("");
 
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -23,7 +24,6 @@ export default function ContactForm() {
     const name = data.get("name")?.toString().trim() ?? "";
     const phone = data.get("phone")?.toString().trim() ?? "";
     const email = data.get("email")?.toString().trim() ?? "";
-    const service = data.get("service")?.toString().trim() ?? "";
     const details = data.get("details")?.toString().trim() ?? "";
 
     const subject = `Free Quote Request — ${service || "General"}`;
@@ -42,97 +42,122 @@ export default function ContactForm() {
     )}&body=${encodeURIComponent(body)}`;
 
     setSubmitted(true);
+    setService("");
     form.reset();
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-        <div>
-          <label htmlFor="name" className="block text-sm font-semibold text-brand-navy">
-            Name
+    <form onSubmit={handleSubmit} className="bg-brand-navy px-9 pb-9 pt-10">
+      <div className="mb-[30px] font-display text-[11px] tracking-[0.16em] text-brand-yellow">
+        TELL US ABOUT THE JOB
+      </div>
+
+      <div className="grid grid-cols-1 gap-7 sm:grid-cols-2">
+        <div className="flex flex-col gap-2">
+          <label
+            htmlFor="sd-name"
+            className="font-display text-[10px] tracking-[0.14em] text-white/60"
+          >
+            NAME
           </label>
           <input
-            id="name"
+            id="sd-name"
             name="name"
             type="text"
             required
-            className="mt-1 w-full rounded-md border border-brand-navy/20 px-3 py-2 text-brand-navy focus:border-brand-navy focus:outline-none focus:ring-2 focus:ring-brand-yellow"
+            className="border-0 border-b border-white/35 bg-transparent py-2 text-[17px] text-white outline-none focus:border-brand-yellow"
           />
         </div>
-        <div>
-          <label htmlFor="phone" className="block text-sm font-semibold text-brand-navy">
-            Phone
+        <div className="flex flex-col gap-2">
+          <label
+            htmlFor="sd-phone"
+            className="font-display text-[10px] tracking-[0.14em] text-white/60"
+          >
+            PHONE
           </label>
           <input
-            id="phone"
+            id="sd-phone"
             name="phone"
             type="tel"
             required
-            className="mt-1 w-full rounded-md border border-brand-navy/20 px-3 py-2 text-brand-navy focus:border-brand-navy focus:outline-none focus:ring-2 focus:ring-brand-yellow"
+            className="border-0 border-b border-white/35 bg-transparent py-2 text-[17px] text-white outline-none focus:border-brand-yellow"
           />
         </div>
       </div>
 
-      <div>
-        <label htmlFor="email" className="block text-sm font-semibold text-brand-navy">
-          Email
+      <div className="mt-7 flex flex-col gap-2">
+        <label
+          htmlFor="sd-email"
+          className="font-display text-[10px] tracking-[0.14em] text-white/60"
+        >
+          EMAIL
         </label>
         <input
-          id="email"
+          id="sd-email"
           name="email"
           type="email"
           required
-          className="mt-1 w-full rounded-md border border-brand-navy/20 px-3 py-2 text-brand-navy focus:border-brand-navy focus:outline-none focus:ring-2 focus:ring-brand-yellow"
+          className="border-0 border-b border-white/35 bg-transparent py-2 text-[17px] text-white outline-none focus:border-brand-yellow"
         />
       </div>
 
-      <div>
-        <label htmlFor="service" className="block text-sm font-semibold text-brand-navy">
-          Service Needed
-        </label>
-        <select
-          id="service"
-          name="service"
-          required
-          defaultValue=""
-          className="mt-1 w-full rounded-md border border-brand-navy/20 bg-white px-3 py-2 text-brand-navy focus:border-brand-navy focus:outline-none focus:ring-2 focus:ring-brand-yellow"
-        >
-          <option value="" disabled>
-            Select a service
-          </option>
+      <div className="mt-[30px]">
+        <div className="mb-3 font-display text-[10px] tracking-[0.14em] text-white/60">
+          SERVICE NEEDED
+        </div>
+        <div className="flex flex-wrap gap-2">
           {services.map((s) => (
-            <option key={s} value={s}>
-              {s}
-            </option>
+            <label key={s} className="cursor-pointer">
+              <input
+                type="radio"
+                name="service"
+                value={s}
+                checked={service === s}
+                onChange={(e) => setService(e.target.value)}
+                required
+                className="sr-only"
+              />
+              <span
+                className={`inline-block border px-3.5 py-2.5 font-display text-[11px] tracking-[0.08em] transition hover:border-brand-yellow ${
+                  service === s
+                    ? "border-brand-yellow bg-brand-yellow text-brand-navy"
+                    : "border-white/30 text-white/85"
+                }`}
+              >
+                {s}
+              </span>
+            </label>
           ))}
-        </select>
+        </div>
       </div>
 
-      <div>
-        <label htmlFor="details" className="block text-sm font-semibold text-brand-navy">
-          Project Details
+      <div className="mt-[30px] flex flex-col gap-2">
+        <label
+          htmlFor="sd-details"
+          className="font-display text-[10px] tracking-[0.14em] text-white/60"
+        >
+          PROJECT DETAILS
         </label>
         <textarea
-          id="details"
+          id="sd-details"
           name="details"
           rows={4}
-          className="mt-1 w-full rounded-md border border-brand-navy/20 px-3 py-2 text-brand-navy focus:border-brand-navy focus:outline-none focus:ring-2 focus:ring-brand-yellow"
+          className="resize-y border-0 border-b border-white/35 bg-white/[0.06] p-3 text-base leading-[1.5] text-white outline-none focus:border-brand-yellow"
         />
       </div>
 
       <button
         type="submit"
-        className="glow-yellow w-full rounded-md bg-brand-yellow px-6 py-4 font-display text-base text-brand-red shadow-md transition hover:brightness-105"
+        className="mt-[34px] w-full bg-brand-yellow px-5 py-5 font-display text-[15px] tracking-[0.1em] text-brand-navy transition hover:brightness-105"
       >
         REQUEST MY FREE QUOTE
       </button>
 
       {submitted && (
-        <p className="rounded-md bg-brand-navy/5 px-4 py-3 text-sm font-semibold text-brand-navy">
+        <p className="mt-[18px] bg-white/[0.08] px-4 py-3.5 text-sm font-semibold leading-[1.55] text-white">
           Thanks! Your email app should now be open with your quote request
           ready to send. Prefer to talk now? Call{" "}
-          <a href={`tel:${business.phoneMainTel}`} className="text-brand-red underline">
+          <a href={`tel:${business.phoneMainTel}`} className="text-brand-yellow">
             {business.phoneMainDisplay}
           </a>
           .
