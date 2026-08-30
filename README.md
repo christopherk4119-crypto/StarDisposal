@@ -62,11 +62,12 @@ entry, header menu, footer index, hub card and schema all follow automatically.
   it); per-page `Service` pointing at that entity by `@id`; `BreadcrumbList` on
   every interior page; `FAQPage` on every FAQ block. 92 blocks, all validated
   as parsing.
-- **Reviews are from Yelp** and are labelled as such on the page. They carry no
-  `Review` or `aggregateRating` structured data on purpose: Google's review
+- **Testimonials carry no `Review` or `aggregateRating` structured data**, on
+  purpose. They originate from the company's Yelp listing, and Google's review
   snippet policy requires review markup to come from reviews the site collects
-  itself, so marking up third-party Yelp reviews risks a manual action. To earn
-  review stars in search results, collect reviews through a form on this site.
+  itself — marking up third-party reviews risks a manual action rather than
+  earning stars. To earn review stars in search results, collect reviews
+  through a form on this site.
 - **Zero orphan pages** — the footer carries a full service index, so every page
   is one click from every other page.
 - **Icons** — `public/icon-512.png` and `public/apple-icon-180.png` are square

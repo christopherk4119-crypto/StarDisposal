@@ -2,16 +2,11 @@ export default function Testimonials() {
   return (
     <section className="bg-brand-yellow px-8 pb-[104px] pt-24 lg:px-14">
       <div className="mx-auto max-w-[1180px]">
-        <div className="mb-10 flex flex-wrap items-center justify-between gap-4">
-          <div className="flex items-center gap-2.5">
-            <span className="h-2 w-2 bg-brand-navy" />
-            <h2 className="font-display text-[11px] uppercase tracking-[0.18em] text-brand-navy/65">
-              What Our Customers Say
-            </h2>
-          </div>
-          <span className="border border-brand-navy/35 px-3.5 py-2 font-display text-[10px] uppercase tracking-[0.14em] text-brand-navy/70">
-            Reviews from Yelp
-          </span>
+        <div className="mb-10 flex items-center gap-2.5">
+          <span className="h-2 w-2 bg-brand-navy" />
+          <h2 className="font-display text-[11px] uppercase tracking-[0.18em] text-brand-navy/65">
+            What Our Customers Say
+          </h2>
         </div>
 
         <blockquote className="m-0 max-w-[1020px]">
@@ -62,13 +57,6 @@ export default function Testimonials() {
             </footer>
           </blockquote>
         </div>
-
-        <p className="mt-14 border-t border-brand-navy/25 pt-5 text-[13px] leading-[1.6] text-brand-navy/70">
-          Reviews reproduced from our Yelp listing, quoted verbatim. Because
-          they were collected by Yelp rather than by this site, they are not
-          marked up as review snippets — Google requires review structured data
-          to come from reviews the site collects itself.
-        </p>
       </div>
     </section>
   );
