@@ -72,6 +72,9 @@ entry, header menu, footer index, hub card and schema all follow automatically.
   is one click from every other page.
 - **Icons** — `public/icon-512.png` and `public/apple-icon-180.png` are square
   (Google silently falls back to a generic icon otherwise), plus `icon.svg`.
+- **`sameAs`** carries the Yelp listing. Add the Google Business Profile share
+  link to `business.sameAs` when available — it is the highest-value entry for
+  entity confirmation. Real profile URLs only; a bare domain does nothing.
 
 ## Phone numbers
 
@@ -86,6 +89,13 @@ Do not display `phoneMainDisplay` on its own anywhere, or people who dial what
 they read will reach the wrong number.
 
 `403-204-7827` is kept as a second line in the footer and on the contact page.
+
+**Known NAP mismatch:** the Google Business Profile currently lists
+403-509-2783 (which is what 403-50-WASTE actually spells). The site and the
+profile therefore disagree on the primary phone number. The manual is blunt
+that NAP inconsistency is the number one off-site hygiene problem, so this
+should be resolved — either by updating the profile to 403-861-2361, or by
+switching the site to the profile's number.
 
 ## Verifying before you ship
 

@@ -40,6 +40,7 @@ export default function LocalBusinessSchema() {
           },
         ],
         email: business.email,
+        sameAs: [...business.sameAs],
         founder: { "@type": "Person", name: business.owner },
         foundingDate: business.foundingDate,
         priceRange: business.priceRange,

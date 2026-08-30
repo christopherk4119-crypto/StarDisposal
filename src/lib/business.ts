@@ -31,10 +31,19 @@ export const business = {
 
   /**
    * Main line. `phoneMainDisplay` is the vanity string from the truck signage;
-   * `phoneMainSub` carries the dialable digits and must always be rendered
-   * next to it. Never show the vanity string on its own — 403-50-WASTE spells
-   * 403-509-2783, which is NOT this line, so anyone dialling it by hand would
-   * reach the wrong number.
+   * `phoneMainSub` carries the dialable digits and must ALWAYS be rendered
+   * beside it.
+   *
+   * This matters more than usual here: 403-50-WASTE spells 403-509-2783,
+   * which is a different LIVE line (it is the number currently on the Google
+   * Business Profile). So anyone who reads the vanity string and dials it by
+   * hand reaches that line, not this one. Never render `phoneMainDisplay`
+   * without `phoneMainSub` next to it.
+   *
+   * NAP NOTE: the Google Business Profile currently lists 403-509-2783, so
+   * the site and the profile do not match. That is a known, temporary
+   * mismatch — the profile is due to be updated. Until it is, this is the
+   * single biggest off-site SEO inconsistency on the business.
    */
   phoneMainDisplay: "403-50-WASTE",
   phoneMainSub: "403-861-2361",
@@ -43,6 +52,13 @@ export const business = {
   /** Second line kept from the intake form. */
   phoneAltDisplay: "403-204-7827",
   phoneAltTel: "+14032047827",
+
+  /**
+   * Real profile URLs only — a bare domain does nothing for entity
+   * confirmation. Add the Google Business Profile share link here once
+   * available; that is the highest-value entry in this list.
+   */
+  sameAs: ["https://www.yelp.ca/biz/star-disposal-services-calgary-5"],
 
   priceRange: "$50+",
   startingPrice: "$50",
