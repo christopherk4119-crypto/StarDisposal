@@ -10,7 +10,7 @@ export const junkRemovalServices: Service[] = [
     h1: "Appliance Removal Calgary",
     title: "Appliance Removal Calgary | Fridges, Washers, Stoves",
     description:
-      "Fridge, freezer, washer, dryer and stove removal in Calgary and Airdrie. We carry it out — stairs included. From $50. Call 403-204-7827.",
+      "Fridge, freezer, washer, dryer and stove removal in Calgary and Airdrie. We carry it out — stairs included. From $50. Call 403-861-2361.",
     summary:
       "Fridges, freezers, washers, dryers, stoves and dishwashers carried out and hauled away — basement stairs included.",
     image: "/images/gallery/bin-trailer-alley.webp",
@@ -63,7 +63,7 @@ export const junkRemovalServices: Service[] = [
       {
         step: "Tell us what and where",
         detail:
-          "Call 403-204-7827 with the appliance type and which floor it is on. A photo texted over is even better. You get a price on that call.",
+          "Call 403-861-2361 with the appliance type and which floor it is on. A photo texted over is even better. You get a price on that call.",
       },
       {
         step: "Book a window",
@@ -131,7 +131,7 @@ export const junkRemovalServices: Service[] = [
     h1: "Furniture Removal Calgary",
     title: "Furniture Removal Calgary | Couches, Beds, Desks",
     description:
-      "Couch, sectional, bed, table and desk removal across Calgary and Airdrie. We carry it out and haul it away. From $50 — call 403-204-7827.",
+      "Couch, sectional, bed, table and desk removal across Calgary and Airdrie. We carry it out and haul it away. From $50 — call 403-861-2361.",
     summary:
       "Couches, sectionals, beds, dressers, tables and office furniture carried out of the room they are in and hauled away.",
     image: "/images/gallery/mattress-furniture-bin.webp",
@@ -184,7 +184,7 @@ export const junkRemovalServices: Service[] = [
       {
         step: "Describe the pieces",
         detail:
-          "Call 403-204-7827 with what is going and which floor it is on. Photos help us price it accurately first time.",
+          "Call 403-861-2361 with what is going and which floor it is on. Photos help us price it accurately first time.",
       },
       {
         step: "Flag the access",
@@ -247,7 +247,7 @@ export const junkRemovalServices: Service[] = [
     h1: "Mattress Disposal Calgary",
     title: "Mattress Disposal Calgary | Pickup From $50",
     description:
-      "Mattress and box spring removal in Calgary and Airdrie. Any size, picked up from inside the home. From $50 — call 403-204-7827.",
+      "Mattress and box spring removal in Calgary and Airdrie. Any size, picked up from inside the home. From $50 — call 403-861-2361.",
     summary:
       "Mattresses and box springs of any size, picked up from the bedroom rather than the curb, and routed for recycling.",
     image: "/images/gallery/mattress-furniture-bin.webp",
@@ -298,7 +298,7 @@ export const junkRemovalServices: Service[] = [
       {
         step: "Call with the size and floor",
         detail:
-          "403-204-7827. Tell us the mattress size, how many pieces, and which floor. You get a price on the call.",
+          "403-861-2361. Tell us the mattress size, how many pieces, and which floor. You get a price on the call.",
       },
       {
         step: "Time it with the delivery",
@@ -328,7 +328,7 @@ export const junkRemovalServices: Service[] = [
     faqs: [
       {
         q: "How much is mattress removal in Calgary?",
-        a: "Pickups start at $50, and a mattress with its box spring is usually a single-item price rather than two. Call 403-204-7827 and you get the number on the phone.",
+        a: "Pickups start at $50, and a mattress with its box spring is usually a single-item price rather than two. Call 403-861-2361 and you get the number on the phone.",
       },
       {
         q: "Will the City of Calgary take a mattress at the curb?",
@@ -365,7 +365,7 @@ export const junkRemovalServices: Service[] = [
     h1: "Garage Clean-Out Calgary",
     title: "Garage Clean-Out Calgary | Full Clear-Out From $50",
     description:
-      "Garage clean-outs in Calgary and Airdrie — we empty it, sort the metal, sweep the pad. Since 1996. Call 403-204-7827 for a quote.",
+      "Garage clean-outs in Calgary and Airdrie — we empty it, sort the metal, sweep the pad. Since 1996. Call 403-861-2361 for a quote.",
     summary:
       "We empty the garage, sort the scrap out of it, and sweep the pad — so you can park in it again.",
     image: "/images/gallery/scrap-tires-cleanup.webp",
@@ -425,7 +425,7 @@ export const junkRemovalServices: Service[] = [
       {
         step: "Walk through it",
         detail:
-          "We look at the garage with you and you tell us what stays. Photos over text to 403-204-7827 work for an initial number.",
+          "We look at the garage with you and you tell us what stays. Photos over text to 403-861-2361 work for an initial number.",
       },
       {
         step: "Pull the hazardous material aside",
@@ -456,7 +456,7 @@ export const junkRemovalServices: Service[] = [
     faqs: [
       {
         q: "How much does a garage clean-out cost in Calgary?",
-        a: "It depends on volume and weight. A partly full single-car garage is often a truckload; a double-car garage packed floor to ceiling is usually a bin. Jobs start at $50 and you get a firm number before we load. Call 403-204-7827.",
+        a: "It depends on volume and weight. A partly full single-car garage is often a truckload; a double-car garage packed floor to ceiling is usually a bin. Jobs start at $50 and you get a firm number before we load. Call 403-861-2361.",
       },
       {
         q: "Do I need to sort anything before you come?",
@@ -493,7 +493,7 @@ export const junkRemovalServices: Service[] = [
     h1: "Estate Clean-Out Calgary",
     title: "Estate Clean-Out Calgary | Full House Clearance",
     description:
-      "Compassionate estate and full house clean-outs in Calgary and Airdrie. Downsizing, probate and possession deadlines. Call 403-204-7827.",
+      "Compassionate estate and full house clean-outs in Calgary and Airdrie. Downsizing, probate and possession deadlines. Call 403-861-2361.",
     summary:
       "Full house clearances for estates, downsizing and possession deadlines — handled patiently and without pressure.",
     image: "/images/gallery/bin-trailer-alley.webp",
@@ -553,7 +553,7 @@ export const junkRemovalServices: Service[] = [
       {
         step: "Talk it through first",
         detail:
-          "Call 403-204-7827. Tell us the size of the house, the deadline and where you are in the process. There is no pressure to book on that call.",
+          "Call 403-861-2361. Tell us the size of the house, the deadline and where you are in the process. There is no pressure to book on that call.",
       },
       {
         step: "Walk the house",
@@ -584,7 +584,7 @@ export const junkRemovalServices: Service[] = [
     faqs: [
       {
         q: "How much does an estate clean-out cost in Calgary?",
-        a: "It is priced by volume and weight, and a full house is usually multiple loads or a bin over several days. We walk the property first so the number reflects the real job. Call 403-204-7827 to arrange that.",
+        a: "It is priced by volume and weight, and a full house is usually multiple loads or a bin over several days. We walk the property first so the number reflects the real job. Call 403-861-2361 to arrange that.",
       },
       {
         q: "How long does clearing a house take?",
@@ -621,7 +621,7 @@ export const junkRemovalServices: Service[] = [
     h1: "Dump Runs Calgary",
     title: "Dump Run Calgary | We Haul It to the Landfill",
     description:
-      "Dump runs across Calgary and Airdrie — we load it, we pay the tipping fee, you skip the landfill queue. Call 403-204-7827.",
+      "Dump runs across Calgary and Airdrie — we load it, we pay the tipping fee, you skip the landfill queue. Call 403-861-2361.",
     summary:
       "You have a pile and no truck. We load it, haul it, pay the tipping fee, and you never see the landfill.",
     image: "/images/gallery/yard-cleanup-debris.webp",
@@ -673,7 +673,7 @@ export const junkRemovalServices: Service[] = [
       {
         step: "Describe the material",
         detail:
-          "Call 403-204-7827 and say what it actually is — boxes, lumber, concrete, yard waste. Material matters more than volume for the price.",
+          "Call 403-861-2361 and say what it actually is — boxes, lumber, concrete, yard waste. Material matters more than volume for the price.",
       },
       {
         step: "Pick loaded or self-load",
@@ -704,7 +704,7 @@ export const junkRemovalServices: Service[] = [
     faqs: [
       {
         q: "How much is a dump run in Calgary?",
-        a: "Jobs start at $50 and the price is driven by weight and volume. Tell us what the material actually is when you call 403-204-7827 — concrete and boxes are very different loads — and the number you get will hold.",
+        a: "Jobs start at $50 and the price is driven by weight and volume. Tell us what the material actually is when you call 403-861-2361 — concrete and boxes are very different loads — and the number you get will hold.",
       },
       {
         q: "Does the price include the landfill fee?",
@@ -741,7 +741,7 @@ export const junkRemovalServices: Service[] = [
     h1: "Yard Waste Removal Calgary",
     title: "Yard Waste Removal Calgary | Branches, Sod, Debris",
     description:
-      "Yard waste, branch, sod and landscaping debris removal in Calgary and Airdrie. More than the green cart holds. Call 403-204-7827.",
+      "Yard waste, branch, sod and landscaping debris removal in Calgary and Airdrie. More than the green cart holds. Call 403-861-2361.",
     summary:
       "Branches, sod, soil, leaves and landscaping debris — everything that will never fit in a green cart.",
     image: "/images/gallery/yard-cleanup-debris.webp",
@@ -802,7 +802,7 @@ export const junkRemovalServices: Service[] = [
       {
         step: "Tell us what the material is",
         detail:
-          "Call 403-204-7827. Branches, sod, fence panels and landscaping rock all price differently — describing the material gets you an accurate number.",
+          "Call 403-861-2361. Branches, sod, fence panels and landscaping rock all price differently — describing the material gets you an accurate number.",
       },
       {
         step: "Keep organics separate if you can",
@@ -837,7 +837,7 @@ export const junkRemovalServices: Service[] = [
       },
       {
         q: "How much does yard waste removal cost in Calgary?",
-        a: "It depends heavily on the material. Branches and leaves are light and go to compost, which is cheaper. Sod, soil and landscaping rock are dense and price higher. Call 403-204-7827 and describe the material.",
+        a: "It depends heavily on the material. Branches and leaves are light and go to compost, which is cheaper. Sod, soil and landscaping rock are dense and price higher. Call 403-861-2361 and describe the material.",
       },
       {
         q: "Do you remove tree stumps?",
@@ -870,7 +870,7 @@ export const junkRemovalServices: Service[] = [
     h1: "Scrap Metal Removal Calgary",
     title: "Scrap Metal Removal Calgary | Free On Volume",
     description:
-      "Scrap metal pickup in Calgary and Airdrie — appliances, steel, tires, machinery. Often cheaper than general junk. Call 403-204-7827.",
+      "Scrap metal pickup in Calgary and Airdrie — appliances, steel, tires, machinery. Often cheaper than general junk. Call 403-861-2361.",
     summary:
       "Steel, appliances, machinery and metal scrap picked up and taken to the scrap yard rather than the landfill.",
     image: "/images/gallery/scrap-tires-cleanup.webp",
@@ -880,7 +880,7 @@ export const junkRemovalServices: Service[] = [
     intro: [
       "Metal is the one category of junk that is genuinely worth something, and it is the reason a scrap-heavy job often costs less than a general junk load of the same size.",
       "We take steel, appliances, machinery, old bikes, barbecues, water heaters, furnaces, ductwork, steel shelving, car parts, rebar, pipe, radiators, aluminium and copper. It goes to a scrap yard rather than into a hole at the landfill.",
-      "For larger volumes of clean metal, the scrap value can offset most or all of the cost of the pickup. Call 403-204-7827, describe what you have, and we will tell you honestly where your job lands.",
+      "For larger volumes of clean metal, the scrap value can offset most or all of the cost of the pickup. Call 403-861-2361, describe what you have, and we will tell you honestly where your job lands.",
     ],
     sections: [
       {
@@ -930,7 +930,7 @@ export const junkRemovalServices: Service[] = [
       {
         step: "Describe the metal",
         detail:
-          "Call 403-204-7827. Say roughly what it is and how much — a photo helps. Metal-heavy jobs price better and we will tell you so.",
+          "Call 403-861-2361. Say roughly what it is and how much — a photo helps. Metal-heavy jobs price better and we will tell you so.",
       },
       {
         step: "Leave it where it is",
@@ -961,7 +961,7 @@ export const junkRemovalServices: Service[] = [
     faqs: [
       {
         q: "Is scrap metal removal free?",
-        a: "Not automatically, but it is cheaper than general junk removal because the metal has value. On larger volumes of clean metal, the scrap value can offset most or all of the pickup cost. Call 403-204-7827 and describe what you have.",
+        a: "Not automatically, but it is cheaper than general junk removal because the metal has value. On larger volumes of clean metal, the scrap value can offset most or all of the pickup cost. Call 403-861-2361 and describe what you have.",
       },
       {
         q: "What metal do you take?",

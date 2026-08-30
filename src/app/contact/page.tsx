@@ -6,9 +6,9 @@ import PageHero from "@/components/PageHero";
 import FaqSection from "@/components/FaqSection";
 import { siteUrl, business } from "@/lib/business";
 
-const title = "Contact Star Disposal Services | 403-204-7827";
+const title = "Contact Star Disposal Services | 403-861-2361";
 const description =
-  "Get a free quote for junk removal, bin rentals or site work in Calgary and Airdrie. Call 403-204-7827, 8 AM to 8 PM, seven days.";
+  "Get a free quote for junk removal, bin rentals or site work in Calgary and Airdrie. Call 403-861-2361, 8 AM to 8 PM, seven days.";
 const url = `${siteUrl}/contact`;
 
 export const metadata: Metadata = {
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "What is the fastest way to get a price?",
-    a: `Call ${business.phoneMainDisplay} and describe the job, or text photos to the same number. Photos get you a far more accurate number than a description, especially for demolition and property clean-ups.`,
+    a: `Call ${business.phoneMainSub} and describe the job, or text photos to the same number. Photos get you a far more accurate number than a description, especially for demolition and property clean-ups.`,
   },
   {
     q: "What are your hours?",

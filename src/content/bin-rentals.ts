@@ -10,7 +10,7 @@ export const binRentalServices: Service[] = [
     h1: "10 Yard Bin Rental Calgary",
     title: "10 Yard Bin Rental Calgary | Small Loads & Heavy Debris",
     description:
-      "10 yard bin rental in Calgary and Airdrie. Fits a tight driveway, right size for concrete, dirt and small renos. Call 403-204-7827.",
+      "10 yard bin rental in Calgary and Airdrie. Fits a tight driveway, right size for concrete, dirt and small renos. Call 403-861-2361.",
     summary:
       "The small bin. Fits a tight driveway, and the correct choice for heavy material like concrete, tile and soil.",
     image: "/images/gallery/bin-trailer-alley.webp",
@@ -44,7 +44,7 @@ export const binRentalServices: Service[] = [
         body: [
           "The mistake to avoid with a 10 yard is using it for light bulky material. Furniture, cabinetry, boxes, insulation and drywall are all voluminous and light, and a 10 yard fills up fast without ever approaching its weight limit.",
           "If you are clearing a whole house, gutting a kitchen, or emptying a packed double garage, a 15 or 20 yard bin will cost you less than two hauls of a 10.",
-          "The rule we give people: if you are throwing out heavy things, go small. If you are throwing out big things, go bigger. Call 403-204-7827 and describe the material and we will tell you which one you actually need.",
+          "The rule we give people: if you are throwing out heavy things, go small. If you are throwing out big things, go bigger. Call 403-861-2361 and describe the material and we will tell you which one you actually need.",
         ],
       },
     ],
@@ -62,7 +62,7 @@ export const binRentalServices: Service[] = [
       {
         step: "Describe the material and the space",
         detail:
-          "Call 403-204-7827. Tell us what is going in and where the bin needs to sit — narrow driveway and alley placements are routine.",
+          "Call 403-861-2361. Tell us what is going in and where the bin needs to sit — narrow driveway and alley placements are routine.",
       },
       {
         step: "We confirm the size",
@@ -126,7 +126,7 @@ export const binRentalServices: Service[] = [
     h1: "12 Yard Bin Rental Calgary",
     title: "12 Yard Bin Rental Calgary | Mid-Size Driveway Bin",
     description:
-      "12 yard bin rental for Calgary and Airdrie garages, decks and mid-size clean-outs. Still fits a normal driveway. Call 403-204-7827.",
+      "12 yard bin rental for Calgary and Airdrie garages, decks and mid-size clean-outs. Still fits a normal driveway. Call 403-861-2361.",
     summary:
       "A step up from the 10 with the same driveway footprint — the practical choice for garages and deck teardowns.",
     image: "/images/gallery/bin-trailer-apartment.webp",
@@ -178,7 +178,7 @@ export const binRentalServices: Service[] = [
       {
         step: "Call with the job",
         detail:
-          "403-204-7827. A packed single garage, a half-full double, or an average deck teardown are all 12 yard jobs.",
+          "403-861-2361. A packed single garage, a half-full double, or an average deck teardown are all 12 yard jobs.",
       },
       {
         step: "Confirm the drop spot",
@@ -242,7 +242,7 @@ export const binRentalServices: Service[] = [
     h1: "15 Yard Bin Rental Calgary",
     title: "15 Yard Bin Rental Calgary | Renos & Big Clean-Outs",
     description:
-      "15 yard bin rental in Calgary and Airdrie. The go-to size for kitchen renos, basements and full garage clear-outs. Call 403-204-7827.",
+      "15 yard bin rental in Calgary and Airdrie. The go-to size for kitchen renos, basements and full garage clear-outs. Call 403-861-2361.",
     summary:
       "Our most-booked size. Kitchen renovations, basement clear-outs and packed double garages all land here.",
     image: "/images/gallery/mattress-furniture-bin.webp",
@@ -302,7 +302,7 @@ export const binRentalServices: Service[] = [
       {
         step: "Describe the project",
         detail:
-          "Call 403-204-7827. Kitchen gut, basement clear-out, double garage — all standard 15 yard jobs.",
+          "Call 403-861-2361. Kitchen gut, basement clear-out, double garage — all standard 15 yard jobs.",
       },
       {
         step: "Check the driveway length",
@@ -370,7 +370,7 @@ export const binRentalServices: Service[] = [
     h1: "20 Yard Bin Rental Calgary",
     title: "20 Yard Bin Rental Calgary | Our Largest Bin",
     description:
-      "20 yard bin rental in Calgary and Airdrie for whole-house clear-outs, big renos and construction. Call 403-204-7827 to book.",
+      "20 yard bin rental in Calgary and Airdrie for whole-house clear-outs, big renos and construction. Call 403-861-2361 to book.",
     summary:
       "Our largest bin. Whole-house clear-outs, major renovations, roofing and construction sites.",
     image: "/images/gallery/yard-cleanup-debris.webp",
@@ -404,7 +404,7 @@ export const binRentalServices: Service[] = [
         body: [
           "A gut renovation touching multiple rooms produces flooring, subfloor, drywall, insulation, framing, cabinetry, fixtures, tile and old mechanical all at once, over weeks rather than days.",
           "Two things make the 20 the right call there. First, the sheer volume. Second, the fact that on a long job you do not want to be interrupting the trades to coordinate a haul every few days.",
-          "For anything at that scale, a standing swap arrangement is usually the cleanest way to run it. Call 403-204-7827 and we will set up a schedule around your build rather than making you phone in each time.",
+          "For anything at that scale, a standing swap arrangement is usually the cleanest way to run it. Call 403-861-2361 and we will set up a schedule around your build rather than making you phone in each time.",
         ],
       },
       {
@@ -430,7 +430,7 @@ export const binRentalServices: Service[] = [
       {
         step: "Confirm the space first",
         detail:
-          "Call 403-204-7827 and describe the drop spot. A 20 needs a straight run on firm level ground with nothing overhead.",
+          "Call 403-861-2361 and describe the drop spot. A 20 needs a straight run on firm level ground with nothing overhead.",
       },
       {
         step: "Tell us the material",
@@ -498,7 +498,7 @@ export const binRentalServices: Service[] = [
     h1: "Renovation Bin Rental Calgary",
     title: "Renovation Bin Rental Calgary | Reno Waste Bins",
     description:
-      "Bin rental for Calgary renovations — drywall, flooring, tile, cabinets and fixtures. Swaps so trades never stop. Call 403-204-7827.",
+      "Bin rental for Calgary renovations — drywall, flooring, tile, cabinets and fixtures. Swaps so trades never stop. Call 403-861-2361.",
     summary:
       "Bins sized and scheduled around a renovation, with swaps so the trades never stop working.",
     image: "/images/gallery/mattress-furniture-bin.webp",
@@ -541,7 +541,7 @@ export const binRentalServices: Service[] = [
         body: [
           "For contractors running several jobs, the arrangement that works is a standing account rather than a booking each time. Same phone number, known sizes, swaps scheduled around your build timeline.",
           "We have been doing this in Calgary since 1996 and the thing contractors actually care about is that the bin goes when it is called and the site does not become a bottleneck. That is the service.",
-          "Call 403-204-7827 and talk to Ted directly about a standing arrangement rather than booking job by job.",
+          "Call 403-861-2361 and talk to Ted directly about a standing arrangement rather than booking job by job.",
         ],
       },
     ],
@@ -559,7 +559,7 @@ export const binRentalServices: Service[] = [
       {
         step: "Talk through the build",
         detail:
-          "Call 403-204-7827 with the scope and timeline. Material and schedule matter more than room count.",
+          "Call 403-861-2361 with the scope and timeline. Material and schedule matter more than room count.",
       },
       {
         step: "Bin before demo day",
@@ -590,7 +590,7 @@ export const binRentalServices: Service[] = [
     faqs: [
       {
         q: "What size bin do I need for a renovation?",
-        a: "A 15 yard is the usual starting point for a single-room gut. Bulky light material like cabinetry and drywall means size up; dense material like tile and countertop means a smaller bin filled properly. Call 403-204-7827 and describe what is coming out.",
+        a: "A 15 yard is the usual starting point for a single-room gut. Bulky light material like cabinetry and drywall means size up; dense material like tile and countertop means a smaller bin filled properly. Call 403-861-2361 and describe what is coming out.",
       },
       {
         q: "When should the bin be delivered?",

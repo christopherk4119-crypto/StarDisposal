@@ -158,7 +158,7 @@ export default function ContactForm() {
           Thanks! Your email app should now be open with your quote request
           ready to send. Prefer to talk now? Call{" "}
           <a href={`tel:${business.phoneMainTel}`} className="text-brand-yellow">
-            {business.phoneMainDisplay}
+            {business.phoneMainSub}
           </a>
           .
         </p>

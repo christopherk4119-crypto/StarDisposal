@@ -28,11 +28,21 @@ export const business = {
   geo: { latitude: 51.0447, longitude: -113.9905 },
 
   email: "stardisposalservices@outlook.com",
-  phoneMainDisplay: "403-204-7827",
-  phoneMainSub: "",
-  phoneMainTel: "+14032047827",
-  phoneTedDisplay: "403-861-2361",
-  phoneTedTel: "+14038612361",
+
+  /**
+   * Main line. `phoneMainDisplay` is the vanity string from the truck signage;
+   * `phoneMainSub` carries the dialable digits and must always be rendered
+   * next to it. Never show the vanity string on its own — 403-50-WASTE spells
+   * 403-509-2783, which is NOT this line, so anyone dialling it by hand would
+   * reach the wrong number.
+   */
+  phoneMainDisplay: "403-50-WASTE",
+  phoneMainSub: "403-861-2361",
+  phoneMainTel: "+14038612361",
+
+  /** Second line kept from the intake form. */
+  phoneAltDisplay: "403-204-7827",
+  phoneAltTel: "+14032047827",
 
   priceRange: "$50+",
   startingPrice: "$50",
@@ -48,6 +58,14 @@ export const business = {
 } as const;
 
 export const areaServed = [...business.primaryAreas, ...business.secondaryAreas];
+
+/**
+ * The number to use in running prose, meta descriptions and FAQ answers.
+ * Always the real digits — a reader must be able to dial what they read.
+ * The vanity string is for the visual CTAs only, where the digits sit
+ * directly beneath it.
+ */
+export const phoneInText = business.phoneMainSub;
 
 /** Human-readable service area sentence, reused across pages instead of a page-per-town. */
 export const areaSentence =

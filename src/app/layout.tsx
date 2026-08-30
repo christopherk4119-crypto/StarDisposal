@@ -19,7 +19,7 @@ const archivoBlack = Archivo_Black({
 
 const title = "Junk Removal Calgary | Bins, Dump Runs & Clean-Ups";
 const description =
-  "Calgary & Airdrie junk removal, bin rentals, dump runs, bobcat work, demolition & site clean-up since 1996. From $50 — call 403-204-7827.";
+  "Calgary & Airdrie junk removal, bin rentals, dump runs, bobcat work, demolition & site clean-up since 1996. From $50 — call 403-861-2361.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

@@ -10,7 +10,7 @@ import { allHubs } from "@/lib/services";
 
 const title = "About Star Disposal Services | Calgary Since 1996";
 const description =
-  "Family run Calgary junk removal and bin rental since 1996. Owned by Talib (Ted) Ferris, who still answers the phone. Call 403-204-7827.";
+  "Family run Calgary junk removal and bin rental since 1996. Owned by Talib (Ted) Ferris, who still answers the phone. Call 403-861-2361.";
 const url = `${siteUrl}/about`;
 
 export const metadata: Metadata = {
@@ -68,13 +68,13 @@ export default function AboutPage() {
               </p>
               <p className="mt-5 text-[17px] leading-[1.65] text-brand-navy/78">
                 We are not a franchise and we are not a call centre. When you
-                ring {business.phoneMainDisplay}, you get someone who has been
+                ring {business.phoneMainSub}, you get someone who has been
                 on the trucks. That is not a marketing line — it is the whole
                 reason people call us back.
               </p>
               <p className="mt-6 border-l-4 border-brand-yellow py-1 pl-5 text-[17px] font-semibold leading-[1.55] text-brand-navy">
-                Still local, still family-run, and you can still reach Ted
-                directly on his cell. That is not changing.
+                Still local, still family-run, and the number on the truck
+                still rings Ted&rsquo;s own phone. That is not changing.
               </p>
             </div>
 
@@ -223,7 +223,7 @@ export default function AboutPage() {
         <CallBand
           tone="yellow"
           heading="Talk to Ted directly"
-          blurb={`${business.phoneMainDisplay}, 8 AM to 8 PM, seven days a week. No call centre, no callback queue.`}
+          blurb={`${business.phoneMainSub} — ${business.phoneMainDisplay} — 8 AM to 8 PM, seven days. No call centre, no callback queue.`}
         />
       </main>
       <Footer />

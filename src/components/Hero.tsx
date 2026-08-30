@@ -44,24 +44,24 @@ export default function Hero() {
         <div className="mt-10 flex flex-wrap items-center gap-6">
           <a
             href={`tel:${business.phoneMainTel}`}
-            className="flex items-center gap-[18px] bg-brand-yellow px-8 py-[22px] text-brand-navy transition hover:brightness-105"
+            className="flex max-w-full items-center gap-3 bg-brand-yellow px-4 py-[22px] text-brand-navy transition hover:brightness-105 sm:gap-[18px] sm:px-8"
           >
             <span className="font-display text-sm tracking-[0.1em]">
               CALL NOW
             </span>
             <span className="block h-[34px] w-px bg-brand-navy/25" />
             <span className="flex flex-col gap-[3px]">
-              <span className="font-display text-[26px] leading-none">
+              <span className="whitespace-nowrap font-display text-[26px] leading-none">
                 {business.phoneMainDisplay}
               </span>
               <span className="text-xs font-semibold text-brand-navy/70">
-                Ted or the yard, 8 AM – 8 PM
+                {business.phoneMainSub} · 8 AM – 8 PM
               </span>
             </span>
           </a>
           <Link
             href="/contact"
-            className="flex items-center gap-[18px] border border-brand-yellow/60 bg-white/[0.06] px-8 py-[22px] text-white transition hover:border-brand-yellow hover:bg-brand-yellow/[0.12]"
+            className="flex max-w-full items-center gap-3 border border-brand-yellow/60 bg-white/[0.06] px-4 py-[22px] text-white transition hover:border-brand-yellow hover:bg-brand-yellow/[0.12] sm:gap-[18px] sm:px-8"
           >
             <span className="font-display text-sm tracking-[0.1em] text-brand-yellow">
               EMAIL US

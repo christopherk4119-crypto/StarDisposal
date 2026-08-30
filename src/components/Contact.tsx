@@ -37,13 +37,13 @@ export default function Contact() {
           <div className="mt-[26px] grid grid-cols-2 gap-[26px]">
             <div>
               <div className="font-display text-[11px] tracking-[0.16em] text-brand-navy/55">
-                TED&rsquo;S CELL
+                SECOND LINE
               </div>
               <a
-                href={`tel:${business.phoneTedTel}`}
+                href={`tel:${business.phoneAltTel}`}
                 className="mt-1.5 block font-display text-xl text-brand-navy transition hover:text-brand-red"
               >
-                {business.phoneTedDisplay}
+                {business.phoneAltDisplay}
               </a>
             </div>
             <div>

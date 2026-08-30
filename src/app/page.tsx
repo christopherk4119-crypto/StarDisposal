@@ -9,45 +9,11 @@ import ServiceArea from "@/components/ServiceArea";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import FaqSection from "@/components/FaqSection";
-import JsonLd from "@/components/JsonLd";
-import { siteUrl } from "@/lib/business";
-
-/**
- * Reviews stay on the homepage only, attached to the LocalBusiness entity
- * declared in the root layout. No aggregateRating is published — the review
- * count and average are not verified against a Google Business Profile.
- */
-const reviewSchema = {
-  "@context": "https://schema.org",
-  "@id": `${siteUrl}/#business`,
-  review: [
-    {
-      "@type": "Review",
-      author: { "@type": "Person", name: "Ingrid H." },
-      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-      reviewBody:
-        "Ted was prompt, friendly, polite... provided excellent service. I would absolutely recommend Star Disposal Services for any hauling job.",
-    },
-    {
-      "@type": "Review",
-      author: { "@type": "Person", name: "Candi Miranda" },
-      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-      reviewBody:
-        "Awesome customer service. They sure helped my elderly father and his wife. They went above and beyond in helping them. Thanks",
-    },
-    {
-      "@type": "Review",
-      author: { "@type": "Person", name: "April G." },
-      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-      reviewBody: "He was polite, helpful, knowledgeable.",
-    },
-  ],
-};
 
 const faqs = [
   {
     q: "How much does junk removal cost in Calgary?",
-    a: "Jobs start at $50. Beyond that it is priced by volume and weight — a single item at the curb is at the bottom of the range, a packed garage is a truckload. Call 403-204-7827, describe the material, and you get a price before anything moves.",
+    a: "Jobs start at $50. Beyond that it is priced by volume and weight — a single item at the curb is at the bottom of the range, a packed garage is a truckload. Call 403-861-2361, describe the material, and you get a price before anything moves.",
   },
   {
     q: "Should I book junk removal or rent a bin?",
@@ -74,7 +40,6 @@ const faqs = [
 export default function Home() {
   return (
     <>
-      <JsonLd data={reviewSchema} />
       <Header />
       <main id="main" className="flex-1">
         <Hero />

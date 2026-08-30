@@ -54,7 +54,7 @@ export default function NotFound() {
             {business.phoneMainDisplay}
           </a>
           <p className="mt-2.5 text-[15px] font-semibold text-white/70">
-            8 AM – 8 PM, seven days a week.
+            {business.phoneMainSub} — 8 AM to 8 PM, seven days a week.
           </p>
         </div>
       </main>

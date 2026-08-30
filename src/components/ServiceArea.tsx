@@ -96,7 +96,7 @@ export default function ServiceArea() {
               {business.phoneMainDisplay}
             </a>
             <div className="mt-[7px] text-[13px] font-semibold text-white/75">
-              Ted or the yard, 8 AM – 8 PM
+              {business.phoneMainSub} · 8 AM – 8 PM
             </div>
           </div>
         </div>

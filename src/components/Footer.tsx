@@ -32,15 +32,20 @@ export default function Footer() {
             <div className="mt-8 flex flex-col gap-3">
               <a
                 href={`tel:${business.phoneMainTel}`}
-                className="font-display text-[26px] leading-none text-brand-navy hover:text-brand-red"
+                className="flex flex-col gap-1 text-brand-navy hover:text-brand-red"
               >
-                {business.phoneMainDisplay}
+                <span className="font-display text-[26px] leading-none">
+                  {business.phoneMainDisplay}
+                </span>
+                <span className="text-[15px] font-semibold">
+                  {business.phoneMainSub}
+                </span>
               </a>
               <a
-                href={`tel:${business.phoneTedTel}`}
+                href={`tel:${business.phoneAltTel}`}
                 className="text-[15px] font-semibold text-brand-navy hover:text-brand-red"
               >
-                Ted&rsquo;s Cell: {business.phoneTedDisplay}
+                Second line: {business.phoneAltDisplay}
               </a>
               <a
                 href={`mailto:${business.email}`}

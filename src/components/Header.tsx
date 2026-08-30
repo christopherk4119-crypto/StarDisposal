@@ -108,9 +108,14 @@ export default function Header() {
         <div className="flex shrink-0 items-center gap-2 sm:gap-3">
           <a
             href={`tel:${business.phoneMainTel}`}
-            className="hidden whitespace-nowrap font-display text-[15px] text-brand-yellow hover:brightness-110 xl:block"
+            className="hidden shrink-0 flex-col items-end leading-none text-brand-yellow hover:brightness-110 xl:flex"
           >
-            {business.phoneMainDisplay}
+            <span className="whitespace-nowrap font-display text-[15px]">
+              {business.phoneMainDisplay}
+            </span>
+            <span className="mt-1 whitespace-nowrap text-[11px] font-semibold text-white/70">
+              {business.phoneMainSub}
+            </span>
           </a>
           <Link
             href="/contact"
@@ -134,19 +139,32 @@ export default function Header() {
         </div>
       </div>
 
+      {/* Mobile: three options only — everything else lives behind the hamburger. */}
       <nav
         aria-label="Quick links"
-        className="flex flex-wrap items-center gap-x-6 border-t border-white/10 px-5 font-display text-[11px] tracking-[0.12em] lg:hidden"
+        className="grid grid-cols-3 border-t border-white/10 font-display text-[11px] tracking-[0.12em] lg:hidden"
       >
-        {allHubs.map((hub) => (
-          <Link
-            key={hub.slug}
-            href={`/${hub.slug}`}
-            className="flex min-h-[46px] items-center whitespace-nowrap border-b-2 border-transparent text-white/85"
-          >
-            {hub.navLabel}
-          </Link>
-        ))}
+        <Link
+          href="/"
+          onClick={close}
+          className="flex min-h-[48px] items-center justify-center border-r border-white/10 text-white/85 active:bg-white/10"
+        >
+          HOME
+        </Link>
+        <Link
+          href="/#services"
+          onClick={close}
+          className="flex min-h-[48px] items-center justify-center border-r border-white/10 text-white/85 active:bg-white/10"
+        >
+          SERVICES
+        </Link>
+        <Link
+          href="/contact"
+          onClick={close}
+          className="flex min-h-[48px] items-center justify-center text-white/85 active:bg-white/10"
+        >
+          CONTACT
+        </Link>
       </nav>
 
       {menuOpen && (
@@ -192,9 +210,14 @@ export default function Header() {
 
           <a
             href={`tel:${business.phoneMainTel}`}
-            className="mt-3 block bg-white/10 py-4 text-center font-display text-base text-brand-yellow"
+            className="mt-3 mb-2 block bg-white/10 py-4 text-center text-brand-yellow"
           >
-            CALL {business.phoneMainDisplay}
+            <span className="block font-display text-base">
+              CALL {business.phoneMainDisplay}
+            </span>
+            <span className="mt-1 block text-[13px] font-semibold text-white/70">
+              {business.phoneMainSub}
+            </span>
           </a>
         </nav>
       )}

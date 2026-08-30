@@ -39,7 +39,7 @@ Nothing about the business or the URL structure is hardcoded twice.
 
 | File | Owns |
 |---|---|
-| `src/lib/business.ts` | `siteUrl`, NAP, hours, geo, service areas. **The only place the domain and phone number are defined.** |
+| `src/lib/business.ts` | `siteUrl`, NAP, hours, geo, service areas. **The only place the domain and phone numbers are defined.** |
 | `src/content/hubs.ts` | The three hub pages |
 | `src/content/{junk-removal,bin-rentals,site-services}.ts` | Spoke page content |
 | `src/lib/services.ts` | Registry + `allRoutes`, consumed by routes, nav, footer, sitemap and cross-links |
@@ -62,13 +62,29 @@ entry, header menu, footer index, hub card and schema all follow automatically.
   it); per-page `Service` pointing at that entity by `@id`; `BreadcrumbList` on
   every interior page; `FAQPage` on every FAQ block. 92 blocks, all validated
   as parsing.
-- **No `aggregateRating`** is published. The three on-site reviews sit on the
-  homepage only. Publish a rating only once the review count and average can be
-  verified against a live Google Business Profile.
+- **Reviews are from Yelp** and are labelled as such on the page. They carry no
+  `Review` or `aggregateRating` structured data on purpose: Google's review
+  snippet policy requires review markup to come from reviews the site collects
+  itself, so marking up third-party Yelp reviews risks a manual action. To earn
+  review stars in search results, collect reviews through a form on this site.
 - **Zero orphan pages** — the footer carries a full service index, so every page
   is one click from every other page.
 - **Icons** — `public/icon-512.png` and `public/apple-icon-180.png` are square
   (Google silently falls back to a generic icon otherwise), plus `icon.svg`.
+
+## Phone numbers
+
+The main line is displayed as the vanity string **403-50-WASTE** to match the
+truck signage, and dials **403-861-2361**.
+
+Those two are not the same digits — `403-50-WASTE` literally spells
+403-509-2783 — so `business.phoneMainSub` (the real digits) is rendered
+directly beneath the vanity string in every CTA, and running prose, meta
+descriptions and FAQ answers always use the digits, never the vanity string.
+Do not display `phoneMainDisplay` on its own anywhere, or people who dial what
+they read will reach the wrong number.
+
+`403-204-7827` is kept as a second line in the footer and on the contact page.
 
 ## Verifying before you ship
 
@@ -85,6 +101,12 @@ grep -rohE '"/images/[^"]+"' src --include="*.tsx" | tr -d '"' | sort -u \
 # the domain must appear only in business.ts
 grep -rn "stardisposalservices.ca" src --include="*.ts" --include="*.tsx" \
   | grep -v src/lib/business.ts
+
+# every page showing the vanity number must also show the dialable digits
+for f in $(find .next/server/app -name "*.html"); do
+  v=$(grep -c '403-50-WASTE' "$f"); d=$(grep -c '403-861-2361' "$f")
+  [ "$v" -gt 0 ] && [ "$d" -eq 0 ] && echo "VANITY WITHOUT DIGITS: $f"
+done
 ```
 
 **Code pushed is not the same as code live.** After deploying, open the live

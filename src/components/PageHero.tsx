@@ -58,7 +58,7 @@ export default function PageHero({
         <div className="mt-9 flex flex-wrap items-center gap-4">
           <a
             href={`tel:${business.phoneMainTel}`}
-            className="flex items-center gap-[18px] bg-brand-yellow px-7 py-5 text-brand-navy transition hover:brightness-105"
+            className="flex max-w-full items-center gap-3 bg-brand-yellow px-4 py-5 text-brand-navy transition hover:brightness-105 sm:gap-[18px] sm:px-7"
           >
             <span className="font-display text-[13px] tracking-[0.1em]">
               CALL NOW
@@ -69,13 +69,13 @@ export default function PageHero({
                 {business.phoneMainDisplay}
               </span>
               <span className="text-[11px] font-semibold text-brand-navy/70">
-                8 AM – 8 PM, seven days
+                {business.phoneMainSub} · 8 AM – 8 PM
               </span>
             </span>
           </a>
           <a
             href={`mailto:${business.email}`}
-            className="border border-brand-yellow/60 bg-white/[0.06] px-7 py-5 font-display text-[13px] tracking-[0.1em] text-brand-yellow transition hover:bg-brand-yellow/[0.12]"
+            className="border border-brand-yellow/60 bg-white/[0.06] px-4 py-5 font-display text-[13px] tracking-[0.1em] text-brand-yellow transition hover:bg-brand-yellow/[0.12] sm:px-7"
           >
             EMAIL FOR A QUOTE
           </a>

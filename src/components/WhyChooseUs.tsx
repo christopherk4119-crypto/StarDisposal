@@ -24,7 +24,7 @@ const stats = [
     value: "Two lines",
     valueSize: "text-[30px]",
     title: "Two Ways to Reach Us",
-    description: `Call the main line ${business.phoneMainDisplay} or Ted's cell directly.`,
+    description: `Call ${business.phoneMainSub} (${business.phoneMainDisplay}) or ${business.phoneAltDisplay}.`,
   },
 ];
 

@@ -23,6 +23,22 @@ export default function LocalBusinessSchema() {
         logo: `${siteUrl}/icon.svg`,
         image: `${siteUrl}/images/about/truck-signage.webp`,
         telephone: business.phoneMainTel,
+        contactPoint: [
+          {
+            "@type": "ContactPoint",
+            telephone: business.phoneMainTel,
+            contactType: "customer service",
+            areaServed: "CA",
+            availableLanguage: "English",
+          },
+          {
+            "@type": "ContactPoint",
+            telephone: business.phoneAltTel,
+            contactType: "customer service",
+            areaServed: "CA",
+            availableLanguage: "English",
+          },
+        ],
         email: business.email,
         founder: { "@type": "Person", name: business.owner },
         foundingDate: business.foundingDate,
