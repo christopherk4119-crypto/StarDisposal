@@ -18,7 +18,7 @@ const stats = [
     value: "$50",
     valueSize: "text-[44px]",
     title: "Starting at $50",
-    description: "Honest, affordable pricing, no surprises.",
+    description: "Upfront flat pricing, no surprises.",
   },
   {
     value: "Two lines",

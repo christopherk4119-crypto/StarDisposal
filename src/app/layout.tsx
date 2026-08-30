@@ -15,10 +15,9 @@ const archivoBlack = Archivo_Black({
 
 const siteUrl = "https://stardisposalservices.ca";
 
-const title =
-  "Star Disposal Services | Calgary Junk Removal & Bin Rentals Since 1996";
+const title = "Junk Removal Calgary | Star Disposal Services";
 const description =
-  "Calgary & Airdrie junk removal, appliance pickup, bin rentals (10-20 yd), dump runs, bobcat work, demolition and site clean-up since 1996. Same-day service, jobs start at $50. Call 403-50WASTE.";
+  "Calgary & Airdrie junk removal, bin rentals, dump runs, bobcat work, demolition & site clean-up since 1996. From $50 — call 403-204-7827.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

@@ -49,9 +49,11 @@ export default function Footer() {
             >
               {business.phoneMainDisplay}
             </a>
-            <span className="text-sm font-semibold text-brand-navy/70">
-              {business.phoneMainSub}
-            </span>
+            {business.phoneMainSub && (
+              <span className="text-sm font-semibold text-brand-navy/70">
+                {business.phoneMainSub}
+              </span>
+            )}
             <a
               href={`tel:${business.phoneTedTel}`}
               className="text-[15px] font-semibold text-brand-navy hover:text-brand-red"

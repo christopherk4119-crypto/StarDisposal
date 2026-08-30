@@ -40,9 +40,6 @@ export default function Testimonials() {
               <span className="font-display text-[13px] text-brand-navy">
                 Candi Miranda
               </span>
-              <span className="text-xs font-semibold text-brand-navy/55">
-                5 reviews · 4 years ago
-              </span>
             </footer>
           </blockquote>
 

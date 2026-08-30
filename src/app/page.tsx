@@ -16,7 +16,7 @@ export default function Home() {
     "@type": "LocalBusiness",
     name: business.name,
     description:
-      "Calgary junk removal, bin rentals, dump runs, bobcat services, demolition, and site clean-up since 1996. Jobs start at $50 — call 403-50WASTE.",
+      "Calgary junk removal, bin rentals, dump runs, bobcat services, demolition, and site clean-up since 1996. Jobs start at $50.",
     telephone: business.phoneMainTel,
     email: business.email,
     address: {
@@ -59,6 +59,28 @@ export default function Home() {
         itemOffered: { "@type": "Service", name: serviceName },
       })),
     },
+    review: [
+      {
+        "@type": "Review",
+        author: { "@type": "Person", name: "Ingrid H." },
+        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+        reviewBody:
+          "Ted was prompt, friendly, polite... provided excellent service. I would absolutely recommend Star Disposal Services for any hauling job.",
+      },
+      {
+        "@type": "Review",
+        author: { "@type": "Person", name: "Candi Miranda" },
+        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+        reviewBody:
+          "Awesome customer service. They sure helped my elderly father and his wife. They went above and beyond in helping them. Thanks",
+      },
+      {
+        "@type": "Review",
+        author: { "@type": "Person", name: "April G." },
+        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+        reviewBody: "He was polite, helpful, knowledgeable.",
+      },
+    ],
   };
 
   return (

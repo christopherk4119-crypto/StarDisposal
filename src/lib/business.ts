@@ -4,9 +4,9 @@ export const business = {
   owner: "Talib (Ted) Ferris",
   address: "2729 14 Ave SE, Calgary, AB T2A 0J7",
   email: "stardisposalservices@outlook.com",
-  phoneMainDisplay: "403-50WASTE",
-  phoneMainSub: "(403-509-2783)",
-  phoneMainTel: "+14035092783",
+  phoneMainDisplay: "403-204-7827",
+  phoneMainSub: "",
+  phoneMainTel: "+14032047827",
   phoneTedDisplay: "403-861-2361",
   phoneTedTel: "+14038612361",
   hours: [

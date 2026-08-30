@@ -65,7 +65,7 @@ export default function ContactForm() {
             name="name"
             type="text"
             required
-            className="border-0 border-b border-white/35 bg-transparent py-2 text-[17px] text-white outline-none focus:border-brand-yellow"
+            className="border-0 border-b border-white/35 bg-transparent py-2 text-[17px] text-white outline-none focus:border-brand-yellow focus-visible:ring-2 focus-visible:ring-brand-yellow focus-visible:ring-offset-2 focus-visible:ring-offset-brand-navy"
           />
         </div>
         <div className="flex flex-col gap-2">
@@ -80,7 +80,7 @@ export default function ContactForm() {
             name="phone"
             type="tel"
             required
-            className="border-0 border-b border-white/35 bg-transparent py-2 text-[17px] text-white outline-none focus:border-brand-yellow"
+            className="border-0 border-b border-white/35 bg-transparent py-2 text-[17px] text-white outline-none focus:border-brand-yellow focus-visible:ring-2 focus-visible:ring-brand-yellow focus-visible:ring-offset-2 focus-visible:ring-offset-brand-navy"
           />
         </div>
       </div>
@@ -97,7 +97,7 @@ export default function ContactForm() {
           name="email"
           type="email"
           required
-          className="border-0 border-b border-white/35 bg-transparent py-2 text-[17px] text-white outline-none focus:border-brand-yellow"
+          className="border-0 border-b border-white/35 bg-transparent py-2 text-[17px] text-white outline-none focus:border-brand-yellow focus-visible:ring-2 focus-visible:ring-brand-yellow focus-visible:ring-offset-2 focus-visible:ring-offset-brand-navy"
         />
       </div>
 
@@ -115,10 +115,10 @@ export default function ContactForm() {
                 checked={service === s}
                 onChange={(e) => setService(e.target.value)}
                 required
-                className="sr-only"
+                className="peer sr-only"
               />
               <span
-                className={`inline-block border px-3.5 py-2.5 font-display text-[11px] tracking-[0.08em] transition hover:border-brand-yellow ${
+                className={`inline-block border px-3.5 py-2.5 font-display text-[11px] tracking-[0.08em] transition hover:border-brand-yellow peer-focus-visible:ring-2 peer-focus-visible:ring-brand-yellow peer-focus-visible:ring-offset-2 peer-focus-visible:ring-offset-brand-navy ${
                   service === s
                     ? "border-brand-yellow bg-brand-yellow text-brand-navy"
                     : "border-white/30 text-white/85"
@@ -142,13 +142,13 @@ export default function ContactForm() {
           id="sd-details"
           name="details"
           rows={4}
-          className="resize-y border-0 border-b border-white/35 bg-white/[0.06] p-3 text-base leading-[1.5] text-white outline-none focus:border-brand-yellow"
+          className="resize-y border-0 border-b border-white/35 bg-white/[0.06] p-3 text-base leading-[1.5] text-white outline-none focus:border-brand-yellow focus-visible:ring-2 focus-visible:ring-brand-yellow focus-visible:ring-offset-2 focus-visible:ring-offset-brand-navy"
         />
       </div>
 
       <button
         type="submit"
-        className="mt-[34px] w-full bg-brand-yellow px-5 py-5 font-display text-[15px] tracking-[0.1em] text-brand-navy transition hover:brightness-105"
+        className="mt-[34px] w-full bg-brand-yellow px-5 py-5 font-display text-[15px] tracking-[0.1em] text-brand-navy transition hover:brightness-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-navy"
       >
         REQUEST MY FREE QUOTE
       </button>

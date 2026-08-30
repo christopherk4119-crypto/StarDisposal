@@ -33,7 +33,7 @@ export default function Header() {
           </span>
         </Link>
 
-        <nav className="hidden min-w-0 flex-1 items-center gap-x-6 gap-y-3 font-display text-[11px] tracking-[0.14em] lg:flex">
+        <nav className="hidden min-w-0 flex-1 items-center justify-center gap-x-8 gap-y-3 font-display text-[11px] tracking-[0.14em] lg:flex">
           <Link
             href="#home"
             className="whitespace-nowrap border-b-2 border-brand-yellow pb-[3px] text-white/85 hover:text-brand-yellow"
@@ -73,22 +73,22 @@ export default function Header() {
         </div>
       </div>
 
-      <nav className="flex items-center gap-5 border-t border-white/10 px-5 py-2.5 font-display text-[11px] tracking-[0.12em] lg:hidden">
+      <nav className="flex flex-wrap items-center gap-x-6 border-t border-white/10 px-5 font-display text-[11px] tracking-[0.12em] lg:hidden">
         <Link
           href="#home"
-          className="whitespace-nowrap border-b-2 border-brand-yellow pb-[3px] text-white"
+          className="flex min-h-[46px] items-center whitespace-nowrap border-b-2 border-brand-yellow text-white"
         >
           HOME
         </Link>
         <Link
           href="#services"
-          className="whitespace-nowrap border-b-2 border-transparent pb-[3px] text-white/85"
+          className="flex min-h-[46px] items-center whitespace-nowrap border-b-2 border-transparent text-white/85"
         >
           SERVICES
         </Link>
         <Link
           href="#contact"
-          className="whitespace-nowrap border-b-2 border-transparent pb-[3px] text-white/85"
+          className="flex min-h-[46px] items-center whitespace-nowrap border-b-2 border-transparent text-white/85"
         >
           CONTACT
         </Link>

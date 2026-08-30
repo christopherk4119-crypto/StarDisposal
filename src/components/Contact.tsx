@@ -27,9 +27,11 @@ export default function Contact() {
             >
               {business.phoneMainDisplay}
             </a>
-            <div className="mt-2 text-sm font-semibold text-brand-navy/60">
-              {business.phoneMainSub}
-            </div>
+            {business.phoneMainSub && (
+              <div className="mt-2 text-sm font-semibold text-brand-navy/60">
+                {business.phoneMainSub}
+              </div>
+            )}
           </div>
 
           <div className="mt-[26px] grid grid-cols-2 gap-[26px]">
