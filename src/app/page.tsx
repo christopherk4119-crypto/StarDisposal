@@ -9,6 +9,9 @@ import ServiceArea from "@/components/ServiceArea";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import { business } from "@/lib/business";
+import { services } from "@/lib/services-data";
+
+const siteUrl = "https://stardisposalservices.ca";
 
 export default function Home() {
   const jsonLd = {
@@ -47,16 +50,13 @@ export default function Home() {
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Services",
-      itemListElement: [
-        "Junk Removal",
-        "All Size Bin Rentals",
-        "Bobcat Services",
-        "Dump Runs",
-        "Demolition",
-        "Site Clean-Up",
-      ].map((serviceName) => ({
+      itemListElement: services.map((service) => ({
         "@type": "Offer",
-        itemOffered: { "@type": "Service", name: serviceName },
+        itemOffered: {
+          "@type": "Service",
+          name: service.name,
+          url: `${siteUrl}/services/${service.slug}`,
+        },
       })),
     },
     review: [

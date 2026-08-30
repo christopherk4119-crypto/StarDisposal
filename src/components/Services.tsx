@@ -25,6 +25,12 @@ export default function Services() {
             and full site clean-outs across Calgary. Ted picks up the
             phone. Jobs start at $50.
           </p>
+          <Link
+            href="/services"
+            className="mt-6 inline-block w-fit border-b-2 border-brand-yellow font-display text-xs tracking-[0.14em] text-brand-navy hover:text-brand-red"
+          >
+            VIEW ALL SERVICES →
+          </Link>
         </div>
 
         <div className="relative h-[430px] overflow-hidden bg-brand-navy lg:col-span-7">
@@ -55,12 +61,20 @@ export default function Services() {
             <p className="mt-3 max-w-[420px] text-[15px] leading-[1.55] text-white/85">
               Garage, home, and yard junk removal — starting at $50.
             </p>
-            <Link
-              href="#contact"
-              className="mt-[18px] inline-block border-b-2 border-brand-yellow/50 font-display text-xs tracking-[0.14em] text-brand-yellow hover:border-brand-yellow"
-            >
-              GET QUOTE →
-            </Link>
+            <div className="mt-[18px] flex flex-wrap items-center gap-5">
+              <Link
+                href="#contact"
+                className="inline-block border-b-2 border-brand-yellow/50 font-display text-xs tracking-[0.14em] text-brand-yellow hover:border-brand-yellow"
+              >
+                GET QUOTE →
+              </Link>
+              <Link
+                href="/services/junk-removal"
+                className="inline-block border-b-2 border-white/30 font-display text-xs tracking-[0.14em] text-white/80 hover:border-brand-yellow hover:text-brand-yellow"
+              >
+                LEARN MORE
+              </Link>
+            </div>
           </div>
         </div>
 
@@ -109,6 +123,12 @@ export default function Services() {
                 20 YD
               </span>
             </div>
+            <Link
+              href="/services/bin-rentals"
+              className="mt-4 inline-block w-fit border-b-2 border-white/30 font-display text-xs tracking-[0.14em] text-white/80 hover:border-brand-yellow hover:text-brand-yellow"
+            >
+              LEARN MORE
+            </Link>
           </div>
         </div>
 
@@ -123,6 +143,12 @@ export default function Services() {
             <p className="mt-2 text-sm leading-[1.5] text-white/70">
               Bobcat work for site prep, landscaping, and material moving.
             </p>
+            <Link
+              href="/services/bobcat-services"
+              className="mt-3 inline-block w-fit border-b-2 border-white/30 font-display text-xs tracking-[0.14em] text-white/80 hover:border-brand-yellow hover:text-brand-yellow"
+            >
+              LEARN MORE
+            </Link>
           </div>
           <div className="h-px bg-white/15" />
           <div className="flex flex-1 flex-col justify-center px-7 py-[30px]">
@@ -136,6 +162,12 @@ export default function Services() {
               Fast, reliable dump runs for residential and commercial
               waste.
             </p>
+            <Link
+              href="/services/dump-runs"
+              className="mt-3 inline-block w-fit border-b-2 border-white/30 font-display text-xs tracking-[0.14em] text-white/80 hover:border-brand-yellow hover:text-brand-yellow"
+            >
+              LEARN MORE
+            </Link>
           </div>
         </div>
 
@@ -149,6 +181,12 @@ export default function Services() {
           <p className="relative mt-3 text-[15px] leading-[1.55] text-brand-navy/78">
             Small demolition jobs handled quickly and safely.
           </p>
+          <Link
+            href="/services/demolition"
+            className="relative mt-4 inline-block w-fit border-b-2 border-brand-navy/40 font-display text-xs tracking-[0.14em] text-brand-navy hover:border-brand-navy"
+          >
+            LEARN MORE
+          </Link>
         </div>
 
         <div className="relative min-h-[250px] overflow-hidden bg-brand-navy lg:col-span-8">
@@ -179,12 +217,20 @@ export default function Services() {
                 renovation projects.
               </p>
             </div>
-            <Link
-              href="#contact"
-              className="shrink-0 bg-brand-yellow px-[18px] py-3.5 font-display text-xs tracking-[0.12em] text-brand-navy transition hover:brightness-105"
-            >
-              GET QUOTE
-            </Link>
+            <div className="flex shrink-0 flex-wrap items-center gap-4">
+              <Link
+                href="/services/site-clean-up"
+                className="border-b-2 border-white/30 font-display text-xs tracking-[0.14em] text-white/80 hover:border-brand-yellow hover:text-brand-yellow"
+              >
+                LEARN MORE
+              </Link>
+              <Link
+                href="#contact"
+                className="bg-brand-yellow px-[18px] py-3.5 font-display text-xs tracking-[0.12em] text-brand-navy transition hover:brightness-105"
+              >
+                GET QUOTE
+              </Link>
+            </div>
           </div>
         </div>
       </div>
