@@ -126,10 +126,62 @@ pushed and is marked Production.
 
 ## Contact form
 
-`src/components/ContactForm.tsx` opens a pre-filled `mailto:` on submit, so the
-site stays fully static with no backend. To take submissions server-side, swap
-`handleSubmit` for a POST to a form service or a route handler at
-`src/app/api/quote/route.ts`.
+The quote form has two delivery modes and picks one from a single env var.
+
+| `NEXT_PUBLIC_FORMSPREE_ID` | Behaviour |
+|---|---|
+| set | POSTs to Formspree; the visitor never leaves the page |
+| unset | falls back to opening the visitor's mail app via `mailto:` |
+
+**Set it in production.** The `mailto:` fallback depends on the visitor having
+a mail client configured — on a phone without one it silently does nothing, the
+lead is lost, and nobody finds out.
+
+### Turning on Formspree
+
+1. Create a free account at [formspree.io](https://formspree.io) using the
+   business inbox (`stardisposalservices@outlook.com`) so notifications land
+   where the quotes are read.
+2. **+ New Form** → name it "Star Disposal quote form" → set the send-to
+   address → **Create Form**.
+3. Formspree shows an endpoint like `https://formspree.io/f/abcdwxyz`. The ID
+   is the part after `/f/`.
+4. In Vercel → Settings → Environment Variables, add
+   `NEXT_PUBLIC_FORMSPREE_ID` = `abcdwxyz` for Production (and Preview if you
+   want to test there).
+5. **Redeploy.** The variable is inlined at build time, so an existing
+   deployment will not pick it up — this step is skipped constantly.
+6. Submit the live form once. Formspree emails a confirmation link the first
+   time; click it or nothing is delivered.
+
+Locally, copy `.env.example` to `.env.local` and fill in the same value.
+
+The form already sends a `_subject` line and carries a `_gotcha` honeypot field
+that Formspree uses to drop bot submissions. The free tier allows 50
+submissions a month, which is comfortable for this volume; if it is ever
+exceeded, Formspree holds the submissions rather than dropping them.
+
+If the POST fails, the form does not fail silently — it tells the visitor and
+shows the phone number and email address instead.
+
+To move off Formspree entirely, replace the `fetch` in `handleSubmit` with a
+POST to a route handler at `src/app/api/quote/route.ts`; nothing else needs to
+change.
+
+## Privacy policy
+
+`/privacy` describes what the quote form collects and why, and it is linked
+from the footer and from under the form's submit button.
+
+Its "Who else sees it" section reads from `usesFormBackend`, so it names
+Formspree when Formspree is configured and says "nobody" when the site is on
+the `mailto:` fallback. It stays accurate automatically — but **any other
+change to how data is handled means editing this page**, in particular adding
+analytics, since the policy currently states that the site runs none. Update
+`lastUpdated` when you do.
+
+It is a solid, accurate starting point rather than legal advice; if the client
+wants certainty, it is cheap to have reviewed.
 
 ## Before going live
 

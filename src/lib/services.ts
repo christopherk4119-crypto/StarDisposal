@@ -42,4 +42,5 @@ export const allRoutes: string[] = [
   "/service-areas",
   "/about",
   "/contact",
+  "/privacy",
 ];

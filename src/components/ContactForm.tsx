@@ -1,7 +1,9 @@
 "use client";
 
+import Link from "next/link";
 import { useState, type FormEvent } from "react";
 import { business } from "@/lib/business";
+import { formspreeEndpoint, usesFormBackend } from "@/lib/forms";
 
 const services = [
   "Bobcat",
@@ -13,20 +15,52 @@ const services = [
   "Other",
 ];
 
+type Status = "idle" | "sending" | "sent" | "error";
+
+const fieldClass =
+  "border-0 border-b border-white/35 bg-transparent py-2 text-[17px] text-white outline-none focus:border-brand-yellow focus-visible:ring-2 focus-visible:ring-brand-yellow focus-visible:ring-offset-2 focus-visible:ring-offset-brand-navy";
+
 export default function ContactForm() {
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<Status>("idle");
   const [service, setService] = useState("");
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
     const data = new FormData(form);
+
+    // Honeypot — real people leave this empty. Silently accept and drop.
+    if (data.get("_gotcha")) {
+      setStatus("sent");
+      form.reset();
+      return;
+    }
+
     const name = data.get("name")?.toString().trim() ?? "";
     const phone = data.get("phone")?.toString().trim() ?? "";
     const email = data.get("email")?.toString().trim() ?? "";
     const details = data.get("details")?.toString().trim() ?? "";
+    const subject = `Quote request — ${service || "General"}`;
 
-    const subject = `Free Quote Request — ${service || "General"}`;
+    if (usesFormBackend) {
+      setStatus("sending");
+      try {
+        const res = await fetch(formspreeEndpoint, {
+          method: "POST",
+          headers: { Accept: "application/json" },
+          body: data,
+        });
+        if (!res.ok) throw new Error(`Formspree responded ${res.status}`);
+        setStatus("sent");
+        setService("");
+        form.reset();
+      } catch {
+        setStatus("error");
+      }
+      return;
+    }
+
+    // Fallback: hand the message to the visitor's mail app.
     const body = [
       `Name: ${name}`,
       `Phone: ${phone}`,
@@ -41,16 +75,34 @@ export default function ContactForm() {
       subject
     )}&body=${encodeURIComponent(body)}`;
 
-    setSubmitted(true);
+    setStatus("sent");
     setService("");
     form.reset();
   }
+
+  const sending = status === "sending";
 
   return (
     <form onSubmit={handleSubmit} className="bg-brand-navy px-9 pb-9 pt-10">
       <div className="mb-[30px] font-display text-[11px] tracking-[0.16em] text-brand-yellow">
         TELL US ABOUT THE JOB
       </div>
+
+      {/* Subject line for the notification email. */}
+      <input
+        type="hidden"
+        name="_subject"
+        value={`Quote request — ${service || "General"}`}
+      />
+      {/* Honeypot. Hidden from people, filled in by bots. */}
+      <input
+        type="text"
+        name="_gotcha"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        className="hidden"
+      />
 
       <div className="grid grid-cols-1 gap-7 sm:grid-cols-2">
         <div className="flex flex-col gap-2">
@@ -60,13 +112,7 @@ export default function ContactForm() {
           >
             NAME
           </label>
-          <input
-            id="sd-name"
-            name="name"
-            type="text"
-            required
-            className="border-0 border-b border-white/35 bg-transparent py-2 text-[17px] text-white outline-none focus:border-brand-yellow focus-visible:ring-2 focus-visible:ring-brand-yellow focus-visible:ring-offset-2 focus-visible:ring-offset-brand-navy"
-          />
+          <input id="sd-name" name="name" type="text" required className={fieldClass} />
         </div>
         <div className="flex flex-col gap-2">
           <label
@@ -75,13 +121,7 @@ export default function ContactForm() {
           >
             PHONE
           </label>
-          <input
-            id="sd-phone"
-            name="phone"
-            type="tel"
-            required
-            className="border-0 border-b border-white/35 bg-transparent py-2 text-[17px] text-white outline-none focus:border-brand-yellow focus-visible:ring-2 focus-visible:ring-brand-yellow focus-visible:ring-offset-2 focus-visible:ring-offset-brand-navy"
-          />
+          <input id="sd-phone" name="phone" type="tel" required className={fieldClass} />
         </div>
       </div>
 
@@ -92,13 +132,7 @@ export default function ContactForm() {
         >
           EMAIL
         </label>
-        <input
-          id="sd-email"
-          name="email"
-          type="email"
-          required
-          className="border-0 border-b border-white/35 bg-transparent py-2 text-[17px] text-white outline-none focus:border-brand-yellow focus-visible:ring-2 focus-visible:ring-brand-yellow focus-visible:ring-offset-2 focus-visible:ring-offset-brand-navy"
-        />
+        <input id="sd-email" name="email" type="email" required className={fieldClass} />
       </div>
 
       <div className="mt-[30px]">
@@ -148,21 +182,57 @@ export default function ContactForm() {
 
       <button
         type="submit"
-        className="mt-[34px] w-full bg-brand-yellow px-5 py-5 font-display text-[15px] tracking-[0.1em] text-brand-navy transition hover:brightness-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-navy"
+        disabled={sending}
+        className="mt-[34px] w-full bg-brand-yellow px-5 py-5 font-display text-[15px] tracking-[0.1em] text-brand-navy transition hover:brightness-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-navy disabled:cursor-not-allowed disabled:opacity-70"
       >
-        REQUEST MY FREE QUOTE
+        {sending ? "SENDING…" : "REQUEST MY FREE QUOTE"}
       </button>
 
-      {submitted && (
-        <p className="mt-[18px] bg-white/[0.08] px-4 py-3.5 text-sm font-semibold leading-[1.55] text-white">
-          Thanks! Your email app should now be open with your quote request
-          ready to send. Prefer to talk now? Call{" "}
-          <a href={`tel:${business.phoneMainTel}`} className="text-brand-yellow">
-            {business.phoneMainSub}
-          </a>
-          .
-        </p>
-      )}
+      <p className="mt-3.5 text-[12px] leading-[1.5] text-white/55">
+        We use your details to reply to this request and nothing else. See our{" "}
+        <Link href="/privacy" className="text-brand-yellow underline underline-offset-2">
+          privacy policy
+        </Link>
+        .
+      </p>
+
+      <div aria-live="polite">
+        {status === "sent" && (
+          <p className="mt-[18px] bg-white/[0.08] px-4 py-3.5 text-sm font-semibold leading-[1.55] text-white">
+            {usesFormBackend ? (
+              <>
+                Thanks — we&rsquo;ve got it. We&rsquo;ll get back to you, usually
+                the same day.
+              </>
+            ) : (
+              <>
+                Thanks! Your email app should now be open with your quote request
+                ready to send.
+              </>
+            )}{" "}
+            Prefer to talk now? Call{" "}
+            <a href={`tel:${business.phoneMainTel}`} className="text-brand-yellow">
+              {business.phoneMainSub}
+            </a>
+            .
+          </p>
+        )}
+
+        {status === "error" && (
+          <p className="mt-[18px] border-l-4 border-brand-red bg-white/[0.08] px-4 py-3.5 text-sm font-semibold leading-[1.55] text-white">
+            That didn&rsquo;t send — the connection dropped or the form service is
+            down. Please call{" "}
+            <a href={`tel:${business.phoneMainTel}`} className="text-brand-yellow">
+              {business.phoneMainSub}
+            </a>{" "}
+            or email{" "}
+            <a href={`mailto:${business.email}`} className="text-brand-yellow">
+              {business.email}
+            </a>
+            .
+          </p>
+        )}
+      </div>
     </form>
   );
 }

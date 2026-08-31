@@ -9,6 +9,7 @@ const companyLinks = [
   { href: "/service-areas", label: "Service Area" },
   { href: "/#gallery", label: "Gallery" },
   { href: "/contact", label: "Contact" },
+  { href: "/privacy", label: "Privacy" },
 ];
 
 export default function Footer() {
