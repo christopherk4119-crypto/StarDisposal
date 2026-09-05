@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "What is the fastest way to get a price?",
-    a: `Call ${business.phoneMainDisplay} — ${business.phoneMainSub} — and describe the job. For demolition and property clean-ups, photos get you a far more accurate number than a description: text them to ${business.phoneCellLabel.toLowerCase()} on ${business.phoneCellDisplay}.`,
+    a: `Call ${business.phoneMainDisplay} — ${business.phoneMainSub} — and describe the job. For demolition and property clean-ups, photos get you a far more accurate number than a description: text them to Ted's cell on ${business.phoneTedDisplay}.`,
   },
   {
     q: "What are your hours?",

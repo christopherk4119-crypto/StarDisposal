@@ -51,10 +51,10 @@ export default function QuoteSection({
               {business.phoneMainSub} · 8 AM – 8 PM, seven days
             </div>
             <a
-              href={`tel:${business.phoneCellTel}`}
+              href={`tel:${business.phoneTedTel}`}
               className="mt-3 block text-[15px] font-semibold text-brand-navy/70 transition hover:text-brand-red"
             >
-              {business.phoneCellLabel}: {business.phoneCellDisplay} &mdash;
+              Ted&rsquo;s Cell (backup): {business.phoneTedDisplay} &mdash;
               texts &amp; job photos
             </a>
           </div>

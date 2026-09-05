@@ -125,10 +125,10 @@ pushed and is marked Production.
 
 ## The quote form is the conversion goal
 
-The business's stated goal is quote requests, so the form is on **24 of 27
+The business's stated goal is quote requests, so the form is on **26 of 29
 pages** — every service page, both hubs and spokes, plus the homepage, about,
-service areas and contact. Only the 404, the error page and the privacy policy
-are without it.
+service areas, contact and both Airdrie landing pages. Only the 404, the error
+page and the privacy policy are without it.
 
 It is rendered by `QuoteSection`, which pre-selects the service from the page
 the visitor is reading (`quoteCategoryFor` in `src/lib/forms.ts`) so there is

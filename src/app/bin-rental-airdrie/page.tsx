@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
 import CallBand from "@/components/CallBand";
 import FaqSection from "@/components/FaqSection";
+import QuoteSection from "@/components/QuoteSection";
 import ServiceSchema from "@/components/ServiceSchema";
 import { siteUrl, business } from "@/lib/business";
 
@@ -120,6 +121,12 @@ export default function BinRentalAirdriePage() {
             </ul>
           </div>
         </section>
+
+        <QuoteSection
+          heading="Get an Airdrie bin price"
+          blurb="Tell us the job and where the bin can sit. You get a number before we deliver, with no surcharge for the drive up."
+          defaultService="Bin Rental"
+        />
 
         <FaqSection faqs={faqs} heading="Airdrie bin rental questions" />
 
