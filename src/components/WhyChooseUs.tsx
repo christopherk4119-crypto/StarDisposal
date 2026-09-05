@@ -15,6 +15,12 @@ const stats = [
     description: "Protected on every job.",
   },
   {
+    value: "WCB",
+    valueSize: "text-[36px]",
+    title: "WCB Covered",
+    description: "Our crew is covered on every job site.",
+  },
+  {
     value: "$50",
     valueSize: "text-[44px]",
     title: "Starting at $50",
@@ -24,7 +30,7 @@ const stats = [
     value: "Two lines",
     valueSize: "text-[30px]",
     title: "Two Ways to Reach Us",
-    description: `Call ${business.phoneMainDisplay} — ${business.phoneMainSub} — or text job photos to ${business.phoneCellDisplay}.`,
+    description: `Call ${business.phoneMainDisplay} ${business.phoneMainSub}, or Ted's cell ${business.phoneTedDisplay} as backup.`,
   },
 ];
 

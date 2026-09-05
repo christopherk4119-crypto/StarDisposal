@@ -34,6 +34,7 @@ const facts = [
   { value: "$50", label: "Smallest job", note: "One item at the curb is still a job." },
   { value: "7 days", label: "Open every day", note: "8 AM to 8 PM, weekends included." },
   { value: "Insured", label: "On every job", note: "Residential and commercial." },
+  { value: "WCB", label: "Crew covered", note: "Every job, every crew member." },
 ];
 
 export default function AboutPage() {

@@ -63,7 +63,7 @@ export const junkRemovalServices: Service[] = [
       {
         step: "Tell us what and where",
         detail:
-          "Call 403-861-2361 with the appliance type and which floor it is on. A photo texted over is even better. You get a price on that call.",
+          "Call 403-509-2783 with the appliance type and which floor it is on. A photo texted over is even better. You get a price on that call.",
       },
       {
         step: "Book a window",
@@ -184,7 +184,7 @@ export const junkRemovalServices: Service[] = [
       {
         step: "Describe the pieces",
         detail:
-          "Call 403-861-2361 with what is going and which floor it is on. Photos help us price it accurately first time.",
+          "Call 403-509-2783 with what is going and which floor it is on. Photos help us price it accurately first time.",
       },
       {
         step: "Flag the access",
@@ -365,7 +365,7 @@ export const junkRemovalServices: Service[] = [
     h1: "Garage Clean-Out Calgary",
     title: "Garage Clean-Out Calgary | Full Clear-Out From $50",
     description:
-      "Garage clean-outs in Calgary and Airdrie — we empty it, sort the metal, sweep the pad. Since 1996. Call 403-509-2783 for a quote.",
+      "Garage clean-outs in Calgary and Airdrie, from $50. We empty it, sort the metal, sweep the pad. Call 403-509-2783 for a quote.",
     summary:
       "We empty the garage, sort the scrap out of it, and sweep the pad — so you can park in it again.",
     image: "/images/gallery/scrap-tires-cleanup.webp",
@@ -425,7 +425,7 @@ export const junkRemovalServices: Service[] = [
       {
         step: "Walk through it",
         detail:
-          "We look at the garage with you and you tell us what stays. Photos over text to 403-861-2361 work for an initial number.",
+          "We look at the garage with you and you tell us what stays. Photos over text to 403-509-2783 work for an initial number.",
       },
       {
         step: "Pull the hazardous material aside",
@@ -493,7 +493,7 @@ export const junkRemovalServices: Service[] = [
     h1: "Estate Clean-Out Calgary",
     title: "Estate Clean-Out Calgary | Full House Clearance",
     description:
-      "Compassionate estate and full house clean-outs in Calgary and Airdrie. Downsizing, probate and possession deadlines. Call 403-509-2783.",
+      "Compassionate estate and full house clean-outs in Calgary and Airdrie, from $50. Downsizing, probate and possession deadlines. Call 403-509-2783.",
     summary:
       "Full house clearances for estates, downsizing and possession deadlines — handled patiently and without pressure.",
     image: "/images/gallery/bin-trailer-alley.webp",
@@ -621,7 +621,7 @@ export const junkRemovalServices: Service[] = [
     h1: "Dump Runs Calgary",
     title: "Dump Run Calgary | We Haul It to the Landfill",
     description:
-      "Dump runs across Calgary and Airdrie — we load it, we pay the tipping fee, you skip the landfill queue. Call 403-509-2783.",
+      "Dump runs across Calgary and Airdrie, from $50 — we load it, we pay the tipping fee, you skip the landfill queue. Call 403-509-2783.",
     summary:
       "You have a pile and no truck. We load it, haul it, pay the tipping fee, and you never see the landfill.",
     image: "/images/gallery/yard-cleanup-debris.webp",
@@ -741,7 +741,7 @@ export const junkRemovalServices: Service[] = [
     h1: "Yard Waste Removal Calgary",
     title: "Yard Waste Removal Calgary | Branches, Sod, Debris",
     description:
-      "Yard waste, branch, sod and landscaping debris removal in Calgary and Airdrie. More than the green cart holds. Call 403-509-2783.",
+      "Yard waste, branch, sod and landscaping debris removal in Calgary and Airdrie, from $50. More than the green cart holds. Call 403-509-2783.",
     summary:
       "Branches, sod, soil, leaves and landscaping debris — everything that will never fit in a green cart.",
     image: "/images/gallery/yard-cleanup-debris.webp",
@@ -870,7 +870,7 @@ export const junkRemovalServices: Service[] = [
     h1: "Scrap Metal Removal Calgary",
     title: "Scrap Metal Removal Calgary | Free On Volume",
     description:
-      "Scrap metal pickup in Calgary and Airdrie — appliances, steel, tires, machinery. Often cheaper than general junk. Call 403-509-2783.",
+      "Scrap metal pickup in Calgary and Airdrie, from $50 — appliances, steel, tires, machinery. Often cheaper than general junk. Call 403-509-2783.",
     summary:
       "Steel, appliances, machinery and metal scrap picked up and taken to the scrap yard rather than the landfill.",
     image: "/images/gallery/scrap-tires-cleanup.webp",
@@ -930,7 +930,7 @@ export const junkRemovalServices: Service[] = [
       {
         step: "Describe the metal",
         detail:
-          "Call 403-861-2361. Say roughly what it is and how much — a photo helps. Metal-heavy jobs price better and we will tell you so.",
+          "Call 403-509-2783. Say roughly what it is and how much — a photo helps. Metal-heavy jobs price better and we will tell you so.",
       },
       {
         step: "Leave it where it is",

@@ -33,7 +33,7 @@ export default function LocalBusinessSchema() {
           },
           {
             "@type": "ContactPoint",
-            telephone: business.phoneCellTel,
+            telephone: business.phoneTedTel,
             contactType: "customer service",
             areaServed: "CA",
             availableLanguage: "English",

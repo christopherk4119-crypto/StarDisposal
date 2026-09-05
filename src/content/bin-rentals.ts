@@ -10,7 +10,7 @@ export const binRentalServices: Service[] = [
     h1: "10 Yard Bin Rental Calgary",
     title: "10 Yard Bin Rental Calgary | Small Loads & Heavy Debris",
     description:
-      "10 yard bin rental in Calgary and Airdrie. Fits a tight driveway, right size for concrete, dirt and small renos. Call 403-509-2783.",
+      "10 yard bin rental in Calgary and Airdrie, from $50. Fits a tight driveway, right size for concrete, dirt and small renos. Call 403-509-2783.",
     summary:
       "The small bin. Fits a tight driveway, and the correct choice for heavy material like concrete, tile and soil.",
     image: "/images/gallery/bin-trailer-alley.webp",
@@ -126,7 +126,7 @@ export const binRentalServices: Service[] = [
     h1: "12 Yard Bin Rental Calgary",
     title: "12 Yard Bin Rental Calgary | Mid-Size Driveway Bin",
     description:
-      "12 yard bin rental for Calgary and Airdrie garages, decks and mid-size clean-outs. Still fits a normal driveway. Call 403-509-2783.",
+      "12 yard bin rental for Calgary and Airdrie garages, decks and mid-size clean-outs, from $50. Still fits a normal driveway. Call 403-509-2783.",
     summary:
       "A step up from the 10 with the same driveway footprint — the practical choice for garages and deck teardowns.",
     image: "/images/gallery/bin-trailer-apartment.webp",
@@ -242,7 +242,7 @@ export const binRentalServices: Service[] = [
     h1: "15 Yard Bin Rental Calgary",
     title: "15 Yard Bin Rental Calgary | Renos & Big Clean-Outs",
     description:
-      "15 yard bin rental in Calgary and Airdrie. The go-to size for kitchen renos, basements and full garage clear-outs. Call 403-509-2783.",
+      "15 yard bin rental in Calgary and Airdrie, from $50. The go-to size for kitchen renos, basements and full garage clear-outs. Call 403-509-2783.",
     summary:
       "Our most-booked size. Kitchen renovations, basement clear-outs and packed double garages all land here.",
     image: "/images/gallery/mattress-furniture-bin.webp",
@@ -370,7 +370,7 @@ export const binRentalServices: Service[] = [
     h1: "20 Yard Bin Rental Calgary",
     title: "20 Yard Bin Rental Calgary | Our Largest Bin",
     description:
-      "20 yard bin rental in Calgary and Airdrie for whole-house clear-outs, big renos and construction. Call 403-509-2783 to book.",
+      "20 yard bin rental in Calgary and Airdrie, from $50, for whole-house clear-outs, big renos and construction. Call 403-509-2783 to book.",
     summary:
       "Our largest bin. Whole-house clear-outs, major renovations, roofing and construction sites.",
     image: "/images/gallery/yard-cleanup-debris.webp",
@@ -498,7 +498,7 @@ export const binRentalServices: Service[] = [
     h1: "Renovation Bin Rental Calgary",
     title: "Renovation Bin Rental Calgary | Reno Waste Bins",
     description:
-      "Bin rental for Calgary renovations — drywall, flooring, tile, cabinets and fixtures. Swaps so trades never stop. Call 403-509-2783.",
+      "Bin rental for Calgary renovations, from $50 — drywall, flooring, tile, cabinets and fixtures. Swaps so trades never stop. Call 403-509-2783.",
     summary:
       "Bins sized and scheduled around a renovation, with swaps so the trades never stop working.",
     image: "/images/gallery/mattress-furniture-bin.webp",

@@ -43,10 +43,10 @@ export default function Footer() {
                 </span>
               </a>
               <a
-                href={`tel:${business.phoneCellTel}`}
+                href={`tel:${business.phoneTedTel}`}
                 className="text-[15px] font-semibold text-brand-navy hover:text-brand-red"
               >
-                {business.phoneCellLabel}: {business.phoneCellDisplay}
+                Ted&rsquo;s Cell (backup): {business.phoneTedDisplay}
               </a>
               <a
                 href={`mailto:${business.email}`}

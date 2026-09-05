@@ -37,13 +37,13 @@ export default function Contact() {
           <div className="mt-[26px] grid grid-cols-2 gap-[26px]">
             <div>
               <div className="font-display text-[11px] tracking-[0.16em] text-brand-navy/55">
-                {business.phoneCellLabel.toUpperCase()}
+                TED&rsquo;S CELL (BACKUP)
               </div>
               <a
-                href={`tel:${business.phoneCellTel}`}
+                href={`tel:${business.phoneTedTel}`}
                 className="mt-1.5 block font-display text-xl text-brand-navy transition hover:text-brand-red"
               >
-                {business.phoneCellDisplay}
+                {business.phoneTedDisplay}
               </a>
               <div className="mt-1 text-[12px] font-semibold text-brand-navy/55">
                 Texts &amp; job photos
@@ -51,13 +51,13 @@ export default function Contact() {
             </div>
             <div>
               <div className="font-display text-[11px] tracking-[0.16em] text-brand-navy/55">
-                EMAIL
+                TEXT (TED)
               </div>
               <a
-                href={`mailto:${business.email}`}
-                className="mt-2 block break-words text-sm font-semibold text-brand-navy transition hover:text-brand-red"
+                href={`sms:${business.phoneTedTel}`}
+                className="mt-1.5 block font-display text-xl text-brand-navy transition hover:text-brand-red"
               >
-                {business.email}
+                {business.phoneTedDisplay}
               </a>
             </div>
           </div>

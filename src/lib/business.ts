@@ -30,31 +30,46 @@ export const business = {
   email: "stardisposalservices@outlook.com",
 
   /**
-   * Main line — the vanity number from the truck signage, and the number on
-   * the Google Business Profile and BBB listing. `phoneMainDisplay` and
-   * `phoneMainSub` are the same line: 403-50-WASTE spells 403-509-2783.
-   * Anyone who reads the vanity string and dials it by hand reaches us.
+   * Main line, confirmed directly by the owner. `phoneMainDisplay` is the
+   * vanity string from the truck signage and the Google Business Profile
+   * listing; `phoneMainSub` is the same number spelled out in digits, shown
+   * beside it so anyone who can't dial letters on their device still has a
+   * number to type. `phoneMainTel` dials those same digits — 403-50-WASTE
+   * decodes to 403-509-2783 on a phone keypad, it is not a different number.
    *
-   * Calls only. For anything that needs a text or a photo, use Ted's cell.
+   * Ted's cell (`phoneTedDisplay` / `phoneTedTel`) is the explicit backup:
+   * call it only if the main line doesn't connect. It must always be labelled
+   * "Ted's Cell", never presented as an equal second main line.
    */
   phoneMainDisplay: "403-50-WASTE",
-  phoneMainSub: "403-509-2783",
+  phoneMainSub: "(403-509-2783)",
   phoneMainTel: "+14035092783",
 
-  /** Secondary line. Takes calls and texts — use this one for job photos. */
-  phoneCellLabel: "Ted's Cell",
-  phoneCellDisplay: "403-861-2361",
-  phoneCellTel: "+14038612361",
+  phoneTedDisplay: "403-861-2361",
+  phoneTedTel: "+14038612361",
 
   /**
    * Real profile URLs only — a bare domain does nothing for entity
    * confirmation. Add the Google Business Profile share link here when
    * available; that is the highest-value entry in this list.
+   *
+   * Note: the business is NOT BBB Accredited (confirmed on the BBB profile
+   * itself). The link is included as an honest reference to a real listing,
+   * never as an accreditation or trust claim.
    */
   sameAs: [
     "https://www.yelp.ca/biz/star-disposal-services-calgary-5",
     "https://www.bbb.org/ca/ab/calgary/profile/auto-wholesale/star-disposal-service-calgary-0017-45169",
   ],
+
+  /**
+   * Real Google Business Profile rating, as shown on Google Maps. Update
+   * these two numbers whenever the profile's rating or review count
+   * changes — never estimate or round in a way that drifts from what
+   * Google Maps actually shows.
+   */
+  googleRatingValue: "5.0",
+  googleReviewCount: "2",
 
   priceRange: "$50+",
   startingPrice: "$50",

@@ -40,6 +40,8 @@ export const allRoutes: string[] = [
     ...servicesByHub(h.slug).map((s) => `/${h.slug}/${s.slug}`),
   ]),
   "/service-areas",
+  "/junk-removal-airdrie",
+  "/bin-rental-airdrie",
   "/about",
   "/contact",
   "/privacy",

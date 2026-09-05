@@ -76,7 +76,7 @@ export const hubs: Hub[] = [
     h1: "Bin Rental Calgary",
     title: "Bin Rental Calgary | 10, 12, 15 & 20 Yard Bins",
     description:
-      "Roll-off bin and dumpster rental in Calgary and Airdrie. 10, 12, 15 and 20 yard bins dropped where you need them. Call 403-509-2783.",
+      "Roll-off bin and dumpster rental in Calgary and Airdrie, from $50. 10, 12, 15 and 20 yard bins dropped where you need them. Call 403-509-2783.",
     summary:
       "10, 12, 15 and 20 yard bins dropped on your driveway, alley or job site — you fill it on your schedule, we haul it away.",
     image: "/images/gallery/bin-trailer-apartment.webp",
@@ -145,7 +145,7 @@ export const hubs: Hub[] = [
     h1: "Demolition & Site Services Calgary",
     title: "Demolition & Site Clean-Up Calgary | Bobcat Work",
     description:
-      "Small demolition, bobcat work, construction waste removal and site clean-up in Calgary and Airdrie. Since 1996. Call 403-509-2783.",
+      "Small demolition, bobcat work, construction waste removal and site clean-up in Calgary and Airdrie, from $50. Call 403-509-2783.",
     summary:
       "Small demolition, bobcat work, construction waste removal and full site clean-up — the heavy end of what we do.",
     image: "/images/gallery/yard-cleanup-debris.webp",
@@ -169,7 +169,7 @@ export const hubs: Hub[] = [
         body: [
           "For a demolition, the three things that decide the price are size, what it is built from, and access. A 20 by 22 foot detached garage on a back alley is a straightforward day. The same garage attached to the house, or one with a concrete slab that has to come out too, is a different job.",
           "For bobcat work, it is the material, the distance it has to move and the ground conditions. Frozen ground in a Calgary February behaves very differently from soft ground in May, and it changes what the machine can do in a day.",
-          "Photos help more than descriptions. Text a few to 403-861-2361 and you will get a much more accurate number than you would from a phone conversation alone.",
+          "Photos help more than descriptions. Text a few to 403-509-2783 and you will get a much more accurate number than you would from a phone conversation alone.",
         ],
       },
       {

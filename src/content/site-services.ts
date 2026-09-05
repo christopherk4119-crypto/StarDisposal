@@ -10,7 +10,7 @@ export const siteServices: Service[] = [
     h1: "Demolition Calgary",
     title: "Demolition Calgary | Garages, Sheds, Decks & Interiors",
     description:
-      "Small demolition in Calgary and Airdrie — garages, sheds, decks, fences and interior strip-outs, with haul-away included. 403-509-2783.",
+      "Small demolition in Calgary and Airdrie, from $50 — garages, sheds, decks, fences and interior strip-outs, haul-away included. 403-509-2783.",
     summary:
       "Garages, sheds, decks, fences and interior strip-outs taken down and hauled away in the same job.",
     image: "/images/gallery/yard-cleanup-debris.webp",
@@ -71,7 +71,7 @@ export const siteServices: Service[] = [
       {
         step: "Send photos",
         detail:
-          "Text a few to 403-861-2361. For demolition, photos get you a far more accurate number than a phone description.",
+          "Text a few to 403-509-2783. For demolition, photos get you a far more accurate number than a phone description.",
       },
       {
         step: "Sort permits and disconnects",
@@ -103,7 +103,7 @@ export const siteServices: Service[] = [
     faqs: [
       {
         q: "How much does it cost to demolish a garage in Calgary?",
-        a: "It depends on size, what it is built from, whether the concrete slab is coming out, and access. A standard detached garage on a back alley is a straightforward job. Text photos to 403-861-2361 for an accurate number.",
+        a: "It depends on size, what it is built from, whether the concrete slab is coming out, and access. A standard detached garage on a back alley is a straightforward job. Text photos to 403-509-2783 for an accurate number.",
       },
       {
         q: "Do you take the debris away as well?",
@@ -140,7 +140,7 @@ export const siteServices: Service[] = [
     h1: "Bobcat Services Calgary",
     title: "Bobcat Services Calgary | Site Prep & Material Moving",
     description:
-      "Bobcat and skid steer work in Calgary and Airdrie — site prep, grading, material moving and debris piles. Call 403-509-2783.",
+      "Bobcat and skid steer work in Calgary and Airdrie, from $50 — site prep, grading, material moving and debris piles. Call 403-509-2783.",
     summary:
       "Skid steer work for site prep, grading, material moving and anything too heavy to shift by hand.",
     image: "/images/gallery/yard-cleanup-debris.webp",
@@ -271,7 +271,7 @@ export const siteServices: Service[] = [
     h1: "Site Clean-Up Calgary",
     title: "Site Clean-Up Calgary | Post-Construction Clear-Down",
     description:
-      "Construction and property site clean-up in Calgary and Airdrie. Final clear-down before handover or possession. Call 403-509-2783.",
+      "Construction and property site clean-up in Calgary and Airdrie, from $50. Final clear-down before handover or possession. Call 403-509-2783.",
     summary:
       "Final clear-down of a construction site or a neglected property — everything gone, ground swept.",
     image: "/images/gallery/scrap-tires-cleanup.webp",
@@ -400,7 +400,7 @@ export const siteServices: Service[] = [
     h1: "Construction Waste Removal Calgary",
     title: "Construction Waste Removal Calgary | Contractor Bins",
     description:
-      "Construction and demolition waste removal for Calgary and Airdrie job sites. Bins, swaps and contractor accounts. 403-509-2783.",
+      "Construction and demolition waste removal for Calgary and Airdrie job sites, from $50. Bins, swaps and contractor accounts. 403-509-2783.",
     summary:
       "Job site waste handled on a schedule — bins, swaps and standing arrangements for contractors.",
     image: "/images/gallery/bin-trailer-apartment.webp",
