@@ -10,7 +10,7 @@ export const siteServices: Service[] = [
     h1: "Demolition Calgary",
     title: "Demolition Calgary | Garages, Sheds, Decks & Interiors",
     description:
-      "Small demolition in Calgary and Airdrie — garages, sheds, decks, fences and interior strip-outs, with haul-away included. 403-861-2361.",
+      "Small demolition in Calgary and Airdrie — garages, sheds, decks, fences and interior strip-outs, with haul-away included. 403-509-2783.",
     summary:
       "Garages, sheds, decks, fences and interior strip-outs taken down and hauled away in the same job.",
     image: "/images/gallery/yard-cleanup-debris.webp",
@@ -140,7 +140,7 @@ export const siteServices: Service[] = [
     h1: "Bobcat Services Calgary",
     title: "Bobcat Services Calgary | Site Prep & Material Moving",
     description:
-      "Bobcat and skid steer work in Calgary and Airdrie — site prep, grading, material moving and debris piles. Call 403-861-2361.",
+      "Bobcat and skid steer work in Calgary and Airdrie — site prep, grading, material moving and debris piles. Call 403-509-2783.",
     summary:
       "Skid steer work for site prep, grading, material moving and anything too heavy to shift by hand.",
     image: "/images/gallery/yard-cleanup-debris.webp",
@@ -183,7 +183,7 @@ export const siteServices: Service[] = [
         body: [
           "The combination people most often want is a machine and a bin at the same time. The bobcat clears, the bin takes it, and the site is finished in one visit rather than being staged over two.",
           "That applies to demolition debris, large yard clean-ups, old landscaping being ripped out, and construction site clear-downs. It is meaningfully cheaper than booking the machine and the disposal separately, because you are paying for one mobilisation rather than two.",
-          "Call 403-861-2361 and describe both halves of the job at once so we bring the right setup the first time.",
+          "Call 403-509-2783 and describe both halves of the job at once so we bring the right setup the first time.",
         ],
       },
     ],
@@ -202,7 +202,7 @@ export const siteServices: Service[] = [
       {
         step: "Describe the job and the access",
         detail:
-          "Call 403-861-2361. The first question is always whether the machine can physically get to the work — gate widths, side yards, alley access.",
+          "Call 403-509-2783. The first question is always whether the machine can physically get to the work — gate widths, side yards, alley access.",
       },
       {
         step: "Flag what it crosses",
@@ -271,7 +271,7 @@ export const siteServices: Service[] = [
     h1: "Site Clean-Up Calgary",
     title: "Site Clean-Up Calgary | Post-Construction Clear-Down",
     description:
-      "Construction and property site clean-up in Calgary and Airdrie. Final clear-down before handover or possession. Call 403-861-2361.",
+      "Construction and property site clean-up in Calgary and Airdrie. Final clear-down before handover or possession. Call 403-509-2783.",
     summary:
       "Final clear-down of a construction site or a neglected property — everything gone, ground swept.",
     image: "/images/gallery/scrap-tires-cleanup.webp",
@@ -305,7 +305,7 @@ export const siteServices: Service[] = [
         body: [
           "Some clean-ups involve someone's home rather than a site, and those need a different pace. Hoarding situations in particular are not junk removal jobs with a bigger truck — they involve a person who is often present and often distressed.",
           "The approach is the same one we take on estate work: no pressure, nothing leaves until it has been agreed, and no commentary. If it is easier to work in stages over several visits rather than clearing everything at once, that is a completely normal way to do it.",
-          "Practically, these jobs need a bin on site for the duration rather than a single truck visit. Call 403-861-2361 and we will talk it through before anything is booked.",
+          "Practically, these jobs need a bin on site for the duration rather than a single truck visit. Call 403-509-2783 and we will talk it through before anything is booked.",
         ],
       },
       {
@@ -336,7 +336,7 @@ export const siteServices: Service[] = [
       {
         step: "Flag any deadline",
         detail:
-          "Handover date, possession, or a City bylaw compliance notice. Tell us on the first call at 403-861-2361.",
+          "Handover date, possession, or a City bylaw compliance notice. Tell us on the first call at 403-509-2783.",
       },
       {
         step: "Bin on site, machine if needed",
@@ -400,7 +400,7 @@ export const siteServices: Service[] = [
     h1: "Construction Waste Removal Calgary",
     title: "Construction Waste Removal Calgary | Contractor Bins",
     description:
-      "Construction and demolition waste removal for Calgary and Airdrie job sites. Bins, swaps and contractor accounts. 403-861-2361.",
+      "Construction and demolition waste removal for Calgary and Airdrie job sites. Bins, swaps and contractor accounts. 403-509-2783.",
     summary:
       "Job site waste handled on a schedule — bins, swaps and standing arrangements for contractors.",
     image: "/images/gallery/bin-trailer-apartment.webp",
@@ -462,7 +462,7 @@ export const siteServices: Service[] = [
       {
         step: "Talk through the build",
         detail:
-          "Call 403-861-2361 with the scope and the trade sequence. Waste volume follows a predictable shape and the schedule should follow it.",
+          "Call 403-509-2783 with the scope and the trade sequence. Waste volume follows a predictable shape and the schedule should follow it.",
       },
       {
         step: "Set the swap schedule",
@@ -494,7 +494,7 @@ export const siteServices: Service[] = [
     faqs: [
       {
         q: "Do you set up accounts for contractors?",
-        a: "Yes. A standing arrangement with known bin sizes and scheduled swaps works far better than booking job by job. Call 403-861-2361 and speak to Ted directly.",
+        a: "Yes. A standing arrangement with known bin sizes and scheduled swaps works far better than booking job by job. Call 403-509-2783 and speak to Ted directly.",
       },
       {
         q: "How quickly can you swap a full bin?",

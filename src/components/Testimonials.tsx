@@ -1,3 +1,10 @@
+/**
+ * Customer quotes, verbatim.
+ *
+ * These are collected on Google, Yelp and BBB rather than by this site, so
+ * they carry no Review structured data — Google only permits review markup
+ * for reviews a site gathers itself. See the README before adding any.
+ */
 export default function Testimonials() {
   return (
     <section className="bg-brand-yellow px-8 pb-[104px] pt-24 lg:px-14">
@@ -10,10 +17,12 @@ export default function Testimonials() {
         </div>
 
         <blockquote className="m-0 max-w-[1020px]">
-          <p className="font-display text-3xl leading-[1.14] tracking-[-0.015em] text-brand-navy lg:text-[44px]">
-            &ldquo;Ted was prompt, friendly, polite&hellip; provided
-            excellent service. I would absolutely recommend Star Disposal
-            Services for any hauling job.&rdquo;
+          <p className="font-display text-[26px] leading-[1.18] tracking-[-0.015em] text-brand-navy lg:text-[38px]">
+            &ldquo;We called Star Disposal Services today (Sunday) to remove an
+            old fridge from a condo we own. Ted was prompt, friendly, polite and
+            provided excellent service. I would absolutely recommend Star
+            Disposal Services for any hauling job you may have. Five Star
+            Service all the way!&rdquo;
           </p>
           <footer className="mt-6 flex flex-wrap items-center gap-4">
             <span className="text-[15px] tracking-[3px] text-brand-navy">
@@ -30,8 +39,8 @@ export default function Testimonials() {
           <blockquote className="m-0 border-t-2 border-brand-navy pt-[22px]">
             <p className="text-xl font-medium leading-[1.5] text-brand-navy">
               &ldquo;Awesome customer service. They sure helped my elderly
-              father and his wife. They went above and beyond in helping
-              them. Thanks&rdquo;
+              father and his wife. They went above and beyond in helping them.
+              Thanks&rdquo;
             </p>
             <footer className="mt-5 flex flex-wrap items-center gap-3.5">
               <span className="text-[13px] tracking-[3px] text-brand-navy">
@@ -44,8 +53,9 @@ export default function Testimonials() {
           </blockquote>
 
           <blockquote className="m-0 border-t-2 border-brand-navy pt-[22px] lg:mt-11">
-            <p className="font-display text-2xl leading-[1.24] text-brand-navy">
-              &ldquo;He was polite, helpful, knowledgeable.&rdquo;
+            <p className="text-xl font-medium leading-[1.5] text-brand-navy">
+              &ldquo;I called Ted to recycle a 2000 Lincoln Town Car. He was
+              polite, helpful, knowledgeable.&rdquo;
             </p>
             <footer className="mt-5 flex flex-wrap items-center gap-3.5">
               <span className="text-[13px] tracking-[3px] text-brand-navy">

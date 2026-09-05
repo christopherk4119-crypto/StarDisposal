@@ -37,14 +37,17 @@ export default function Contact() {
           <div className="mt-[26px] grid grid-cols-2 gap-[26px]">
             <div>
               <div className="font-display text-[11px] tracking-[0.16em] text-brand-navy/55">
-                SECOND LINE
+                {business.phoneCellLabel.toUpperCase()}
               </div>
               <a
-                href={`tel:${business.phoneAltTel}`}
+                href={`tel:${business.phoneCellTel}`}
                 className="mt-1.5 block font-display text-xl text-brand-navy transition hover:text-brand-red"
               >
-                {business.phoneAltDisplay}
+                {business.phoneCellDisplay}
               </a>
+              <div className="mt-1 text-[12px] font-semibold text-brand-navy/55">
+                Texts &amp; job photos
+              </div>
             </div>
             <div>
               <div className="font-display text-[11px] tracking-[0.16em] text-brand-navy/55">

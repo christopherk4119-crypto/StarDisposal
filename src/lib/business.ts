@@ -30,35 +30,31 @@ export const business = {
   email: "stardisposalservices@outlook.com",
 
   /**
-   * Main line. `phoneMainDisplay` is the vanity string from the truck signage;
-   * `phoneMainSub` carries the dialable digits and must ALWAYS be rendered
-   * beside it.
+   * Main line — the vanity number from the truck signage, and the number on
+   * the Google Business Profile and BBB listing. `phoneMainDisplay` and
+   * `phoneMainSub` are the same line: 403-50-WASTE spells 403-509-2783.
+   * Anyone who reads the vanity string and dials it by hand reaches us.
    *
-   * This matters more than usual here: 403-50-WASTE spells 403-509-2783,
-   * which is a different LIVE line (it is the number currently on the Google
-   * Business Profile). So anyone who reads the vanity string and dials it by
-   * hand reaches that line, not this one. Never render `phoneMainDisplay`
-   * without `phoneMainSub` next to it.
-   *
-   * NAP NOTE: the Google Business Profile currently lists 403-509-2783, so
-   * the site and the profile do not match. That is a known, temporary
-   * mismatch — the profile is due to be updated. Until it is, this is the
-   * single biggest off-site SEO inconsistency on the business.
+   * Calls only. For anything that needs a text or a photo, use Ted's cell.
    */
   phoneMainDisplay: "403-50-WASTE",
-  phoneMainSub: "403-861-2361",
-  phoneMainTel: "+14038612361",
+  phoneMainSub: "403-509-2783",
+  phoneMainTel: "+14035092783",
 
-  /** Second line kept from the intake form. */
-  phoneAltDisplay: "403-204-7827",
-  phoneAltTel: "+14032047827",
+  /** Secondary line. Takes calls and texts — use this one for job photos. */
+  phoneCellLabel: "Ted's Cell",
+  phoneCellDisplay: "403-861-2361",
+  phoneCellTel: "+14038612361",
 
   /**
    * Real profile URLs only — a bare domain does nothing for entity
-   * confirmation. Add the Google Business Profile share link here once
+   * confirmation. Add the Google Business Profile share link here when
    * available; that is the highest-value entry in this list.
    */
-  sameAs: ["https://www.yelp.ca/biz/star-disposal-services-calgary-5"],
+  sameAs: [
+    "https://www.yelp.ca/biz/star-disposal-services-calgary-5",
+    "https://www.bbb.org/ca/ab/calgary/profile/auto-wholesale/star-disposal-service-calgary-0017-45169",
+  ],
 
   priceRange: "$50+",
   startingPrice: "$50",

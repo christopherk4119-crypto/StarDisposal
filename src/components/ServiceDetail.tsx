@@ -6,8 +6,10 @@ import FaqSection from "./FaqSection";
 import CallBand from "./CallBand";
 import RelatedServices from "./RelatedServices";
 import ServiceSchema from "./ServiceSchema";
+import QuoteSection from "./QuoteSection";
 import type { Hub, Service } from "@/lib/service-types";
 import { areaSentence } from "@/lib/business";
+import { quoteCategoryFor } from "@/lib/forms";
 
 /** Long-form spoke page. One component, so each new page is content, not markup. */
 export default function ServiceDetail({
@@ -187,6 +189,12 @@ export default function ServiceDetail({
             </div>
           )}
         </section>
+
+        <QuoteSection
+          heading="Get a price for this job"
+          blurb={`Tell us what you have and where it is — ${service.name.toLowerCase()} anywhere in Calgary or Airdrie. You get a number before anything moves, and there is no obligation.`}
+          defaultService={quoteCategoryFor(service.hub, service.slug)}
+        />
 
         <FaqSection faqs={service.faqs} heading={`${service.name} questions`} />
 

@@ -17,3 +17,19 @@ export const formspreeEndpoint = formspreeId
 
 /** True when submissions are delivered server-side rather than via mailto. */
 export const usesFormBackend = Boolean(formspreeId);
+
+/**
+ * Maps a service page onto one of the quote form's radio options, so the
+ * form arrives pre-filled with what the visitor was actually reading.
+ * One less field to fill in is one less reason to abandon it.
+ */
+export function quoteCategoryFor(hub: string, slug: string): string {
+  if (slug === "dump-runs") return "Dump Run";
+  if (hub === "junk-removal") return "Junk Removal";
+  if (hub === "bin-rentals") return "Bin Rental";
+  if (slug === "demolition") return "Demolition";
+  if (slug === "bobcat-services") return "Bobcat";
+  if (slug === "site-cleanup") return "Site Clean-Up";
+  if (slug === "construction-waste-removal") return "Bin Rental";
+  return "";
+}
