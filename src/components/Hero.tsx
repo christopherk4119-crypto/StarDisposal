@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { business } from "@/lib/business";
 
 export default function Hero() {
@@ -59,23 +58,23 @@ export default function Hero() {
               </span>
             </span>
           </a>
-          <Link
-            href="/contact"
+          <a
+            href={`sms:${business.phoneTedTel}`}
             className="flex max-w-full items-center gap-3 border border-brand-yellow/60 bg-white/[0.06] px-4 py-[22px] text-white transition hover:border-brand-yellow hover:bg-brand-yellow/[0.12] sm:gap-[18px] sm:px-8"
           >
             <span className="font-display text-sm tracking-[0.1em] text-brand-yellow">
-              EMAIL US
+              TEXT TED
             </span>
             <span className="block h-[34px] w-px bg-white/25" />
             <span className="flex flex-col gap-[3px]">
               <span className="font-display text-xl leading-none">
-                Rather get a quote by email
+                Rather text than call?
               </span>
               <span className="text-xs font-semibold text-white/70">
-                Reply next business day
+                {business.phoneTedDisplay}
               </span>
             </span>
-          </Link>
+          </a>
         </div>
 
         <div className="mt-16 flex max-w-[800px] flex-wrap gap-12 border-t border-white/18 pt-[26px]">

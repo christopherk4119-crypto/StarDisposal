@@ -15,6 +15,12 @@ const stats = [
     description: "Protected on every job.",
   },
   {
+    value: "WCB",
+    valueSize: "text-[36px]",
+    title: "WCB Covered",
+    description: "Our crew is covered on every job site.",
+  },
+  {
     value: "$50",
     valueSize: "text-[44px]",
     title: "Starting at $50",

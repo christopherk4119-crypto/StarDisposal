@@ -74,10 +74,10 @@ export default function PageHero({
             </span>
           </a>
           <a
-            href={`mailto:${business.email}`}
+            href={`sms:${business.phoneTedTel}`}
             className="border border-brand-yellow/60 bg-white/[0.06] px-4 py-5 font-display text-[13px] tracking-[0.1em] text-brand-yellow transition hover:bg-brand-yellow/[0.12] sm:px-7"
           >
-            EMAIL FOR A QUOTE
+            TEXT TED
           </a>
         </div>
       </div>

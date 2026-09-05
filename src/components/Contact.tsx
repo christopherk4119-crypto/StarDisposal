@@ -48,13 +48,13 @@ export default function Contact() {
             </div>
             <div>
               <div className="font-display text-[11px] tracking-[0.16em] text-brand-navy/55">
-                EMAIL
+                TEXT (TED)
               </div>
               <a
-                href={`mailto:${business.email}`}
-                className="mt-2 block break-words text-sm font-semibold text-brand-navy transition hover:text-brand-red"
+                href={`sms:${business.phoneTedTel}`}
+                className="mt-1.5 block font-display text-xl text-brand-navy transition hover:text-brand-red"
               >
-                {business.email}
+                {business.phoneTedDisplay}
               </a>
             </div>
           </div>
