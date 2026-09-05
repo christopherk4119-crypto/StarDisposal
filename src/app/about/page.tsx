@@ -10,7 +10,7 @@ import { allHubs } from "@/lib/services";
 
 const title = "About Star Disposal Services | Calgary Since 1996";
 const description =
-  "Family run Calgary junk removal and bin rental since 1996. Owned by Talib (Ted) Ferris, who still answers the phone. Call 403-861-2361.";
+  "Family run Calgary junk removal and bin rental since 1996. Owned by Talib (Ted) Ferris, who still answers the phone. Call 403-509-2783.";
 const url = `${siteUrl}/about`;
 
 export const metadata: Metadata = {

@@ -8,7 +8,7 @@ export const hubs: Hub[] = [
     h1: "Junk Removal Calgary",
     title: "Junk Removal Calgary | From $50, Same Day",
     description:
-      "Calgary junk removal since 1996. Appliances, furniture, mattresses, garage and estate clean-outs. We load it. From $50 — call 403-861-2361.",
+      "Calgary junk removal since 1996. Appliances, furniture, mattresses, garage and estate clean-outs. We load it. From $50 — call 403-509-2783.",
     summary:
       "We show up, we load it, it's gone. Appliances, furniture, mattresses, garage and estate clean-outs across Calgary and Airdrie.",
     image: "/images/gallery/mattress-furniture-bin.webp",
@@ -51,7 +51,7 @@ export const hubs: Hub[] = [
       },
       {
         q: "How fast can you come?",
-        a: "Often the same day, especially for smaller loads booked in the morning. We answer the phone from 8 AM to 8 PM seven days a week — call 403-861-2361 and we will tell you honestly what today looks like.",
+        a: "Often the same day, especially for smaller loads booked in the morning. We answer the phone from 8 AM to 8 PM seven days a week — call 403-509-2783 and we will tell you honestly what today looks like.",
       },
       {
         q: "Do you do the loading, or do I?",
@@ -76,7 +76,7 @@ export const hubs: Hub[] = [
     h1: "Bin Rental Calgary",
     title: "Bin Rental Calgary | 10, 12, 15 & 20 Yard Bins",
     description:
-      "Roll-off bin and dumpster rental in Calgary and Airdrie. 10, 12, 15 and 20 yard bins dropped where you need them. Call 403-861-2361.",
+      "Roll-off bin and dumpster rental in Calgary and Airdrie. 10, 12, 15 and 20 yard bins dropped where you need them. Call 403-509-2783.",
     summary:
       "10, 12, 15 and 20 yard bins dropped on your driveway, alley or job site — you fill it on your schedule, we haul it away.",
     image: "/images/gallery/bin-trailer-apartment.webp",
@@ -109,7 +109,7 @@ export const hubs: Hub[] = [
         body: [
           "Rental periods are flexible. Most residential jobs run a few days to a week. Renovation and construction jobs often run longer, and contractors frequently want a swap — we take the full one and drop an empty in the same visit so the trades never stop working.",
           "The cost of a bin rental is the drop-off, the rental period, the haul, and the landfill tipping fee, which is charged by weight. That is why heavy material matters: two bins of the same size can cost meaningfully different amounts if one is full of couch cushions and the other is full of tile.",
-          "Call 403-861-2361 and describe the job and we will give you a number for the size you need, including the fill limits, before anything gets delivered.",
+          "Call 403-509-2783 and describe the job and we will give you a number for the size you need, including the fill limits, before anything gets delivered.",
         ],
       },
     ],
@@ -145,7 +145,7 @@ export const hubs: Hub[] = [
     h1: "Demolition & Site Services Calgary",
     title: "Demolition & Site Clean-Up Calgary | Bobcat Work",
     description:
-      "Small demolition, bobcat work, construction waste removal and site clean-up in Calgary and Airdrie. Since 1996. Call 403-861-2361.",
+      "Small demolition, bobcat work, construction waste removal and site clean-up in Calgary and Airdrie. Since 1996. Call 403-509-2783.",
     summary:
       "Small demolition, bobcat work, construction waste removal and full site clean-up — the heavy end of what we do.",
     image: "/images/gallery/yard-cleanup-debris.webp",
@@ -169,7 +169,7 @@ export const hubs: Hub[] = [
         body: [
           "For a demolition, the three things that decide the price are size, what it is built from, and access. A 20 by 22 foot detached garage on a back alley is a straightforward day. The same garage attached to the house, or one with a concrete slab that has to come out too, is a different job.",
           "For bobcat work, it is the material, the distance it has to move and the ground conditions. Frozen ground in a Calgary February behaves very differently from soft ground in May, and it changes what the machine can do in a day.",
-          "Photos help more than descriptions. Text a few to 403-861-2361 and you will get a much more accurate number than you would from a phone conversation alone.",
+          "Photos help more than descriptions. Text a few to 403-509-2783 and you will get a much more accurate number than you would from a phone conversation alone.",
         ],
       },
       {

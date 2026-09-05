@@ -10,7 +10,7 @@ import { allHubs } from "@/lib/services";
 
 const title = "Service Area | Junk Removal Calgary & Airdrie";
 const description =
-  "Star Disposal Services covers all quadrants of Calgary plus Airdrie, Cochrane and Chestermere. Yard on 14 Ave SE. Call 403-861-2361.";
+  "Star Disposal Services covers all quadrants of Calgary plus Airdrie, Cochrane and Chestermere. Yard on 14 Ave SE. Call 403-509-2783.";
 const url = `${siteUrl}/service-areas`;
 
 export const metadata: Metadata = {
@@ -77,7 +77,7 @@ const faqs = [
   },
   {
     q: "Do you go outside Calgary and Airdrie?",
-    a: "Cochrane and Chestermere are covered as standard. For anything further out, call 403-861-2361 and describe the job — we will tell you honestly whether it makes sense for us to take it.",
+    a: "Cochrane and Chestermere are covered as standard. For anything further out, call 403-509-2783 and describe the job — we will tell you honestly whether it makes sense for us to take it.",
   },
   {
     q: "Can you get a bin into an inner-city back alley?",

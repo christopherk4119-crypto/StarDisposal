@@ -30,28 +30,23 @@ export const business = {
   email: "stardisposalservices@outlook.com",
 
   /**
-   * Main line. `phoneMainDisplay` is the vanity string from the truck signage;
-   * `phoneMainSub` carries the dialable digits and must ALWAYS be rendered
-   * beside it.
+   * Main line, confirmed directly by the owner. `phoneMainDisplay` is the
+   * vanity string from the truck signage and the Google Business Profile
+   * listing; `phoneMainSub` is the same number spelled out in digits, shown
+   * beside it so anyone who can't dial letters on their device still has a
+   * number to type. `phoneMainTel` dials those same digits — 403-50-WASTE
+   * decodes to 403-509-2783 on a phone keypad, it is not a different number.
    *
-   * This matters more than usual here: 403-50-WASTE spells 403-509-2783,
-   * which is a different LIVE line (it is the number currently on the Google
-   * Business Profile). So anyone who reads the vanity string and dials it by
-   * hand reaches that line, not this one. Never render `phoneMainDisplay`
-   * without `phoneMainSub` next to it.
-   *
-   * NAP NOTE: the Google Business Profile currently lists 403-509-2783, so
-   * the site and the profile do not match. That is a known, temporary
-   * mismatch — the profile is due to be updated. Until it is, this is the
-   * single biggest off-site SEO inconsistency on the business.
+   * Ted's cell (`phoneTedDisplay` / `phoneTedTel`) is the explicit backup:
+   * call it only if the main line doesn't connect. It must always be labelled
+   * "Ted's Cell", never presented as an equal second main line.
    */
   phoneMainDisplay: "403-50-WASTE",
-  phoneMainSub: "403-861-2361",
-  phoneMainTel: "+14038612361",
+  phoneMainSub: "(403-509-2783)",
+  phoneMainTel: "+14035092783",
 
-  /** Second line kept from the intake form. */
-  phoneAltDisplay: "403-204-7827",
-  phoneAltTel: "+14032047827",
+  phoneTedDisplay: "403-861-2361",
+  phoneTedTel: "+14038612361",
 
   /**
    * Real profile URLs only — a bare domain does nothing for entity

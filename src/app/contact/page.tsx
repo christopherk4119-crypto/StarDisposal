@@ -6,9 +6,9 @@ import PageHero from "@/components/PageHero";
 import FaqSection from "@/components/FaqSection";
 import { siteUrl, business } from "@/lib/business";
 
-const title = "Contact Star Disposal Services | 403-861-2361";
+const title = "Contact Star Disposal Services | 403-509-2783";
 const description =
-  "Get a free quote for junk removal, bin rentals or site work in Calgary and Airdrie. Call 403-861-2361, 8 AM to 8 PM, seven days.";
+  "Get a free quote for junk removal, bin rentals or site work in Calgary and Airdrie. Call 403-509-2783, 8 AM to 8 PM, seven days.";
 const url = `${siteUrl}/contact`;
 
 export const metadata: Metadata = {

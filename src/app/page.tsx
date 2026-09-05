@@ -13,7 +13,7 @@ import FaqSection from "@/components/FaqSection";
 const faqs = [
   {
     q: "How much does junk removal cost in Calgary?",
-    a: "Jobs start at $50. Beyond that it is priced by volume and weight — a single item at the curb is at the bottom of the range, a packed garage is a truckload. Call 403-861-2361, describe the material, and you get a price before anything moves.",
+    a: "Jobs start at $50. Beyond that it is priced by volume and weight — a single item at the curb is at the bottom of the range, a packed garage is a truckload. Call 403-509-2783, describe the material, and you get a price before anything moves.",
   },
   {
     q: "Should I book junk removal or rent a bin?",
