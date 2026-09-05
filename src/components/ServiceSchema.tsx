@@ -10,11 +10,13 @@ export default function ServiceSchema({
   serviceType,
   description,
   path,
+  areaServedOverride,
 }: {
   name: string;
   serviceType: string;
   description: string;
   path: string;
+  areaServedOverride?: string[];
 }) {
   return (
     <JsonLd
@@ -26,7 +28,10 @@ export default function ServiceSchema({
         description,
         url: `${siteUrl}${path}`,
         provider: { "@id": `${siteUrl}/#business` },
-        areaServed: areaServed.map((city) => ({ "@type": "City", name: city })),
+        areaServed: (areaServedOverride ?? areaServed).map((city) => ({
+          "@type": "City",
+          name: city,
+        })),
         offers: {
           "@type": "Offer",
           priceCurrency: "CAD",

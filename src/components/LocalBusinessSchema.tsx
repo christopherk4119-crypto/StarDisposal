@@ -41,12 +41,6 @@ export default function LocalBusinessSchema() {
         ],
         email: business.email,
         sameAs: [...business.sameAs],
-        aggregateRating: {
-          "@type": "AggregateRating",
-          ratingValue: business.googleRatingValue,
-          reviewCount: business.googleReviewCount,
-          bestRating: "5",
-        },
         founder: { "@type": "Person", name: business.owner },
         foundingDate: business.foundingDate,
         priceRange: business.priceRange,

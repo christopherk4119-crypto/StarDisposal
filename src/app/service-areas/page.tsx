@@ -55,6 +55,10 @@ const towns = [
   {
     name: "Airdrie",
     body: "A regular run, not an occasional trip. No surcharge on a normal-sized load. Bins, junk removal, dump runs and site work all available on the same basis as Calgary.",
+    links: [
+      { label: "Junk removal in Airdrie", path: "/junk-removal-airdrie" },
+      { label: "Bin rentals in Airdrie", path: "/bin-rental-airdrie" },
+    ],
   },
   {
     name: "Cochrane",
@@ -175,9 +179,24 @@ export default function ServiceAreasPage() {
                 <h3 className="font-display text-[30px] leading-none text-brand-navy">
                   {town.name}
                 </h3>
-                <p className="max-w-[820px] text-[16px] leading-[1.65] text-brand-navy/75">
-                  {town.body}
-                </p>
+                <div>
+                  <p className="max-w-[820px] text-[16px] leading-[1.65] text-brand-navy/75">
+                    {town.body}
+                  </p>
+                  {"links" in town && town.links && (
+                    <div className="mt-3 flex flex-wrap gap-x-6 gap-y-2">
+                      {town.links.map((link) => (
+                        <Link
+                          key={link.path}
+                          href={link.path}
+                          className="font-display text-[13px] tracking-[0.06em] text-brand-navy underline decoration-brand-yellow decoration-2 underline-offset-4 hover:text-brand-red"
+                        >
+                          {link.label} →
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
               </div>
             ))}
           </div>

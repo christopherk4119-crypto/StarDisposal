@@ -17,7 +17,7 @@ const archivoBlack = Archivo_Black({
   display: "swap",
 });
 
-const title = "Junk Removal Calgary | Bins, Dump Runs & Clean-Ups";
+const title = "Junk Removal Calgary | Star Disposal Services";
 const description =
   "Calgary & Airdrie junk removal, bin rentals, dump runs, bobcat work, demolition & site clean-up since 1996. From $50 — call 403-509-2783.";
 
@@ -33,23 +33,6 @@ export const metadata: Metadata = {
   authors: [{ name: business.name, url: siteUrl }],
   creator: business.name,
   publisher: business.name,
-  keywords: [
-    "junk removal Calgary",
-    "bin rental Calgary",
-    "dumpster rental Calgary",
-    "appliance removal Calgary",
-    "mattress disposal Calgary",
-    "furniture removal Calgary",
-    "garage clean out Calgary",
-    "estate clean out Calgary",
-    "dump run Calgary",
-    "scrap metal removal Calgary",
-    "demolition Calgary",
-    "bobcat services Calgary",
-    "site clean up Calgary",
-    "construction waste removal Calgary",
-    "junk removal Airdrie",
-  ],
   alternates: { canonical: siteUrl },
   robots: {
     index: true,

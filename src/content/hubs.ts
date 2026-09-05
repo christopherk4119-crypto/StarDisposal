@@ -76,7 +76,7 @@ export const hubs: Hub[] = [
     h1: "Bin Rental Calgary",
     title: "Bin Rental Calgary | 10, 12, 15 & 20 Yard Bins",
     description:
-      "Roll-off bin and dumpster rental in Calgary and Airdrie. 10, 12, 15 and 20 yard bins dropped where you need them. Call 403-509-2783.",
+      "Roll-off bin and dumpster rental in Calgary and Airdrie, from $50. 10, 12, 15 and 20 yard bins dropped where you need them. Call 403-509-2783.",
     summary:
       "10, 12, 15 and 20 yard bins dropped on your driveway, alley or job site — you fill it on your schedule, we haul it away.",
     image: "/images/gallery/bin-trailer-apartment.webp",
@@ -145,7 +145,7 @@ export const hubs: Hub[] = [
     h1: "Demolition & Site Services Calgary",
     title: "Demolition & Site Clean-Up Calgary | Bobcat Work",
     description:
-      "Small demolition, bobcat work, construction waste removal and site clean-up in Calgary and Airdrie. Since 1996. Call 403-509-2783.",
+      "Small demolition, bobcat work, construction waste removal and site clean-up in Calgary and Airdrie, from $50. Call 403-509-2783.",
     summary:
       "Small demolition, bobcat work, construction waste removal and full site clean-up — the heavy end of what we do.",
     image: "/images/gallery/yard-cleanup-debris.webp",
