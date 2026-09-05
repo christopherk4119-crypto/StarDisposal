@@ -52,8 +52,24 @@ export const business = {
    * Real profile URLs only — a bare domain does nothing for entity
    * confirmation. Add the Google Business Profile share link here once
    * available; that is the highest-value entry in this list.
+   *
+   * Note: the business is NOT BBB Accredited (confirmed on the BBB profile
+   * itself). The link is included as an honest reference to a real listing,
+   * never as an accreditation or trust claim.
    */
-  sameAs: ["https://www.yelp.ca/biz/star-disposal-services-calgary-5"],
+  sameAs: [
+    "https://www.yelp.ca/biz/star-disposal-services-calgary-5",
+    "https://www.bbb.org/ca/ab/calgary/profile/auto-wholesale/star-disposal-service-calgary-0017-45169",
+  ],
+
+  /**
+   * Real Google Business Profile rating, as shown on Google Maps. Update
+   * these two numbers whenever the profile's rating or review count
+   * changes — never estimate or round in a way that drifts from what
+   * Google Maps actually shows.
+   */
+  googleRatingValue: "5.0",
+  googleReviewCount: "2",
 
   priceRange: "$50+",
   startingPrice: "$50",

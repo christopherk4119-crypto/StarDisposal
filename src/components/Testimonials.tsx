@@ -1,12 +1,23 @@
+import { business } from "@/lib/business";
+
 export default function Testimonials() {
   return (
     <section className="bg-brand-yellow px-8 pb-[104px] pt-24 lg:px-14">
       <div className="mx-auto max-w-[1180px]">
-        <div className="mb-10 flex items-center gap-2.5">
-          <span className="h-2 w-2 bg-brand-navy" />
-          <h2 className="font-display text-[11px] uppercase tracking-[0.18em] text-brand-navy/65">
-            What Our Customers Say
-          </h2>
+        <div className="mb-10 flex flex-wrap items-center justify-between gap-4">
+          <div className="flex items-center gap-2.5">
+            <span className="h-2 w-2 bg-brand-navy" />
+            <h2 className="font-display text-[11px] uppercase tracking-[0.18em] text-brand-navy/65">
+              What Our Customers Say
+            </h2>
+          </div>
+          <div className="flex items-center gap-2 font-display text-[13px] text-brand-navy">
+            <span className="tracking-[2px]">★★★★★</span>
+            <span className="font-semibold">
+              {business.googleRatingValue} ({business.googleReviewCount})
+            </span>
+            <span className="text-brand-navy/60">Google Reviews</span>
+          </div>
         </div>
 
         <blockquote className="m-0 max-w-[1020px]">
