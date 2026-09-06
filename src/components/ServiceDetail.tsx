@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -10,6 +11,7 @@ import QuoteSection from "./QuoteSection";
 import type { Hub, Service } from "@/lib/service-types";
 import { areaSentence } from "@/lib/business";
 import { quoteCategoryFor } from "@/lib/forms";
+import { sectionPhotos } from "@/lib/photos";
 
 /** Long-form spoke page. One component, so each new page is content, not markup. */
 export default function ServiceDetail({
@@ -20,6 +22,7 @@ export default function ServiceDetail({
   hub: Hub;
 }) {
   const path = `/${service.hub}/${service.slug}`;
+  const sectionImages = sectionPhotos(path, service.sections.length);
 
   return (
     <>
@@ -108,6 +111,18 @@ export default function ServiceDetail({
                     <h2 className="font-display text-[28px] leading-[1.05] tracking-[-0.015em] text-brand-navy lg:text-[34px]">
                       {section.heading}
                     </h2>
+                    {sectionImages[i] && (
+                      <div className="relative mt-6 aspect-[4/3] overflow-hidden bg-brand-navy">
+                        <Image
+                          src={sectionImages[i].src}
+                          alt={sectionImages[i].alt}
+                          fill
+                          loading="lazy"
+                          sizes="(min-width: 1024px) 34vw, 90vw"
+                          className="object-cover"
+                        />
+                      </div>
+                    )}
                   </div>
                   <div className="min-w-0">
                     {section.body.map((para, j) => (

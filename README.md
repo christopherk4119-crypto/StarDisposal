@@ -70,6 +70,24 @@ entry, header menu, footer index, hub card and schema all follow automatically.
   results, collect reviews through a form on this site.
 - **`sameAs`** carries the Yelp and BBB listings. Add the Google Business
   Profile share link to `business.sameAs` when available.
+
+## Photos
+
+`src/lib/photos.ts` holds the seven real job photos with literal alt text, and
+`sectionPhotos(key, count)` assigns one to each body section on hub and service
+pages. Assignment is deterministic, so a page shows the same photos on every
+build, and distinct within a page — no page repeats an image against itself.
+
+Seven photos across ~71 sections means each is reused roughly ten times
+site-wide. A visitor only ever sees one page, so the repetition is invisible in
+practice, but **more real job photos is the single easiest content improvement
+available.** Drop new `.webp` files into `public/images/gallery/`, add them to
+the `photos` array with honest alt text, and every page picks them up
+automatically.
+
+Alt text describes what is actually in the frame, not the page it sits on — the
+same photo appears on many pages, so page-specific alt text would be false
+somewhere.
 - **Zero orphan pages** — the footer carries a full service index, so every page
   is one click from every other page.
 - **Icons** — `public/icon-512.png` and `public/apple-icon-180.png` are square

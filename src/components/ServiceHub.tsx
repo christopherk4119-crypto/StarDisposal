@@ -11,6 +11,7 @@ import type { Hub, Service } from "@/lib/service-types";
 import { allHubs } from "@/lib/services";
 import { areaSentence } from "@/lib/business";
 import { quoteCategoryFor } from "@/lib/forms";
+import { sectionPhotos } from "@/lib/photos";
 
 /**
  * Hub layout: overview plus a link to every spoke beneath it.
@@ -27,6 +28,7 @@ export default function ServiceHub({
   services: Service[];
 }) {
   const otherHubs = allHubs.filter((h) => h.slug !== hub.slug);
+  const sectionImages = sectionPhotos(`/${hub.slug}`, hub.sections.length);
 
   return (
     <>
@@ -152,6 +154,18 @@ export default function ServiceHub({
                   <h2 className="font-display text-[28px] leading-[1.05] tracking-[-0.015em] text-brand-navy lg:text-[34px]">
                     {section.heading}
                   </h2>
+                  {sectionImages[i] && (
+                    <div className="relative mt-6 aspect-[4/3] overflow-hidden bg-brand-navy">
+                      <Image
+                        src={sectionImages[i].src}
+                        alt={sectionImages[i].alt}
+                        fill
+                        loading="lazy"
+                        sizes="(min-width: 1024px) 34vw, 90vw"
+                        className="object-cover"
+                      />
+                    </div>
+                  )}
                 </div>
                 <div className="min-w-0">
                   {section.body.map((para, j) => (
