@@ -26,12 +26,8 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-brand-yellow/35 bg-brand-navy">
       <div className="mx-auto flex max-w-[1400px] items-center justify-between gap-4 px-5 py-3.5 lg:gap-6 lg:px-10">
         <Link href="/" className="flex min-w-0 shrink items-center gap-3" onClick={close}>
-          <Logo className="h-11 w-11 shrink-0" />
-          <span className="hidden font-display text-sm leading-tight text-white sm:block">
-            STAR DISPOSAL
-            <br />
-            SERVICES
-          </span>
+          <Logo variant="mark" className="h-11 w-11 shrink-0 sm:hidden" />
+          <Logo className="hidden h-[58px] w-auto shrink-0 sm:block" />
         </Link>
 
         <nav

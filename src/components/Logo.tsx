@@ -1,56 +1,112 @@
+/**
+ * Star Disposal Services logo, rebuilt as SVG from the artwork the owner
+ * supplied: navy star on gold, "STAR" in red with a navy outline, "Since 1996"
+ * in italic serif, "DISPOSAL SERVICES" across the bottom.
+ *
+ * `variant="mark"` renders the star only, for tight spots and square slots.
+ * The favicon files in /public are generated from that same star.
+ *
+ * Text is real SVG <text>, so it depends on the viewer having a heavy sans
+ * (Arial Black / Helvetica). If the owner supplies the original vector file,
+ * drop it in and swap this component for an <Image> — see the README.
+ */
+
+const NAVY = "#1B2545";
+const RED = "#D0212F";
+const GOLD = "#E9AE1B";
+
+/** Five-point star, upright, drawn within a 0–200 box. */
 const STAR_POINTS =
-  "100,8 121.16,70.88 187.5,71.57 134.24,111.12 154.08,174.43 100,136 45.92,174.43 65.76,111.12 12.5,71.57 78.84,70.88";
+  "100,6 124.7,74.1 197.6,75.4 139.1,118.6 160.9,187.6 100,145.8 39.1,187.6 60.9,118.6 2.4,75.4 75.3,74.1";
 
 export default function Logo({
   className = "",
+  variant = "full",
   background = true,
 }: {
   className?: string;
+  /** "full" is the landscape lockup; "mark" is the star on its own. */
+  variant?: "full" | "mark";
+  /** Draw the gold panel behind the logo. */
   background?: boolean;
 }) {
-  const starFill = background ? "#1E2A5E" : "#FFFFFF";
-  const disposalFill = background ? "#1E2A5E" : "#FFFFFF";
+  if (variant === "mark") {
+    return (
+      <svg
+        viewBox="0 0 200 200"
+        className={className}
+        role="img"
+        aria-label="Star Disposal Services"
+      >
+        {background && <rect width="200" height="200" fill={GOLD} />}
+        <polygon points={STAR_POINTS} fill={background ? NAVY : "#FFFFFF"} />
+      </svg>
+    );
+  }
 
   return (
     <svg
-      viewBox="0 0 200 200"
+      viewBox="0 0 500 300"
       className={className}
       role="img"
-      aria-label="Star Disposal Services logo"
+      aria-label="Star Disposal Services — since 1996"
     >
-      {background && <rect x="0" y="0" width="200" height="200" rx="18" fill="#FFD700" />}
-      <polygon
-        points={STAR_POINTS}
-        fill={starFill}
-        stroke={starFill}
-        strokeWidth="2"
-        strokeLinejoin="round"
-      />
+      {background && <rect width="500" height="300" fill={GOLD} />}
+
+      {/* Star, left of the wordmark */}
+      <g transform="translate(28 26) scale(0.83)">
+        <polygon points={STAR_POINTS} fill={NAVY} />
+      </g>
+
+      {/*
+        textLength pins each line's width, so the lockup keeps its proportions
+        even when the viewer lacks Arial Black and falls back to another face.
+      */}
+
+      {/* STAR — red with a navy outline, slanted to match the artwork */}
+      <g transform="skewX(-11)">
+        <text
+          x="80"
+          y="178"
+          textLength="390"
+          lengthAdjust="spacingAndGlyphs"
+          fontFamily="'Arial Black', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+          fontWeight="900"
+          fontSize="150"
+          fill={RED}
+          stroke={NAVY}
+          strokeWidth="10"
+          strokeLinejoin="round"
+          paintOrder="stroke"
+        >
+          STAR
+        </text>
+      </g>
+
+      {/* Since 1996 */}
       <text
-        x="100"
-        y="103"
-        textAnchor="middle"
-        fontFamily="Arial Black, Arial, sans-serif"
-        fontWeight="900"
-        fontSize="34"
-        fill="#D32F2F"
-        stroke="#FFFFFF"
-        strokeWidth="3"
-        paintOrder="stroke"
-        letterSpacing="2"
+        x="318"
+        y="232"
+        textLength="158"
+        lengthAdjust="spacingAndGlyphs"
+        fontFamily="Georgia, 'Times New Roman', Times, serif"
+        fontStyle="italic"
+        fontSize="44"
+        fill={NAVY}
       >
-        STAR
+        Since 1996
       </text>
-      {background && <rect x="24" y="150" width="152" height="24" rx="4" fill="#FFD700" />}
+
+      {/* DISPOSAL SERVICES */}
       <text
-        x="100"
-        y="167"
-        textAnchor="middle"
-        fontFamily="Arial, sans-serif"
-        fontWeight="800"
-        fontSize="13"
-        fill={disposalFill}
-        letterSpacing="0.5"
+        x="28"
+        y="288"
+        textLength="444"
+        lengthAdjust="spacingAndGlyphs"
+        fontFamily="'Arial Black', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+        fontWeight="900"
+        fontSize="42"
+        fill={NAVY}
       >
         DISPOSAL SERVICES
       </text>

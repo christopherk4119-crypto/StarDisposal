@@ -71,6 +71,27 @@ entry, header menu, footer index, hub card and schema all follow automatically.
 - **`sameAs`** carries the Yelp and BBB listings. Add the Google Business
   Profile share link to `business.sameAs` when available.
 
+## Logo
+
+`src/components/Logo.tsx` is an SVG rebuild of the owner's artwork — navy star
+on gold, "STAR" in red with a navy outline, "Since 1996", "DISPOSAL SERVICES".
+
+- `variant="full"` (default) is the landscape lockup, used in the header from
+  the `sm` breakpoint up and in the footer.
+- `variant="mark"` is the star alone, used in the header on phones where the
+  lockup's sub-text would be too small to read. The favicons in `/public` come
+  from the same star.
+- `background={false}` drops the gold panel — used in the footer, which already
+  sits on gold.
+
+Each text line is pinned with `textLength`, so the proportions hold even when
+the viewer has no Arial Black and the browser substitutes another face.
+
+**If the owner supplies the original vector file**, that beats a rebuild: drop
+it in `public/images/`, and replace this component's body with an `<Image>` (or
+inline the SVG). The `variant` and `background` props exist so callers don't
+have to change.
+
 ## Photos
 
 `src/lib/photos.ts` holds the seven real job photos with literal alt text, and
