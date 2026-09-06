@@ -180,40 +180,31 @@ falls back to nothing.
 
 ## Contact form
 
-The quote form has two delivery modes and picks one from a single env var.
+Submissions go to **Formspree form `mdawrdyw`**
+(`https://formspree.io/f/mdawrdyw`). The visitor never leaves the page.
 
-| `NEXT_PUBLIC_FORMSPREE_ID` | Behaviour |
-|---|---|
-| set | POSTs to Formspree; the visitor never leaves the page |
-| unset | falls back to opening the visitor's mail app via `mailto:` |
+The form ID ships as the default in `src/lib/forms.ts` rather than living only
+in a Vercel environment variable. It is not a secret — the endpoint is visible
+in any page that posts to it — and hardcoding it removes the failure mode where
+someone deploys without setting the variable and the form silently degrades.
 
-**Set it in production.** The `mailto:` fallback depends on the visitor having
-a mail client configured — on a phone without one it silently does nothing, the
-lead is lost, and nobody finds out.
+`NEXT_PUBLIC_FORMSPREE_ID` still overrides it, which is the right way to point
+a preview or local build at a throwaway form so test submissions don't reach
+the business inbox. Copy `.env.example` to `.env.local` to do that.
 
-### Turning on Formspree
+If the ID is ever blanked out, the form falls back to opening the visitor's
+mail app via `mailto:`. **That fallback is the dangerous path** — on a phone
+with no mail client configured it silently does nothing, the lead is lost, and
+nobody finds out. Don't ship in that state.
 
-1. Create a free account at [formspree.io](https://formspree.io) using the
-   business inbox (`stardisposalservices@outlook.com`) so notifications land
-   where the quotes are read.
-2. **+ New Form** → name it "Star Disposal quote form" → set the send-to
-   address → **Create Form**.
-3. Formspree shows an endpoint like `https://formspree.io/f/abcdwxyz`. The ID
-   is the part after `/f/`.
-4. In Vercel → Settings → Environment Variables, add
-   `NEXT_PUBLIC_FORMSPREE_ID` = `abcdwxyz` for Production (and Preview if you
-   want to test there).
-5. **Redeploy.** The variable is inlined at build time, so an existing
-   deployment will not pick it up — this step is skipped constantly.
-6. Submit the live form once. Formspree emails a confirmation link the first
-   time; click it or nothing is delivered.
+The form sends a `_subject` line and carries a `_gotcha` honeypot that Formspree
+uses to drop bot submissions. The free tier allows 50 submissions a month, which
+is comfortable at this volume; over that, Formspree holds submissions rather
+than dropping them.
 
-Locally, copy `.env.example` to `.env.local` and fill in the same value.
-
-The form already sends a `_subject` line and carries a `_gotcha` honeypot field
-that Formspree uses to drop bot submissions. The free tier allows 50
-submissions a month, which is comfortable for this volume; if it is ever
-exceeded, Formspree holds the submissions rather than dropping them.
+**First live submission:** Formspree emails a confirmation link the very first
+time the form is used. Until someone clicks it, nothing is delivered. Submit the
+form once after deploying and confirm that email.
 
 If the POST fails, the form does not fail silently — it tells the visitor and
 shows the phone number and email address instead.

@@ -1,15 +1,22 @@
 /**
  * Quote form delivery.
  *
- * With `NEXT_PUBLIC_FORMSPREE_ID` set, the form POSTs to Formspree and the
- * visitor never leaves the page. Without it, the form falls back to opening
- * the visitor's mail app with a pre-filled message.
+ * The form POSTs to Formspree and the visitor never leaves the page. If the
+ * form ID is ever blanked out, it falls back to opening the visitor's mail
+ * app with a pre-filled message.
  *
- * The fallback is the risky path: on a phone with no mail client configured
- * it silently does nothing and the lead is lost. Set the env var in
- * production.
+ * That fallback is the risky path — on a phone with no mail client configured
+ * it silently does nothing and the lead is lost — which is why the real form
+ * ID ships as the default below rather than living only in Vercel.
  */
-export const formspreeId = process.env.NEXT_PUBLIC_FORMSPREE_ID ?? "";
+/**
+ * The business's live Formspree form. Not a secret — the endpoint is visible
+ * in any page that posts to it — so it ships as the default rather than
+ * depending on an environment variable someone has to remember to set.
+ * NEXT_PUBLIC_FORMSPREE_ID still overrides it, e.g. a throwaway form for
+ * preview deployments.
+ */
+export const formspreeId = process.env.NEXT_PUBLIC_FORMSPREE_ID || "mdawrdyw";
 
 export const formspreeEndpoint = formspreeId
   ? `https://formspree.io/f/${formspreeId}`
