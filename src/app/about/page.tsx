@@ -56,7 +56,7 @@ export default function AboutPage() {
               <p className="text-xl leading-[1.5] text-brand-navy">
                 Star Disposal Services has been hauling junk, dropping bins and
                 cleaning up sites in Calgary since 1996 — nearly thirty years
-                out of the same yard on 14 Ave SE.
+                out of the same southeast Calgary yard.
               </p>
               <p className="mt-5 text-[17px] leading-[1.65] text-brand-navy/78">
                 The business is owned and operated by{" "}

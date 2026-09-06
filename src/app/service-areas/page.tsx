@@ -10,7 +10,7 @@ import { allHubs } from "@/lib/services";
 
 const title = "Service Area | Junk Removal Calgary & Airdrie";
 const description =
-  "Star Disposal Services covers all quadrants of Calgary plus Airdrie, Cochrane and Chestermere. Yard on 14 Ave SE. Call 403-509-2783.";
+  "Star Disposal Services covers all quadrants of Calgary plus Airdrie, Cochrane and Chestermere. Based in SE Calgary. Call 403-509-2783.";
 const url = `${siteUrl}/service-areas`;
 
 export const metadata: Metadata = {
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
 const quadrants = [
   {
     name: "SE Calgary",
-    note: "Our home quadrant — the yard is on 14 Ave SE.",
+    note: "Our home quadrant — where we're based.",
     body: "Inglewood, Ramsay, Forest Lawn, Dover, Erin Woods, Ogden, Riverbend, McKenzie Towne, Auburn Bay, Mahogany, Douglasdale and the industrial areas around Foothills. Short response times here because it is where we are based.",
   },
   {
@@ -77,7 +77,7 @@ const faqs = [
   },
   {
     q: "Which part of Calgary are you based in?",
-    a: "Our yard is at 2729 14 Ave SE, in the southeast. That means the shortest response times are in SE Calgary, but we run all four quadrants every week.",
+    a: "We're based in southeast Calgary. That means the shortest response times are in SE Calgary, but we run all four quadrants every week.",
   },
   {
     q: "Do you go outside Calgary and Airdrie?",
@@ -100,7 +100,7 @@ export default function ServiceAreasPage() {
       <main id="main" className="flex-1">
         <PageHero
           h1="Junk Removal &amp; Bin Rentals Across Calgary"
-          summary="All four Calgary quadrants plus Airdrie, Cochrane and Chestermere. Our yard is on 14 Ave SE."
+          summary="All four Calgary quadrants plus Airdrie, Cochrane and Chestermere. Based in southeast Calgary."
           image="/images/about/truck-signage.webp"
           imageAlt="Star Disposal Services truck serving Calgary, Airdrie, Cochrane and Chestermere"
           eyebrow="Where we run"

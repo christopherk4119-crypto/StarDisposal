@@ -47,16 +47,9 @@ export default function LocalBusinessSchema() {
         currenciesAccepted: "CAD",
         address: {
           "@type": "PostalAddress",
-          streetAddress: business.streetAddress,
           addressLocality: business.addressLocality,
           addressRegion: business.addressRegion,
-          postalCode: business.postalCode,
           addressCountry: business.addressCountry,
-        },
-        geo: {
-          "@type": "GeoCoordinates",
-          latitude: business.geo.latitude,
-          longitude: business.geo.longitude,
         },
         areaServed: areaServed.map((city) => ({
           "@type": "City",

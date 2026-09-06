@@ -68,7 +68,8 @@ export default function PrivacyPage() {
             Who we are
           </h2>
           <p className="mt-4 text-[17px] leading-[1.7] text-brand-navy/80">
-            {business.name}, {business.address}. You can reach us at{" "}
+            {business.name}, serving Calgary, Airdrie, Cochrane and
+            Chestermere, AB. You can reach us at{" "}
             <a
               href={`tel:${business.phoneMainTel}`}
               className="break-words font-semibold text-brand-navy underline decoration-brand-yellow decoration-2 underline-offset-4 hover:text-brand-red"

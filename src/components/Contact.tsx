@@ -61,10 +61,10 @@ export default function Contact() {
 
           <div className="mt-[30px] border-t border-brand-navy/18 pt-5">
             <div className="font-display text-[11px] tracking-[0.16em] text-brand-navy/55">
-              ADDRESS
+              SERVICE AREA
             </div>
             <p className="mt-[7px] text-[15px] font-semibold text-brand-navy">
-              {business.address}
+              Calgary, Airdrie, Cochrane &amp; Chestermere
             </p>
           </div>
 

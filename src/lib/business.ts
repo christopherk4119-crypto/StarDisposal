@@ -19,13 +19,15 @@ export const business = {
   owner: "Talib (Ted) Ferris",
   foundingDate: "1996",
 
-  address: "2729 14 Ave SE, Calgary, AB T2A 0J7",
-  streetAddress: "2729 14 Ave SE",
+  /**
+   * Service-area business — no public street address by request. City,
+   * region and country are enough for local SEO and are all that should
+   * ever be shown; never add streetAddress, postalCode or geo back in
+   * without asking first.
+   */
   addressLocality: "Calgary",
   addressRegion: "AB",
-  postalCode: "T2A 0J7",
   addressCountry: "CA",
-  geo: { latitude: 51.0447, longitude: -113.9905 },
 
   email: "stardisposalservices@outlook.com",
 

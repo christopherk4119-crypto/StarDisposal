@@ -105,10 +105,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-11 flex flex-wrap justify-between gap-6 border-t border-brand-navy/25 pt-5">
-          <span className="text-[13px] text-brand-navy/75">
-            {business.address}
-          </span>
+        <div className="mt-11 border-t border-brand-navy/25 pt-5">
           <span className="text-[13px] text-brand-navy/65">
             © {new Date().getFullYear()} {business.name} — Calgary, AB — Since{" "}
             {business.foundingDate}

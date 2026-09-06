@@ -6,7 +6,7 @@ const calgaryAreas = [
   { name: "NW Calgary", sub: "City · Northwest" },
   { name: "NE Calgary", sub: "City · Northeast" },
   { name: "SW Calgary", sub: "City · Southwest" },
-  { name: "SE Calgary", sub: "City · Southeast · Yard on 14 Ave SE" },
+  { name: "SE Calgary", sub: "City · Southeast · Where we're based" },
 ];
 
 const surroundingAreas = [
