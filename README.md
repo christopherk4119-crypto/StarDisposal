@@ -78,9 +78,12 @@ on gold, "STAR" in red with a navy outline, "Since 1996", "DISPOSAL SERVICES".
 
 - `variant="full"` (default) is the landscape lockup, used in the header from
   the `sm` breakpoint up and in the footer.
-- `variant="mark"` is the star alone, used in the header on phones where the
-  lockup's sub-text would be too small to read. The favicons in `/public` come
-  from the same star.
+- `variant="compact"` is star + STAR + DISPOSAL SERVICES on a shorter, wider
+  panel — used in the header on phones. The full lockup's third tier renders
+  around 7px at phone header height, so this drops "Since 1996" to buy the
+  room and keep the wordmark legible.
+- `variant="mark"` is the star alone, for square slots. The favicons in
+  `/public` come from the same star.
 - `background={false}` drops the gold panel — used in the footer, which already
   sits on gold.
 

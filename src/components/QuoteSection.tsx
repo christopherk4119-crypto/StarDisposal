@@ -52,7 +52,7 @@ export default function QuoteSection({
             </div>
             <a
               href={`tel:${business.phoneTedTel}`}
-              className="mt-3 block text-[15px] font-semibold text-brand-navy/70 transition hover:text-brand-red"
+              className="mt-2 flex min-h-[44px] items-center text-[15px] font-semibold text-brand-navy/70 transition hover:text-brand-red"
             >
               Ted&rsquo;s Cell (backup): {business.phoneTedDisplay} &mdash;
               texts &amp; job photos

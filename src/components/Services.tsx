@@ -234,16 +234,16 @@ export default function Services() {
             <div key={hub.slug}>
               <Link
                 href={`/${hub.slug}`}
-                className="block border-b-2 border-brand-yellow pb-2 font-display text-[15px] text-brand-navy hover:text-brand-red"
+                className="flex min-h-[44px] items-end border-b-2 border-brand-yellow pb-2 font-display text-[15px] text-brand-navy hover:text-brand-red sm:block sm:min-h-0"
               >
                 {hub.h1}
               </Link>
-              <ul className="mt-3.5 flex flex-col gap-2.5">
+              <ul className="mt-2 flex flex-col sm:mt-3.5 sm:gap-2.5">
                 {servicesByHub(hub.slug).map((service) => (
                   <li key={service.slug}>
                     <Link
                       href={`/${service.hub}/${service.slug}`}
-                      className="text-[15px] font-medium text-brand-navy/72 hover:text-brand-red"
+                      className="flex min-h-[44px] items-center text-[15px] font-medium text-brand-navy/72 hover:text-brand-red sm:min-h-0"
                     >
                       {service.h1}
                     </Link>

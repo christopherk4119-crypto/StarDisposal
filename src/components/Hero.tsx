@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-[660px] items-center overflow-hidden bg-brand-navy"
+      className="relative flex min-h-[520px] items-center overflow-hidden bg-brand-navy md:min-h-[660px]"
     >
       <Image
         src="/images/about/truck-signage.webp"
@@ -23,13 +23,13 @@ export default function Hero() {
         }}
       />
 
-      <div className="relative w-full max-w-[1400px] px-[clamp(20px,4vw,56px)] pb-[clamp(56px,7vw,84px)] pt-[clamp(56px,8vw,92px)] mx-auto">
+      <div className="relative mx-auto w-full max-w-[1400px] px-[clamp(20px,4vw,56px)] pb-[clamp(40px,7vw,84px)] pt-[clamp(36px,8vw,92px)]">
         <div className="inline-flex items-center gap-2.5 border border-brand-yellow/50 px-4 py-[7px] font-display text-[11px] uppercase tracking-[0.14em] text-brand-yellow">
           <span className="h-[7px] w-[7px] bg-brand-yellow" />
           Calgary owned since 1996
         </div>
 
-        <h1 className="mt-[22px] font-display text-[clamp(46px,7vw,88px)] leading-[0.94] tracking-[-0.025em] text-white">
+        <h1 className="mt-[18px] font-display text-[clamp(40px,7vw,88px)] leading-[0.94] tracking-[-0.025em] text-white">
           {"Junk Removal "}
           <br />
           <span className="text-brand-yellow">in Calgary.</span>
@@ -81,7 +81,7 @@ export default function Hero() {
           </a>
         </div>
 
-        <div className="mt-16 flex max-w-[800px] flex-wrap gap-12 border-t border-white/18 pt-[26px]">
+        <div className="mt-10 flex max-w-[800px] flex-wrap gap-x-10 gap-y-6 border-t border-white/18 pt-[22px] sm:mt-16 sm:gap-12">
           <div className="flex flex-col gap-1">
             <span className="font-display text-[28px] text-brand-yellow">29 yrs</span>
             <span className="text-[13px] text-white/70">Serving Calgary</span>

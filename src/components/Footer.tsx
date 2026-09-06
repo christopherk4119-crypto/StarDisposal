@@ -61,16 +61,16 @@ export default function Footer() {
               <div key={hub.slug}>
                 <Link
                   href={`/${hub.slug}`}
-                  className="block border-b border-brand-navy/30 pb-2 font-display text-[12px] tracking-[0.08em] text-brand-navy hover:text-brand-red"
+                  className="flex min-h-[40px] items-end border-b border-brand-navy/30 pb-2 font-display text-[12px] tracking-[0.08em] text-brand-navy hover:text-brand-red sm:block sm:min-h-0"
                 >
                   {hub.navLabel}
                 </Link>
-                <ul className="mt-3 flex flex-col gap-2.5">
+                <ul className="mt-2 flex flex-col sm:mt-3 sm:gap-2.5">
                   {servicesByHub(hub.slug).map((service) => (
                     <li key={service.slug}>
                       <Link
                         href={`/${service.hub}/${service.slug}`}
-                        className="text-[13px] font-medium leading-snug text-brand-navy/75 hover:text-brand-red"
+                        className="flex min-h-[38px] items-center text-[14px] font-medium leading-snug text-brand-navy/75 hover:text-brand-red sm:min-h-0 sm:text-[13px]"
                       >
                         {service.name}
                       </Link>
@@ -84,12 +84,12 @@ export default function Footer() {
               <span className="block border-b border-brand-navy/30 pb-2 font-display text-[12px] tracking-[0.08em] text-brand-navy">
                 COMPANY
               </span>
-              <ul className="mt-3 flex flex-col gap-2.5">
+              <ul className="mt-2 flex flex-col sm:mt-3 sm:gap-2.5">
                 {companyLinks.map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-[13px] font-medium leading-snug text-brand-navy/75 hover:text-brand-red"
+                      className="flex min-h-[38px] items-center text-[14px] font-medium leading-snug text-brand-navy/75 hover:text-brand-red sm:min-h-0 sm:text-[13px]"
                     >
                       {link.label}
                     </Link>

@@ -25,8 +25,13 @@ export default function Logo({
   background = true,
 }: {
   className?: string;
-  /** "full" is the landscape lockup; "mark" is the star on its own. */
-  variant?: "full" | "mark";
+  /**
+   * "full"    the landscape lockup with "Since 1996" — desktop
+   * "compact" star + STAR + DISPOSAL SERVICES, no "Since 1996" — phones,
+   *           where the full lockup's third tier renders around 7px
+   * "mark"    the star alone, for square slots
+   */
+  variant?: "full" | "compact" | "mark";
   /** Draw the gold panel behind the logo. */
   background?: boolean;
 }) {
@@ -40,6 +45,54 @@ export default function Logo({
       >
         {background && <rect width="200" height="200" fill={GOLD} />}
         <polygon points={STAR_POINTS} fill={background ? NAVY : "#FFFFFF"} />
+      </svg>
+    );
+  }
+
+  if (variant === "compact") {
+    // Shorter and wider than the full lockup, so the wordmark stays legible at
+    // header height on a phone. Drops "Since 1996" to buy that room.
+    return (
+      <svg
+        viewBox="0 0 340 200"
+        className={className}
+        role="img"
+        aria-label="Star Disposal Services"
+      >
+        {background && <rect width="340" height="200" fill={GOLD} />}
+        <g transform="translate(10 16) scale(0.72)">
+          <polygon points={STAR_POINTS} fill={NAVY} />
+        </g>
+        <g transform="skewX(-11)">
+          <text
+            x="62"
+            y="128"
+            textLength="250"
+            lengthAdjust="spacingAndGlyphs"
+            fontFamily="'Arial Black', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+            fontWeight="900"
+            fontSize="108"
+            fill={RED}
+            stroke={NAVY}
+            strokeWidth="8"
+            strokeLinejoin="round"
+            paintOrder="stroke"
+          >
+            STAR
+          </text>
+        </g>
+        <text
+          x="14"
+          y="186"
+          textLength="312"
+          lengthAdjust="spacingAndGlyphs"
+          fontFamily="'Arial Black', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+          fontWeight="900"
+          fontSize="36"
+          fill={NAVY}
+        >
+          DISPOSAL SERVICES
+        </text>
       </svg>
     );
   }

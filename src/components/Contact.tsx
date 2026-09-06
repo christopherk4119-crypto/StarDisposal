@@ -23,7 +23,7 @@ export default function Contact() {
             </div>
             <a
               href={`tel:${business.phoneMainTel}`}
-              className="mt-1.5 block font-display text-4xl leading-none tracking-[-0.01em] text-brand-navy transition hover:text-brand-red lg:text-[42px]"
+              className="mt-1.5 flex min-h-[48px] items-center font-display text-4xl leading-none tracking-[-0.01em] text-brand-navy transition hover:text-brand-red lg:text-[42px]"
             >
               {business.phoneMainDisplay}
             </a>
@@ -41,7 +41,7 @@ export default function Contact() {
               </div>
               <a
                 href={`tel:${business.phoneTedTel}`}
-                className="mt-1.5 block font-display text-xl text-brand-navy transition hover:text-brand-red"
+                className="mt-1.5 flex min-h-[44px] items-center font-display text-xl text-brand-navy transition hover:text-brand-red"
               >
                 {business.phoneTedDisplay}
               </a>
@@ -55,7 +55,7 @@ export default function Contact() {
               </div>
               <a
                 href={`sms:${business.phoneTedTel}`}
-                className="mt-1.5 block font-display text-xl text-brand-navy transition hover:text-brand-red"
+                className="mt-1.5 flex min-h-[44px] items-center font-display text-xl text-brand-navy transition hover:text-brand-red"
               >
                 {business.phoneTedDisplay}
               </a>

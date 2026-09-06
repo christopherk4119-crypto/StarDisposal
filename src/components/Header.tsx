@@ -26,7 +26,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-brand-yellow/35 bg-brand-navy">
       <div className="mx-auto flex max-w-[1400px] items-center justify-between gap-4 px-5 py-3.5 lg:gap-6 lg:px-10">
         <Link href="/" className="flex min-w-0 shrink items-center gap-3" onClick={close}>
-          <Logo variant="mark" className="h-11 w-11 shrink-0 sm:hidden" />
+          <Logo variant="compact" className="h-[46px] w-auto shrink-0 sm:hidden" />
           <Logo className="hidden h-[58px] w-auto shrink-0 sm:block" />
         </Link>
 
@@ -116,7 +116,7 @@ export default function Header() {
           <Link
             href="/contact"
             onClick={close}
-            className="whitespace-nowrap bg-brand-yellow px-3 py-2.5 font-display text-[10px] tracking-[0.1em] text-brand-navy transition hover:brightness-105 sm:px-4 sm:py-3 sm:text-[11px] sm:tracking-[0.12em]"
+            className="flex min-h-[46px] items-center whitespace-nowrap bg-brand-yellow px-4 font-display text-[12px] tracking-[0.1em] text-brand-navy transition hover:brightness-105 sm:px-4 sm:text-[11px] sm:tracking-[0.12em]"
           >
             <span className="sm:hidden">QUOTE</span>
             <span className="hidden sm:inline">GET A FREE QUOTE</span>

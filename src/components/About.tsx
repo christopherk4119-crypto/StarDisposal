@@ -47,7 +47,7 @@ export default function About() {
             </Link>
             <Link
               href="/about"
-              className="inline-block border-b-2 border-brand-yellow pb-1 font-display text-[13px] tracking-[0.12em] text-brand-navy hover:text-brand-red"
+              className="inline-flex min-h-[44px] items-center border-b-2 border-brand-yellow pb-1 font-display text-[13px] tracking-[0.12em] text-brand-navy hover:text-brand-red"
             >
               MORE ABOUT US →
             </Link>

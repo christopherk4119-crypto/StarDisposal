@@ -91,7 +91,7 @@ export default function ServiceArea() {
           <div className="absolute inset-x-6 bottom-[26px]">
             <a
               href={`tel:${business.phoneMainTel}`}
-              className="block font-display text-xl leading-[1.15] text-white hover:text-brand-yellow"
+              className="flex min-h-[44px] items-center font-display text-xl leading-[1.15] text-white hover:text-brand-yellow"
             >
               {business.phoneMainDisplay}
             </a>
