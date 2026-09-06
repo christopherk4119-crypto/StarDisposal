@@ -13,8 +13,21 @@ export const siteUrl = "https://stardisposalservices.ca";
 export const business = {
   name: "Star Disposal Services",
   legalName: "Star Disposal Services",
-  /** Historic / DBA names — kept in schema `alternateName` so the entity association survives. */
-  alternateNames: ["Star Disposal Service", "Star Disposal"],
+  /**
+   * Variants this business is listed under elsewhere, published as schema
+   * `alternateName` so those listings resolve to the same entity.
+   * "Star Disposal Service Calgary" is how the BBB profile names it.
+   *
+   * The primary `name` stays "Star Disposal Services" — it matches the Google
+   * Business Profile, Yelp and the owner's own intake form. Do not append a
+   * city to it: Google's name guidelines require the real-world business name,
+   * and location keywords in the name are a reportable violation.
+   */
+  alternateNames: [
+    "Star Disposal Service",
+    "Star Disposal",
+    "Star Disposal Service Calgary",
+  ],
   tagline: "Calgary's Trusted Junk Removal & Bin Rental Experts Since 1996",
   owner: "Talib (Ted) Ferris",
   foundingDate: "1996",
