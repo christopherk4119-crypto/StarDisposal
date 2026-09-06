@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
 import CallBand from "@/components/CallBand";
 import Testimonials from "@/components/Testimonials";
+import QuoteSection from "@/components/QuoteSection";
 import { siteUrl, business } from "@/lib/business";
 import { allHubs } from "@/lib/services";
 
@@ -74,8 +75,8 @@ export default function AboutPage() {
                 reason people call us back.
               </p>
               <p className="mt-6 border-l-4 border-brand-yellow py-1 pl-5 text-[17px] font-semibold leading-[1.55] text-brand-navy">
-                Still local, still family-run, and the number on the truck
-                still rings Ted&rsquo;s own phone. That is not changing.
+                Still local, still family-run, and the number on the truck is
+                still the number that answers. That is not changing.
               </p>
             </div>
 
@@ -220,6 +221,11 @@ export default function AboutPage() {
             ))}
           </div>
         </section>
+
+        <QuoteSection
+          heading="Tell us about the job"
+          blurb="Nearly thirty years doing this in Calgary. Send the details and you get a straight number back."
+        />
 
         <CallBand
           tone="yellow"

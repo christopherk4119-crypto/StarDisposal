@@ -63,39 +63,38 @@ entry, header menu, footer index, hub card and schema all follow automatically.
   every interior page; `FAQPage` on every FAQ block. 92 blocks, all validated
   as parsing.
 - **Testimonials carry no `Review` or `aggregateRating` structured data**, on
-  purpose. They originate from the company's Yelp listing, and Google's review
-  snippet policy requires review markup to come from reviews the site collects
-  itself — marking up third-party reviews risks a manual action rather than
-  earning stars. To earn review stars in search results, collect reviews
-  through a form on this site.
+  purpose. They are collected on Google, Yelp and BBB rather than by this site,
+  and Google's review snippet policy requires review markup to come from
+  reviews the site gathers itself — marking up third-party reviews risks a
+  manual action rather than earning stars. To earn review stars in search
+  results, collect reviews through a form on this site.
+- **`sameAs`** carries the Yelp and BBB listings. Add the Google Business
+  Profile share link to `business.sameAs` when available.
 - **Zero orphan pages** — the footer carries a full service index, so every page
   is one click from every other page.
 - **Icons** — `public/icon-512.png` and `public/apple-icon-180.png` are square
   (Google silently falls back to a generic icon otherwise), plus `icon.svg`.
-- **`sameAs`** carries the Yelp listing. Add the Google Business Profile share
-  link to `business.sameAs` when available — it is the highest-value entry for
-  entity confirmation. Real profile URLs only; a bare domain does nothing.
 
 ## Phone numbers
 
-The main line is displayed as the vanity string **403-50-WASTE** to match the
-truck signage, and dials **403-861-2361**.
+| | Number | Use |
+|---|---|---|
+| Main | **403-50-WASTE** = 403-509-2783 | Calls only |
+| Secondary | **Ted's Cell** 403-861-2361 | Calls, texts, job photos |
 
-Those two are not the same digits — `403-50-WASTE` literally spells
-403-509-2783 — so `business.phoneMainSub` (the real digits) is rendered
-directly beneath the vanity string in every CTA, and running prose, meta
-descriptions and FAQ answers always use the digits, never the vanity string.
-Do not display `phoneMainDisplay` on its own anywhere, or people who dial what
-they read will reach the wrong number.
+The vanity string and the digits are the same line — 403-50-WASTE spells
+403-509-2783 — and this matches the Google Business Profile and the BBB
+listing, so the site's NAP is consistent with both.
 
-`403-204-7827` is kept as a second line in the footer and on the contact page.
+Two rules the copy follows, and any new copy must too:
 
-**Known NAP mismatch:** the Google Business Profile currently lists
-403-509-2783 (which is what 403-50-WASTE actually spells). The site and the
-profile therefore disagree on the primary phone number. The manual is blunt
-that NAP inconsistency is the number one off-site hygiene problem, so this
-should be resolved — either by updating the profile to 403-861-2361, or by
-switching the site to the profile's number.
+- **Never render `phoneMainDisplay` without `phoneMainSub` beside it.** Some
+  people dial what they read rather than tapping.
+- **Never tell anyone to text the main line.** It takes calls only. Anything
+  involving a text or a job photo points at `phoneCellDisplay`.
+
+`403-204-7827` (from the original intake form) has been removed. It appears on
+neither the Business Profile nor the BBB listing and was never confirmed.
 
 ## Verifying before you ship
 
@@ -123,6 +122,22 @@ done
 **Code pushed is not the same as code live.** After deploying, open the live
 URL yourself and confirm the newest deployment's commit hash matches what you
 pushed and is marked Production.
+
+## The quote form is the conversion goal
+
+The business's stated goal is quote requests, so the form is on **26 of 29
+pages** — every service page, both hubs and spokes, plus the homepage, about,
+service areas, contact and both Airdrie landing pages. Only the 404, the error
+page and the privacy policy are without it.
+
+It is rendered by `QuoteSection`, which pre-selects the service from the page
+the visitor is reading (`quoteCategoryFor` in `src/lib/forms.ts`) so there is
+one less field to fill in. Someone arriving on a service page from Google can
+request a quote without navigating anywhere.
+
+If you add a service whose category is new, extend `quoteCategoryFor` and the
+`services` array in `ContactForm` together, or the pre-selection silently
+falls back to nothing.
 
 ## Contact form
 

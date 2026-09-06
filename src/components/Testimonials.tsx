@@ -45,8 +45,8 @@ export default function Testimonials() {
           <blockquote className="m-0 border-t-2 border-brand-navy pt-[22px]">
             <p className="text-xl font-medium leading-[1.5] text-brand-navy">
               &ldquo;Awesome customer service. They sure helped my elderly
-              father and his wife. They went above and beyond in helping
-              them. Thanks&rdquo;
+              father and his wife. They went above and beyond in helping them.
+              Thanks&rdquo;
             </p>
             <footer className="mt-5 flex flex-wrap items-center gap-3.5">
               <span className="text-[13px] tracking-[3px] text-brand-navy">

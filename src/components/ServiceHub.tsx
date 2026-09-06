@@ -6,9 +6,11 @@ import PageHero from "./PageHero";
 import FaqSection from "./FaqSection";
 import CallBand from "./CallBand";
 import ServiceSchema from "./ServiceSchema";
+import QuoteSection from "./QuoteSection";
 import type { Hub, Service } from "@/lib/service-types";
 import { allHubs } from "@/lib/services";
 import { areaSentence } from "@/lib/business";
+import { quoteCategoryFor } from "@/lib/forms";
 
 /**
  * Hub layout: overview plus a link to every spoke beneath it.
@@ -167,6 +169,12 @@ export default function ServiceHub({
             ))}
           </div>
         </section>
+
+        <QuoteSection
+          heading="Get a price for your job"
+          blurb="Describe the job and we will come back with a price. If a different service would cost you less, we will say so."
+          defaultService={quoteCategoryFor(hub.slug, hub.slug)}
+        />
 
         <FaqSection faqs={hub.faqs} heading={`${hub.name} questions`} />
 

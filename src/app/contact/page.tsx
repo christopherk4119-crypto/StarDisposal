@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "What is the fastest way to get a price?",
-    a: `Call ${business.phoneMainSub} and describe the job, or text photos to the same number. Photos get you a far more accurate number than a description, especially for demolition and property clean-ups.`,
+    a: `Call ${business.phoneMainDisplay} — ${business.phoneMainSub} — and describe the job. For demolition and property clean-ups, photos get you a far more accurate number than a description: text them to Ted's cell on ${business.phoneTedDisplay}.`,
   },
   {
     q: "What are your hours?",
@@ -56,7 +56,7 @@ export default function ContactPage() {
       <main id="main" className="flex-1">
         <PageHero
           h1="Contact Star Disposal Services"
-          summary="Call, text photos, or send the form. Ted answers the phone himself, 8 AM to 8 PM, seven days a week."
+          summary="Send the form and we'll come back with a price. Or call — Ted answers the phone himself, 8 AM to 8 PM, seven days a week."
           image="/images/about/truck-signage.webp"
           imageAlt="Star Disposal Services truck with 403-50 WASTE signage in Calgary"
           eyebrow="Free quote"

@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
 import CallBand from "@/components/CallBand";
 import FaqSection from "@/components/FaqSection";
+import QuoteSection from "@/components/QuoteSection";
 import { siteUrl, business } from "@/lib/business";
 import { allHubs } from "@/lib/services";
 
@@ -228,6 +229,11 @@ export default function ServiceAreasPage() {
             ))}
           </div>
         </section>
+
+        <QuoteSection
+          heading="Get a quote anywhere in our area"
+          blurb="Calgary, Airdrie, Cochrane or Chestermere — tell us the job and we will come back with a price."
+        />
 
         <FaqSection faqs={faqs} heading="Service area questions" />
 

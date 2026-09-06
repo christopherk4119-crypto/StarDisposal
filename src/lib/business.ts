@@ -52,7 +52,7 @@ export const business = {
 
   /**
    * Real profile URLs only — a bare domain does nothing for entity
-   * confirmation. Add the Google Business Profile share link here once
+   * confirmation. Add the Google Business Profile share link here when
    * available; that is the highest-value entry in this list.
    *
    * Note: the business is NOT BBB Accredited (confirmed on the BBB profile

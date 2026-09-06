@@ -20,9 +20,14 @@ type Status = "idle" | "sending" | "sent" | "error";
 const fieldClass =
   "border-0 border-b border-white/35 bg-transparent py-2 text-[17px] text-white outline-none focus:border-brand-yellow focus-visible:ring-2 focus-visible:ring-brand-yellow focus-visible:ring-offset-2 focus-visible:ring-offset-brand-navy";
 
-export default function ContactForm() {
+export default function ContactForm({
+  defaultService = "",
+}: {
+  /** Pre-selects a service so the visitor has one less field to fill in. */
+  defaultService?: string;
+}) {
   const [status, setStatus] = useState<Status>("idle");
-  const [service, setService] = useState("");
+  const [service, setService] = useState(defaultService);
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -52,7 +57,7 @@ export default function ContactForm() {
         });
         if (!res.ok) throw new Error(`Formspree responded ${res.status}`);
         setStatus("sent");
-        setService("");
+        setService(defaultService);
         form.reset();
       } catch {
         setStatus("error");
@@ -76,7 +81,7 @@ export default function ContactForm() {
     )}&body=${encodeURIComponent(body)}`;
 
     setStatus("sent");
-    setService("");
+    setService(defaultService);
     form.reset();
   }
 

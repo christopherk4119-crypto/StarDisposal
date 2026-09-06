@@ -45,6 +45,9 @@ export default function Contact() {
               >
                 {business.phoneTedDisplay}
               </a>
+              <div className="mt-1 text-[12px] font-semibold text-brand-navy/55">
+                Texts &amp; job photos
+              </div>
             </div>
             <div>
               <div className="font-display text-[11px] tracking-[0.16em] text-brand-navy/55">
