@@ -95,6 +95,17 @@ it in `public/images/`, and replace this component's body with an `<Image>` (or
 inline the SVG). The `variant` and `background` props exist so callers don't
 have to change.
 
+## Search Console verification
+
+`public/googleccf56000b6b3a580.html` is a Google Search Console verification
+token, served at the site root. **Do not delete or rename it** — Google
+re-checks it periodically and removing it revokes access to the property.
+
+It verifies a *URL-prefix* property, which only covers the exact variant it was
+added under. A *Domain* property is better — it covers http, https, www and
+non-www together — but can only be verified by a DNS TXT record, not this file.
+Both can be active at once, so adding the DNS record later costs nothing.
+
 ## Photos
 
 `src/lib/photos.ts` holds the seven real job photos with literal alt text, and
