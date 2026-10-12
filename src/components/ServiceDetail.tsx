@@ -9,7 +9,7 @@ import RelatedServices from "./RelatedServices";
 import ServiceSchema from "./ServiceSchema";
 import QuoteSection from "./QuoteSection";
 import type { Hub, Service } from "@/lib/service-types";
-import { areaSentence } from "@/lib/business";
+import { areaSentence, commercialSentence } from "@/lib/business";
 import { quoteCategoryFor } from "@/lib/forms";
 import { sectionPhotos } from "@/lib/photos";
 
@@ -70,6 +70,9 @@ export default function ServiceDetail({
               ))}
               <p className="mt-6 border-l-4 border-brand-yellow py-1 pl-5 text-[16px] font-semibold leading-[1.55] text-brand-navy">
                 {areaSentence}
+              </p>
+              <p className="mt-3 text-[15px] leading-[1.55] text-brand-navy/70">
+                {commercialSentence}
               </p>
             </div>
 

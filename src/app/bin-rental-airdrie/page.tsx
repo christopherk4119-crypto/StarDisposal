@@ -6,7 +6,7 @@ import CallBand from "@/components/CallBand";
 import FaqSection from "@/components/FaqSection";
 import QuoteSection from "@/components/QuoteSection";
 import ServiceSchema from "@/components/ServiceSchema";
-import { siteUrl, business } from "@/lib/business";
+import { siteUrl, business, commercialSentence } from "@/lib/business";
 
 const path = "/bin-rental-airdrie";
 const title = "Bin Rental Airdrie | 10 to 20 Yard | Star Disposal";
@@ -96,6 +96,9 @@ export default function BinRentalAirdriePage() {
             of days — tell us roughly how long the job will run when you
             book, and we&rsquo;ll plan the pickup around your timeline, not
             the other way around.
+          </p>
+          <p className="mt-5 max-w-[760px] text-[15px] leading-[1.55] text-brand-navy/70">
+            {commercialSentence}
           </p>
 
           <div className="mt-10 border-t-2 border-brand-navy pt-6">

@@ -9,7 +9,7 @@ import ServiceSchema from "./ServiceSchema";
 import QuoteSection from "./QuoteSection";
 import type { Hub, Service } from "@/lib/service-types";
 import { allHubs } from "@/lib/services";
-import { areaSentence } from "@/lib/business";
+import { areaSentence, commercialSentence } from "@/lib/business";
 import { quoteCategoryFor } from "@/lib/forms";
 import { sectionPhotos } from "@/lib/photos";
 
@@ -64,6 +64,9 @@ export default function ServiceHub({
                   {para}
                 </p>
               ))}
+              <p className="mt-5 text-[15px] leading-[1.55] text-brand-navy/70">
+                {commercialSentence}
+              </p>
             </div>
             <div className="self-start border-l-4 border-brand-yellow bg-[#f5f5f1] px-7 py-8">
               <div className="mb-4 font-display text-[11px] tracking-[0.16em] text-brand-navy/55">

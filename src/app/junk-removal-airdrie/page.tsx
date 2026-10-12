@@ -6,7 +6,7 @@ import CallBand from "@/components/CallBand";
 import FaqSection from "@/components/FaqSection";
 import QuoteSection from "@/components/QuoteSection";
 import ServiceSchema from "@/components/ServiceSchema";
-import { siteUrl, business } from "@/lib/business";
+import { siteUrl, business, commercialSentence } from "@/lib/business";
 
 const path = "/junk-removal-airdrie";
 const title = "Junk Removal Airdrie | Star Disposal Services";
@@ -87,6 +87,9 @@ export default function JunkRemovalAirdriePage() {
             starting at $50 for a small load. The only real difference is the
             drive; a normal-sized Airdrie job costs the same as the same job
             in Calgary, with no distance surcharge tacked on.
+          </p>
+          <p className="mt-5 max-w-[760px] text-[15px] leading-[1.55] text-brand-navy/70">
+            {commercialSentence}
           </p>
           <p className="mt-5 max-w-[760px] text-[17px] leading-[1.65] text-brand-navy/78">
             Because we&rsquo;re on this route regularly rather than

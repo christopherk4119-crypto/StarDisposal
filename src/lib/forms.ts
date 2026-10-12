@@ -38,5 +38,6 @@ export function quoteCategoryFor(hub: string, slug: string): string {
   if (slug === "bobcat-services") return "Bobcat";
   if (slug === "site-cleanup") return "Site Clean-Up";
   if (slug === "construction-waste-removal") return "Bin Rental";
+  if (slug === "commercial-waste-removal") return "Other";
   return "";
 }

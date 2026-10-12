@@ -39,10 +39,24 @@ export default function Hero() {
           Junk gone today.
         </p>
 
-        <p className="mt-[18px] max-w-[540px] text-xl leading-[1.55] text-white/85">
-          Bins, dump runs, bobcat work and full clean-outs across Calgary and
+        <p className="mt-[18px] max-w-[560px] text-xl leading-[1.55] text-white/85">
+          Bins, dump runs, bobcat work and full clean-outs for homeowners,
+          businesses, contractors and property managers across Calgary and
           Airdrie. Ted picks up the phone. Jobs start at $50.
         </p>
+
+        <div className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-2">
+          {["Fully Insured", "WCB Covered", "Since 1996", "7 Days a Week"].map(
+            (label) => (
+              <span
+                key={label}
+                className="border border-white/25 px-3 py-1.5 font-display text-[11px] uppercase tracking-[0.1em] text-white/85"
+              >
+                {label}
+              </span>
+            )
+          )}
+        </div>
 
         <div className="mt-10 flex flex-wrap items-center gap-6">
           <a

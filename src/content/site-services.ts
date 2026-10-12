@@ -523,4 +523,123 @@ export const siteServices: Service[] = [
       "/bin-rentals/renovation-bin-rental",
     ],
   },
+
+  {
+    slug: "commercial-waste-removal",
+    hub,
+    name: "Commercial Waste",
+    h1: "Commercial Waste Removal in Calgary",
+    title: "Commercial Waste Removal Calgary | Star Disposal Services",
+    description:
+      "Commercial waste removal in Calgary for retail, restaurants, offices and property managers. Scheduled or on-call. Call 403-509-2783.",
+    summary:
+      "Retail, restaurants, offices, multi-unit residential and property managers — scheduled or on-call waste removal, fully insured and WCB covered.",
+    image: "/images/gallery/bin-trailer-apartment.webp",
+    imageAlt:
+      "Star Disposal bin trailer at a Calgary commercial property during a waste removal job",
+    serviceType: "Commercial Waste Removal",
+    intro: [
+      "Star Disposal Services works with businesses as regularly as it works with homeowners — retail stores, restaurants, offices, multi-unit residential buildings and the property managers who run them. This is separate from job-site construction waste, which has its own page; this is ongoing and one-off waste removal for a business that is already operating.",
+      "Some clients want a standing weekly or monthly pickup. Others call on an as-needed basis — a backroom clear-out, a fixtures changeover, a unit turnover between tenants. Both work the same way: you tell us the scope, we quote it, and we show up when we say we will.",
+      "We are fully insured and WCB covered, which matters more for commercial work than residential — a property manager or business owner who hires an uninsured contractor is taking on a risk most cannot afford to carry. We can confirm coverage directly if your insurer or management company needs it in writing.",
+    ],
+    sections: [
+      {
+        heading: "Retail, restaurants and offices",
+        body: [
+          "Retail backrooms accumulate packaging, old fixtures and display material between resets. Restaurants generate a steady volume of packaging and need it gone reliably, not whenever someone remembers to call. Offices tend to produce less volume day to day but spike hard around a move, a renovation or a lease turnover.",
+          "We work around business hours rather than through them — early morning, after close, or whenever a pickup causes the least disruption to customers or staff.",
+          "For a business that needs the same thing handled on a repeat basis, a standing arrangement means one phone call sets the schedule instead of a new call every time.",
+        ],
+      },
+      {
+        heading: "Multi-unit residential and property managers",
+        body: [
+          "Property managers deal with a specific, recurring version of this problem: a tenant moves out and leaves furniture and junk behind, a common area needs clearing, or a unit needs to be turned over on a tight deadline before the next tenant moves in.",
+          "We quote unit turnovers the same way we quote any junk removal job — by volume and labour — and we can work on short notice when a turnover deadline is tight. For a building or management company handling this repeatedly across multiple units or properties, a standing arrangement is usually simpler than booking each one separately.",
+          "Insurance paperwork is often a real requirement here, not a formality — many management companies cannot legally use an uninsured contractor on their properties. We can provide what you need to confirm coverage before the first job.",
+        ],
+      },
+      {
+        heading: "Construction sites and contractor accounts",
+        body: [
+          "Active construction and demolition job sites are covered on our dedicated construction waste removal page, which goes into bin sizing and swap scheduling in more depth — that is the better starting point if you are running a build rather than an operating business.",
+          "The two overlap in practice: a general contractor doing commercial tenant improvements often needs both the job-site bin and a separate commercial pickup once the space is operating. We can set both up together under one standing arrangement.",
+        ],
+      },
+    ],
+    included: [
+      "Scheduled weekly or monthly pickups",
+      "One-off and as-needed on-call removal",
+      "Retail backroom and fixture clear-outs",
+      "Restaurant packaging and general waste",
+      "Office clear-outs for moves and renovations",
+      "Multi-unit residential and tenant turnover clean-outs",
+      "Standing arrangements for property managers and businesses",
+      "Fully insured, WCB covered — documentation provided on request",
+    ],
+    process: [
+      {
+        step: "Describe the business and the volume",
+        detail:
+          "Call 403-509-2783. Tell us the type of business, roughly how much needs to go, and whether this is one-off or ongoing.",
+      },
+      {
+        step: "Scheduled or on-call",
+        detail:
+          "We set up a standing pickup schedule, or you call as needed — whichever actually fits how the business generates waste.",
+      },
+      {
+        step: "Confirm insurance if you need it",
+        detail:
+          "Property managers and businesses that require proof of insurance or WCB coverage before work starts can get it ahead of the first job.",
+      },
+      {
+        step: "We work around your hours",
+        detail:
+          "Early morning, after close, or whenever causes the least disruption to customers, tenants or staff.",
+      },
+      {
+        step: "Billed the way that works for you",
+        detail:
+          "Single jobs are paid on completion; standing arrangements can be set up on an account basis — ask when you call.",
+      },
+    ],
+    limits: [
+      "No hazardous or chemical waste disposal — paints, solvents, commercial chemicals and similar need a licensed handler.",
+      "No medical or biohazard waste.",
+      "Active construction and demolition job sites are better served by our construction waste removal service — see that page for bin sizing and swap scheduling.",
+    ],
+    faqs: [
+      {
+        q: "Do you offer scheduled pickups for businesses, or only one-off jobs?",
+        a: "Both. Some commercial clients are on a standing weekly or monthly schedule; others call as needed. Tell us which fits your business and we will set it up that way.",
+      },
+      {
+        q: "Are you insured and WCB covered for commercial properties?",
+        a: "Yes, fully insured and WCB covered. If your insurer or management company needs documentation before work starts, we can provide it.",
+      },
+      {
+        q: "Do you handle unit turnovers for property managers?",
+        a: "Yes, including on short notice when a turnover deadline is tight. We quote it the same way as any junk removal job — by volume and labour.",
+      },
+      {
+        q: "Can you work outside regular business hours?",
+        a: "Yes. We routinely work early morning or after close so a pickup does not disrupt customers, tenants or staff during the day.",
+      },
+      {
+        q: "Is this the same service as construction waste removal?",
+        a: "No — construction waste removal is for active job sites with bin swap scheduling. Commercial waste removal is for a business that is already operating. If you are running a build, start with the construction waste removal page instead.",
+      },
+      {
+        q: "Do you set up accounts for multi-location businesses or property management companies?",
+        a: "Yes. A standing arrangement across multiple properties or locations is usually simpler to manage than booking each one separately. Call 403-509-2783 to set it up.",
+      },
+    ],
+    related: [
+      "/site-services/construction-waste-removal",
+      "/junk-removal/e-waste-removal",
+      "/bin-rentals/renovation-bin-rental",
+    ],
+  },
 ];

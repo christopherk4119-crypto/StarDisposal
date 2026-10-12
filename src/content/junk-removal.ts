@@ -120,7 +120,7 @@ export const junkRemovalServices: Service[] = [
     related: [
       "/junk-removal/scrap-metal-removal",
       "/junk-removal/furniture-removal",
-      "/bin-rentals/renovation-bin-rental",
+      "/junk-removal/e-waste-removal",
     ],
   },
 
@@ -988,6 +988,126 @@ export const junkRemovalServices: Service[] = [
       "/junk-removal/appliance-removal",
       "/junk-removal/garage-cleanouts",
       "/site-services/construction-waste-removal",
+    ],
+  },
+
+  {
+    slug: "e-waste-removal",
+    hub,
+    name: "E-Waste Removal",
+    h1: "E-Waste Removal in Calgary",
+    title: "E-Waste Removal Calgary | Star Disposal Services",
+    description:
+      "E-waste removal in Calgary — TVs, computers, printers and small electronics recycled properly, not landfilled. Call 403-509-2783.",
+    summary:
+      "TVs, computers, printers and small electronics carried out and routed to proper recycling — residential and office IT clear-outs.",
+    image: "/images/gallery/bin-trailer-alley.webp",
+    imageAlt:
+      "Star Disposal bin trailer in a Calgary alley, used for electronics and e-waste pickups",
+    serviceType: "Electronics Recycling",
+    intro: [
+      "Electronics pile up faster than almost anything else in a house or an office — old TVs, a drawer of dead laptops, a closet of cables nobody can identify, a printer that was replaced two moves ago. We clear it out and route it to proper recycling rather than a landfill.",
+      "We take TVs and monitors (tube and flat-panel), desktops, laptops and tablets, printers, copiers and scanners, routers and networking gear, small kitchen and household electronics, and general office IT equipment. If it plugs in or runs on batteries and you are not sure whether we take it, call and ask.",
+      "This is as much a commercial job as a residential one. Office moves, lease turnovers and IT refreshes routinely leave a room of obsolete equipment behind, and we run that as a scheduled pickup the same way we would a single household TV.",
+    ],
+    sections: [
+      {
+        heading: "Why electronics can't go in the regular bin",
+        body: [
+          "Electronics contain materials that cannot go to a landfill — lead and mercury in older CRT monitors and tube TVs, lithium batteries in laptops and small devices, and circuit boards with trace metals that need to be recovered rather than buried. Alberta runs a dedicated electronics recycling program for exactly this reason, and it is why e-waste is handled as its own stream rather than tossed in with general junk.",
+          "Lithium batteries specifically are a fire risk in a mixed load if they are damaged or crushed, which is part of why electronics get collected and routed separately rather than thrown in with everything else.",
+          "None of this changes what the job looks like from your side — you point at what is going, we carry it out, and the sorting happens after it leaves your property.",
+        ],
+      },
+      {
+        heading: "Office and commercial IT clear-outs",
+        body: [
+          "A lease turnover, an office move or a hardware refresh usually leaves behind more electronics than people expect once you count monitors, towers, printers, phones and networking gear across a whole floor. We run these as a single scheduled pickup rather than a string of individual trips.",
+          "We carry equipment out of offices the same way we carry appliances out of basements — up and down stairs, through hallways, out to the truck. For a larger clear-out, tell us roughly what is involved when you call and we will plan the visit around it.",
+          "Data security is on you before we arrive. We are not a certified data destruction service, so wipe or physically remove drives from anything that held business or personal data before it leaves your hands.",
+        ],
+      },
+      {
+        heading: "TVs, monitors and the rest of the household pile",
+        body: [
+          "Old tube TVs are the heaviest, most awkward item in this category — a 27-inch CRT can run 60 to 80 pounds of glass and lead-lined components, which is exactly why they tend to sit in a basement for years instead of getting dealt with. We carry those out the same way we carry appliances.",
+          "Flat-panel TVs and monitors are lighter but still need to be handled as electronics, not general junk, because of the materials inside. Printers, routers, game consoles, small kitchen electronics and tangles of cables all fall into the same pickup.",
+          "A drawer of old phones and chargers is a small job, not something worth a special trip on its own — it is exactly the kind of thing to add onto a larger junk removal or office clear-out.",
+        ],
+      },
+    ],
+    included: [
+      "TVs and monitors, tube and flat-panel",
+      "Desktops, laptops and tablets",
+      "Printers, copiers, scanners and fax machines",
+      "Routers, networking gear and cabling",
+      "Small household and kitchen electronics",
+      "Office IT clear-outs for moves and lease turnovers",
+      "Carry-out from basements, offices and upper floors",
+      "Routed to proper electronics recycling, not landfill",
+    ],
+    process: [
+      {
+        step: "Tell us what and how much",
+        detail:
+          "Call 403-509-2783 with roughly what you have — a single TV, a drawer of devices, or a whole office floor. You get a price on that call.",
+      },
+      {
+        step: "Clear personal and business data first",
+        detail:
+          "We are not a data destruction service. Wipe or remove drives from anything that held personal or business information before pickup.",
+      },
+      {
+        step: "Book a window",
+        detail:
+          "We run 8 AM to 8 PM, seven days. Office clear-outs can be scheduled outside regular hours on request.",
+      },
+      {
+        step: "We carry it out",
+        detail:
+          "Stairs, hallways and loading docks included. You do not need to move anything yourself.",
+      },
+      {
+        step: "Routed to recycling",
+        detail:
+          "Electronics are kept separate from general junk and routed to proper recycling rather than landfill.",
+      },
+    ],
+    limits: [
+      "We are not a certified data destruction service — clear drives yourself before pickup.",
+      "No large commercial server rack decommissioning without a prior call to scope the job.",
+      "Damaged lithium batteries should be flagged when you book so they can be transported safely.",
+    ],
+    faqs: [
+      {
+        q: "How much does e-waste removal cost in Calgary?",
+        a: "It depends on volume — a single TV is a different job than a closet of old electronics or an office floor. Call 403-509-2783 and describe what you have for a price before anything moves.",
+      },
+      {
+        q: "Will my data be wiped from old computers?",
+        a: "We are not a certified data destruction service, so that is on you before we arrive — wipe the drive or remove it from the device if it held personal or business data.",
+      },
+      {
+        q: "Do you take old tube TVs?",
+        a: "Yes. They are heavy and awkward — often 60 to 80 pounds — which is exactly the kind of job we are set up to carry out.",
+      },
+      {
+        q: "Do you do office and commercial electronics clear-outs?",
+        a: "Yes. Office moves, lease turnovers and IT refreshes are common jobs for us, and we run them as a single scheduled pickup rather than piecemeal trips.",
+      },
+      {
+        q: "Does e-waste actually get recycled, or does it end up in the landfill?",
+        a: "It is kept separate from general junk and routed through proper electronics recycling — that is the whole reason e-waste is treated as its own category rather than tossed in a regular load.",
+      },
+      {
+        q: "Do you serve Airdrie for electronics pickups?",
+        a: "Yes, along with Cochrane and Chestermere, on the same basis as Calgary.",
+      },
+    ],
+    related: [
+      "/junk-removal/appliance-removal",
+      "/junk-removal/scrap-metal-removal",
+      "/site-services/commercial-waste-removal",
     ],
   },
 ];

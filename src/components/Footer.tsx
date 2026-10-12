@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Logo from "./Logo";
+import Image from "next/image";
 import { business } from "@/lib/business";
 import { allHubs, servicesByHub } from "@/lib/services";
 
@@ -19,7 +19,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-[1.1fr_1fr]">
           <div className="min-w-0">
             <Link href="/" className="flex items-center gap-3.5">
-              <Logo background={false} className="h-[88px] w-auto" />
+              <Image
+                src="/brand/star-disposal-LOGO-wide.jpg"
+                alt=""
+                width={982}
+                height={201}
+                loading="lazy"
+                className="h-[72px] w-auto"
+              />
             </Link>
             <p className="mt-[22px] max-w-[380px] text-base font-semibold leading-[1.55] text-brand-navy/80">
               {business.tagline}

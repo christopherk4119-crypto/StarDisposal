@@ -112,3 +112,11 @@ export const phoneInText = business.phoneMainSub;
 /** Human-readable service area sentence, reused across pages instead of a page-per-town. */
 export const areaSentence =
   "We run across Calgary — NW, NE, SW and SE — plus Airdrie, Cochrane and Chestermere.";
+
+/**
+ * Confirms residential and commercial scope on every service page — the
+ * site read as homeowner-only before this existed. Reused rather than
+ * hand-written per page so it can't drift or get missed on a new one.
+ */
+export const commercialSentence =
+  "We work with homeowners and businesses alike — residential and commercial, including construction sites and property management accounts.";

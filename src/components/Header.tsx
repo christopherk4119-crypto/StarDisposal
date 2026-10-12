@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
-import Logo from "./Logo";
 import { business } from "@/lib/business";
 import { allHubs, servicesByHub } from "@/lib/services";
 
@@ -26,8 +26,14 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-brand-yellow/35 bg-brand-navy">
       <div className="mx-auto flex max-w-[1400px] items-center justify-between gap-4 px-5 py-3.5 lg:gap-6 lg:px-10">
         <Link href="/" className="flex min-w-0 shrink items-center gap-3" onClick={close}>
-          <Logo variant="compact" className="h-[46px] w-auto shrink-0 sm:hidden" />
-          <Logo className="hidden h-[58px] w-auto shrink-0 sm:block" />
+          <Image
+            src="/brand/star-disposal-LOGO-wide.jpg"
+            alt="Star Disposal Services — junk removal and bin rentals in Calgary"
+            width={982}
+            height={201}
+            priority
+            className="h-[40px] w-auto shrink-0 sm:h-[52px]"
+          />
         </Link>
 
         <nav
