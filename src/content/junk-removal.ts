@@ -214,7 +214,7 @@ export const junkRemovalServices: Service[] = [
     faqs: [
       {
         q: "How much does it cost to remove a couch in Calgary?",
-        a: "Jobs start at $50, and a single couch at ground level with clear access sits near the bottom of the range. A basement sectional that has to be taken apart takes longer and prices accordingly. You get the number before we load.",
+        a: "A single couch on the main floor with clear access is $50. A basement sectional that has to be taken apart takes longer and prices accordingly. You get the number before we load.",
       },
       {
         q: "Will you take furniture apart to get it out?",
