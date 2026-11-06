@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { business } from "@/lib/business";
 
 export default function Hero() {
@@ -94,6 +95,14 @@ export default function Hero() {
             </span>
           </a>
         </div>
+
+        <Link
+          href="/bin-rentals"
+          className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-white/80 transition hover:text-brand-yellow"
+        >
+          Need a bin instead? 10–20 yard bins, from $50
+          <span aria-hidden="true">→</span>
+        </Link>
 
         <div className="mt-10 flex max-w-[800px] flex-wrap gap-x-10 gap-y-6 border-t border-white/18 pt-[22px] sm:mt-16 sm:gap-12">
           <div className="flex flex-col gap-1">

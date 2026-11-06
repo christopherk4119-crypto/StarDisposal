@@ -858,6 +858,7 @@ export const junkRemovalServices: Service[] = [
     ],
     related: [
       "/junk-removal/dump-runs",
+      "/bin-rentals/15-yard-bin-rental",
       "/site-services/bobcat-services",
       "/site-services/demolition",
     ],

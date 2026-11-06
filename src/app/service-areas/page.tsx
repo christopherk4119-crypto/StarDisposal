@@ -64,10 +64,14 @@ const towns = [
   {
     name: "Cochrane",
     body: "Covered for bins, clean-outs and site work. Worth calling ahead for scheduling on larger jobs so we can plan the run.",
+    links: [{ label: "Bin rentals in Cochrane", path: "/bin-rental-cochrane" }],
   },
   {
     name: "Chestermere",
     body: "Covered for the full range of services. Acreage clean-ups and larger property jobs are common out this way.",
+    links: [
+      { label: "Bin rentals in Chestermere", path: "/bin-rental-chestermere" },
+    ],
   },
 ];
 

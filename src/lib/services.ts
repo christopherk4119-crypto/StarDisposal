@@ -42,6 +42,8 @@ export const allRoutes: string[] = [
   "/service-areas",
   "/junk-removal-airdrie",
   "/bin-rental-airdrie",
+  "/bin-rental-cochrane",
+  "/bin-rental-chestermere",
   "/about",
   "/contact",
   "/privacy",
